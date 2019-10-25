@@ -1,0 +1,1050 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Spectral Normalization 谱归一化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Unbalanced_sample_loss.html" />
+    
+    
+    <link rel="prev" href="Isolating_Sources_of_Disentanglement_in_VAEs.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/0.html">
+            
+                <a href="../introduction/0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../introduction/AI_system.html">
+            
+                <a href="../introduction/AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../code_technique/">
+            
+                <a href="../code_technique/">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../code_technique/python/python_technique.html">
+            
+                <a href="../code_technique/python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../code_technique/python/sort.html">
+            
+                <a href="../code_technique/python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../code_technique/python/opencv.html">
+            
+                <a href="../code_technique/python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../code_technique/pytorch/pytorch1.html">
+            
+                <a href="../code_technique/pytorch/pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../code_technique/pytorch/pytorch2.html">
+            
+                <a href="../code_technique/pytorch/pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../code_technique/pytorch/pytorch_train.html">
+            
+                <a href="../code_technique/pytorch/pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../code_technique/pytorch/pytorch_.html">
+            
+                <a href="../code_technique/pytorch/pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../code_technique/pytorch/pytorch_vision.html">
+            
+                <a href="../code_technique/pytorch/pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                <a href="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../code_technique/pytorch/SPP.html">
+            
+                <a href="../code_technique/pytorch/SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux/linux_technique.html">
+            
+                <a href="../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux/linux_GPU.html">
+            
+                <a href="../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="paper_write.html">
+            
+                <a href="paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="Image_to_Image.html">
+            
+                <a href="Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="GNN.html">
+            
+                <a href="GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="GMMN.html">
+            
+                <a href="GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="Deformable_Kernels.html">
+            
+                <a href="Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.8" data-path="Spectral_Normalization.html">
+            
+                <a href="Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="Unbalanced_sample_loss.html">
+            
+                <a href="Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="NN.html">
+            
+                <a href="NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../super_resolution/">
+            
+                <a href="../super_resolution/">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../super_resolution/SR_summarize.html">
+            
+                <a href="../super_resolution/SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../super_resolution/SR.html">
+            
+                <a href="../super_resolution/SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../super_resolution/code_dataset.html">
+            
+                <a href="../super_resolution/code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../super_resolution/baseline.html">
+            
+                <a href="../super_resolution/baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../super_resolution/loss.html">
+            
+                <a href="../super_resolution/loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../data/">
+            
+                <a href="../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../data/picture.html">
+            
+                <a href="../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../data/picture_enhance.html">
+            
+                <a href="../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../data/data.html">
+            
+                <a href="../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../data/imaaug.html">
+            
+                <a href="../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../math/">
+            
+                <a href="../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../math/matrix.html">
+            
+                <a href="../math/matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../math/distribution_show.html">
+            
+                <a href="../math/distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../math/affine_transformation.html">
+            
+                <a href="../math/affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../math/graph.html">
+            
+                <a href="../math/graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../other/discriminator_train.html">
+            
+                <a href="../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../other/FLOPS.html">
+            
+                <a href="../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Spectral Normalization 谱归一化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="spectral-normalization-&#x8C31;&#x5F52;&#x4E00;&#x5316;">Spectral Normalization &#x8C31;&#x5F52;&#x4E00;&#x5316;</h1>
+<p>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x4ECB;&#x7ECD;&#x8C31;&#x5F52;&#x4E00;&#x5316;&#x8FD9;&#x9879;&#x6280;&#x672F;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BBA;&#x6587;&#x53C2;&#x8003;&#x4E0B;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x3002;</p>
+<p>Spectral Normalization For GANsarxiv.org</p>
+<p>&#x672C;&#x6587;&#x4E3B;&#x8981;&#x5BF9;&#x8BBA;&#x6587;&#x4E2D;&#x7684;&#x57FA;&#x7840;&#x77E5;&#x8BC6;&#x548C;&#x9057;&#x6F0F;&#x7684;&#x7EC6;&#x8282;&#x505A;&#x51FA;&#x8865;&#x5145;&#xFF0C;&#x4EE5;&#x4FBF;&#x4E8E;&#x66F4;&#x597D;&#x5730;&#x7406;&#x89E3;&#x8C31;&#x5F52;&#x4E00;&#x5316;&#x3002;&#x90E8;&#x5206;&#x5185;&#x5BB9;&#x53C2;&#x8003;&#x5E76;&#x6574;&#x5408;&#x4E86;&#x5982;&#x4E0B;&#x4E24;&#x7BC7;&#x535A;&#x5BA2;&#xFF1A;Spectral Normalization Explainedchristiancosgrove.com<img src="https://ws4.sinaimg.cn/large/006tNc79ly1g2sjxo7xhnj303c03cq2z.jpg" alt="&#x56FE;&#x6807;"></p>
+<p>GAN &#x7684;&#x8C31;&#x5F52;&#x4E00;&#x5316;(Spectral Norm)&#x548C;&#x77E9;&#x9635;&#x7684;&#x5947;&#x5F02;&#x503C;&#x5206;&#x89E3;(Singular Value Decompostion)kaiz.xyz<img src="https://ws1.sinaimg.cn/large/006tNc79ly1g2sjxn8zeej303c03cq2s.jpg" alt="&#x56FE;&#x6807;"></p>
+<h2 id="lipschitz-continuity"><strong>Lipschitz continuity</strong></h2>
+<p>&#x5728; GAN &#x4E2D;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x4E00;&#x4E2A;&#x5224;&#x522B;&#x5668; <img src="https://www.zhihu.com/equation?tex=D%3A+I\rightarrow\mathbb{R}" alt="D: I\rightarrow\mathbb{R}"> &#xFF0C;&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=I" alt="I"> &#x662F;&#x56FE;&#x50CF;&#x7A7A;&#x95F4;&#x3002;&#x5982;&#x679C;&#x5224;&#x522B;&#x5668;&#x662F; K-Lipschitz continuous &#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5BF9;&#x56FE;&#x50CF;&#x7A7A;&#x95F4;&#x4E2D;&#x7684;&#x4EFB;&#x610F; x &#x548C; y&#xFF0C;&#x6709;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%7C%7CD%28x%29-D%28y%29%7C%7C%5Cleq+K%7C%7Cx-y%7C%7C%5Ctag%7B1%7D" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=||\cdot||" alt="&#x516C;&#x5F0F;"> &#x4E3A; <img src="https://www.zhihu.com/equation?tex=L_2" alt="&#x516C;&#x5F0F;"> norm&#xFF0C;&#x5982;&#x679C; K &#x53D6;&#x5230;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x90A3;&#x4E48; K &#x88AB;&#x79F0;&#x4E3A; Lipschitz constant&#x3002;</p>
+<p>&#x76F4;&#x89C2;&#x5730;&#x6765;&#x8BF4;&#xFF0C;Lipschitz &#x6761;&#x4EF6;&#x9650;&#x5236;&#x4E86;&#x51FD;&#x6570;&#x53D8;&#x5316;&#x7684;&#x5267;&#x70C8;&#x7A0B;&#x5EA6;&#xFF0C;&#x5373;&#x51FD;&#x6570;&#x7684;&#x68AF;&#x5EA6;&#x3002;&#x5728;&#x4E00;&#x7EF4;&#x7A7A;&#x95F4;&#x4E2D;&#xFF0C;&#x5F88;&#x5BB9;&#x6613;&#x770B;&#x51FA; y=sin(x) &#x662F; 1-Lipschitz&#x7684;&#xFF0C;&#x5B83;&#x7684;&#x6700;&#x5927;&#x659C;&#x7387;&#x662F; 1&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x5224;&#x522B;&#x5668;&#x51FD;&#x6570;&#x5177;&#x6709; Lipschitz continuity &#x5462;&#xFF1F;Wasserstein GAN &#x63D0;&#x51FA;&#x4E86;&#x7528; wasserstein &#x8DDD;&#x79BB;&#x53D6;&#x4EE3;&#x4E4B;&#x524D;&#x7684; KL &#x6563;&#x5EA6;&#x6216;&#x8005; JS &#x6563;&#x5EA6;&#xFF0C;&#x4F5C;&#x4E3A; GAN &#x5224;&#x522B;&#x5668;&#x7684;&#x635F;&#x5931;&#x51FD;&#x6570;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=W%28P_r%2C+P_g%29%3D%5Cinf_%7B%5Cgamma%5Csim%5Cprod%28P_r%2C+P_g%29%7D%5Cmathbb%7BE%7D_%7B%28x%2Cy%29%5Csim%5Cgamma%7D%7C%7Cx-y%7C%7C%5Ctag%7B2%7D" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=P_r" alt="&#x516C;&#x5F0F;"> <img src="https://www.zhihu.com/equation?tex=P_g" alt="&#x516C;&#x5F0F;"> &#x5206;&#x522B;&#x4E3A;&#x771F;&#x5B9E;&#x6570;&#x636E;&#x548C;&#x751F;&#x6210;&#x7684;&#x6570;&#x636E;&#x7684;&#x5206;&#x5E03;&#x51FD;&#x6570;&#xFF0C;wasserstein &#x8DDD;&#x79BB;&#x8861;&#x91CF;&#x4E86;&#x8FD9;&#x4E24;&#x4E2A;&#x5206;&#x5E03;&#x51FD;&#x6570;&#x7684;&#x5DEE;&#x5F02;&#x6027;&#x3002;&#x76F4;&#x89C2;&#x5730;&#x7406;&#x89E3;&#xFF0C;&#x5C31;&#x662F;&#x6839;&#x636E;&#x8FD9;&#x4E24;&#x4E2A;&#x5206;&#x5E03;&#x51FD;&#x6570;&#x5206;&#x522B;&#x751F;&#x6210;&#x4E00;&#x5806;&#x6570;&#x636E; <img src="https://www.zhihu.com/equation?tex=x_1%2C+x_2%2C+...+%2C+x_n" alt="&#x516C;&#x5F0F;"> &#x548C;&#x53E6;&#x4E00;&#x5806;&#x6570;&#x636E; <img src="https://www.zhihu.com/equation?tex=y_1%2C+y_2%2C+...+%2C+y_n" alt="&#x516C;&#x5F0F;"> , &#x7136;&#x540E;&#x8BA1;&#x7B97;&#x8FD9;&#x4E24;&#x5806;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x3002;&#x8DDD;&#x79BB;&#x7684;&#x7B97;&#x6CD5;&#x662F;&#x627E;&#x5230;&#x4E00;&#x79CD;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x7684;&#x914D;&#x5BF9;&#x65B9;&#x6848; <img src="https://www.zhihu.com/equation?tex=%5Cgamma%5Csim%5Cprod%28P_r%2C+P_g%29" alt="&#x516C;&#x5F0F;"> &#xFF0C;&#x628A; <img src="https://www.zhihu.com/equation?tex=x_i" alt="&#x516C;&#x5F0F;"> &#x79FB;&#x52A8;&#x5230; <img src="https://www.zhihu.com/equation?tex=y_j" alt="&#x516C;&#x5F0F;"> &#xFF0C;&#x6C42;&#x603B;&#x79FB;&#x52A8;&#x8DDD;&#x79BB;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x3002;&#x7531;&#x4E8E;&#x5728; GAN &#x4E2D;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=P_r" alt="&#x516C;&#x5F0F;"> &#x548C; <img src="https://www.zhihu.com/equation?tex=P_g" alt="&#x516C;&#x5F0F;"> &#x90FD;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x53EA;&#x80FD;&#x662F;&#x4ECE;&#x91CC;&#x9762;&#x4E0D;&#x505C;&#x5730;&#x91C7;&#x6837;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x53EF;&#x80FD;&#x627E;&#x5230;&#x8FD9;&#x6837;&#x7684; <img src="https://www.zhihu.com/equation?tex=\gamma" alt="\gamma"> &#xFF0C;&#x65E0;&#x6CD5;&#x76F4;&#x63A5;&#x4F18;&#x5316;&#x516C;&#x5F0F; (2) &#x3002;W-GAN &#x7684;&#x505A;&#x6CD5;&#x662F;&#x6839;&#x636E; Kantorovich-Rubinstein duality&#xFF0C;&#x5C06;&#x516C;&#x5F0F; (2) &#x8F6C;&#x5316;&#x6210;&#x516C;&#x5F0F; (3)&#xFF0C;&#x8FC7;&#x7A0B;&#x8BE6;&#x89C1;&#xFF1A;</p>
+<p>Wasserstein GAN and the Kantorovich-Rubinstein Dualityvincentherrmann.github.io<img src="https://ws2.sinaimg.cn/large/006tNc79ly1g2sjxos0kgj305003cjr9.jpg" alt="&#x56FE;&#x6807;"></p>
+<p><img src="https://www.zhihu.com/equation?tex=W%28P_r%2C+P_g%29%3D%5Csup_%7B%7C%7Cf%7C%7C_L%5Cleq+1%7D%5Cmathbb%7BE%7D_%7Bx%5Csim+P_r%7D%5Bf%28x%29%5D-%5Cmathbb%7BE%7D_%7By%5Csim+P_g%7D%5Bf%28y%29%5D%5Ctag%7B3%7D" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=f" alt="f"> &#x5373;&#x4E3A;&#x5224;&#x522B;&#x5668;&#x51FD;&#x6570;&#x3002;&#x53EA;&#x6709;&#x5F53;&#x5224;&#x522B;&#x5668;&#x51FD;&#x6570;&#x6EE1;&#x8DB3; 1-Lipschitz &#x7EA6;&#x675F;&#x65F6;&#xFF0C;(2) &#x624D;&#x80FD;&#x8F6C;&#x5316;&#x4E3A; (3)&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x6B63;&#x5982;&#x4E0A;&#x6587;&#x6240;&#x8BF4;&#xFF0C;Lipschitz continuous &#x7684;&#x51FD;&#x6570;&#x7684;&#x68AF;&#x5EA6;&#x4E0A;&#x754C;&#x88AB;&#x9650;&#x5236;&#xFF0C;&#x56E0;&#x6B64;&#x51FD;&#x6570;&#x66F4;&#x5E73;&#x6ED1;&#xFF0C;&#x5728;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x4F18;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53C2;&#x6570;&#x53D8;&#x5316;&#x4E5F;&#x4F1A;&#x66F4;&#x7A33;&#x5B9A;&#xFF0C;&#x4E0D;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x68AF;&#x5EA6;&#x7206;&#x70B8;&#xFF0C;&#x56E0;&#x6B64;Lipschitz continuity &#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x6027;&#x8D28;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x8BA9;&#x5224;&#x522B;&#x5668;&#x51FD;&#x6570;&#x6EE1;&#x8DB3; 1-Lipschitz continuity&#xFF0C;W-GAN &#x548C;&#x4E4B;&#x540E;&#x7684; W-GAN GP &#x5206;&#x522B;&#x91C7;&#x7528;&#x4E86; weight-clipping &#x548C; gradient penalty &#x6765;&#x7EA6;&#x675F;&#x5224;&#x522B;&#x5668;&#x53C2;&#x6570;&#x3002;&#x8FD9;&#x91CC;&#x7684;&#x8C31;&#x5F52;&#x4E00;&#x5316;&#xFF0C;&#x5219;&#x662F;&#x53E6;&#x4E00;&#x79CD;&#x8BA9;&#x51FD;&#x6570;&#x6EE1;&#x8DB3; 1-Lipschitz continuity &#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h2 id="&#x77E9;&#x9635;&#x7684;-lipschitz-continuity"><strong>&#x77E9;&#x9635;&#x7684; Lipschitz continuity</strong></h2>
+<p>&#x4F17;&#x6240;&#x5468;&#x77E5;&#xFF0C;&#x77E9;&#x9635;&#x7684;&#x4E58;&#x6CD5;&#x662F;&#x7EBF;&#x6027;&#x6620;&#x5C04;&#x3002;&#x5BF9;&#x7EBF;&#x6027;&#x6620;&#x5C04;&#x6765;&#x8BF4;&#xFF0C;&#x5982;&#x679C;&#x5B83;&#x5728;&#x96F6;&#x70B9;&#x5904;&#x662F; K-Lipschitz &#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5728;&#x6574;&#x4E2A;&#x5B9A;&#x4E49;&#x57DF;&#x4E0A;&#x90FD;&#x662F; K-Lipschitz &#x7684;&#x3002;&#x60F3;&#x8C61;&#x4E00;&#x6761;&#x8FC7;&#x96F6;&#x70B9;&#x7684;&#x76F4;&#x7EBF;&#xFF0C;&#x5B83;&#x7684;&#x659C;&#x7387;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x4E0A;&#x9762;&#x4EFB;&#x4F55;&#x4E00;&#x70B9;&#x662F; K-Lipschitz &#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4E0A;&#x9762;&#x6240;&#x6709;&#x70B9;&#x90FD;&#x662F; K-Lipschitz &#x7684;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5BF9;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A%3A\mathbb{R}^n\rightarrow\mathbb{R}^m" alt="A:\mathbb{R}^n\rightarrow\mathbb{R}^m">&#x6765;&#x8BF4;&#xFF0C;&#x5B83;&#x6EE1;&#x8DB3; K-Lipschitz &#x7684;&#x5145;&#x8981;&#x6761;&#x4EF6;&#x662F;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=||Ax||\leq+K||x||%2C+\forall+x\in+\mathbb{R}^n\tag{4}" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x5BF9;&#x5176;&#x505A;&#x5982;&#x4E0B;&#x53D8;&#x6362;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+%7C%7CAx%7C%7C+%26%5Cleq+K%7C%7Cx%7C%7C+%5C%5C+%5Clangle+Ax%2C+Ax+%5Crangle+%26%5Cleq+K%5E2%5Clangle+x%2C+x+%5Crangle+%5C%5C+%5Clangle+%28A%5ETA-K%5E2%29x%2Cx%5Crangle+%26%5Cleq+0+%5Ctag%7B5%7D+%5Cend%7Balign%7D" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=\langle+\cdot+%2C+\cdot+\rangle" alt="&#x516C;&#x5F0F;"> &#x8868;&#x793A;&#x4E24;&#x4E2A;&#x5411;&#x91CF;&#x7684;&#x5185;&#x79EF;&#x3002;&#x7531;&#x4E8E;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A^TA" alt="&#x516C;&#x5F0F;"> &#x662F;&#x534A;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#xFF0C;&#x5B83;&#x7684;&#x6240;&#x6709;&#x7279;&#x5F81;&#x503C;&#x5747;&#x4E3A;&#x975E;&#x8D1F;&#x3002;&#x6211;&#x4EEC;&#x5047;&#x8BBE;&#x5B83;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x6784;&#x6210;&#x7684;&#x57FA;&#x5E95;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=\nu_1%2C+\nu_2%2C+...+%2C+\nu_n+" alt="&#x516C;&#x5F0F;"> &#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x503C;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=\lambda_1%2C+\lambda_2%2C+...+%2C+\lambda_n+" alt="&#x516C;&#x5F0F;"> &#xFF0C;&#x4EE4; <img src="https://www.zhihu.com/equation?tex=x%3Dx_1\cdot\nu_1%2Bx_2\cdot\nu_2%2B+...+%2Bx_n\cdot+\nu_n+" alt="&#x516C;&#x5F0F;"> &#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x516C;&#x5F0F; (5) &#x7684;&#x5DE6;&#x534A;&#x90E8;&#x5206;&#x53EF;&#x4EE5;&#x8F6C;&#x5316;&#x4E3A;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+%5Clangle%28A%5ETA-K%5E2%29x%2C+x%5Crangle+%26%3D+%5Clangle%28A%5ETA-K%5E2%29%5Csum%5Climits_%7Bi%3D1%7D%5Enx_i%5Ccdot%5Cnu_i%2C+%5Csum%5Climits_%7Bj%3D1%7D%5Enx_j%5Ccdot%5Cnu_j%5Crangle%5C%5C+%26%3D%5Csum%5Climits_%7Bi%3D1%7D%5En%5Csum%5Climits_%7Bj%3D1%7D%5Enx_ix_j%5Clangle%28A%5ETA-K%5E2%29%5Cnu_i%2C+%5Cnu_j%5Crangle+%5C%5C+%26%3D%5Csum%5Climits_%7Bi%3D1%7D%5En%28%5Clambda_i-K%5E2%29x_i%5E2%5Cleq+0+%5C%5C+%26%5CRightarrow%5Csum%5Climits_%7Bi%3D1%7D%5En%28K%5E2-%5Clambda_i%29x_i%5E2+%5Cgeq0%5Ctag%7B6%7D+%5Cend%7Balign%7D" alt="&#x516C;&#x5F0F;"></p>
+<p>&#x8981;&#x4F7F;&#x516C;&#x5F0F; (6) &#x5BF9;&#x4EFB;&#x610F; <img src="https://www.zhihu.com/equation?tex=x_i" alt="x_i"> &#x6052;&#x6210;&#x7ACB;&#xFF0C;&#x4E14; <img src="https://www.zhihu.com/equation?tex=\lambda_i" alt="\lambda_i"> &#x975E;&#x8D1F;&#xFF0C;&#x5219;&#x5FC5;&#x6709; <img src="https://www.zhihu.com/equation?tex=K^2-\lambda_i\geq0%2C+\forall+i%3D1%2C2%2C+...+%2C+n" alt="K^2-\lambda_i\geq0, \forall i=1,2, ... , n"> &#x3002;&#x82E5; <img src="https://www.zhihu.com/equation?tex=\lambda_1" alt="\lambda_1">&#x4E3A;<img src="https://www.zhihu.com/equation?tex=A^TA" alt="A^TA">&#x6700;&#x5927;&#x7684;&#x7279;&#x5F81;&#x503C;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6EE1;&#x8DB3; <img src="https://www.zhihu.com/equation?tex=K\geq\sqrt{\lambda_1}" alt="K\geq\sqrt{\lambda_1}"> &#xFF0C;&#x8FD9;&#x91CC; <img src="https://www.zhihu.com/equation?tex=\sqrt{\lambda_1}" alt="\sqrt{\lambda_1}"> &#x5373;&#x4E3A;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x7684; spectral norm&#x3002;</p>
+<p>&#x7EFC;&#x4E0A;&#x6240;&#x8FF0;&#xFF0C;&#x6620;&#x5C04; <img src="https://www.zhihu.com/equation?tex=A%3A%5Cmathbb%7BR%7D%5En%5Crightarrow%5Cmathbb%7BR%7D%5Em" alt="A:\mathbb{R}^n\rightarrow\mathbb{R}^m"> &#x6EE1;&#x8DB3; K-Lipschitz &#x8FDE;&#x7EED;&#xFF0C;K &#x7684;&#x6700;&#x5C0F;&#x503C;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=%5Csqrt%7B%5Clambda_1%7D" alt="\sqrt{\lambda_1}">&#x3002;&#x90A3;&#x4E48;&#xFF0C;&#x8981;&#x60F3;&#x8BA9;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x6EE1;&#x8DB3; 1-Lipschitz &#x8FDE;&#x7EED;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;A&#x7684;&#x6240;&#x6709;&#x5143;&#x7D20;&#x4E0A;&#x540C;&#x65F6;&#x9664;&#x4EE5; <img src="https://www.zhihu.com/equation?tex=%5Csqrt%7B%5Clambda_1%7D" alt="\sqrt{\lambda_1}"> &#x5373;&#x53EF;&#xFF08;&#x89C2;&#x5BDF;&#x516C;&#x5F0F; (4)&#x5DE6;&#x4FA7;&#x662F;&#x7EBF;&#x6027;&#x6620;&#x5C04;&#xFF09;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x8BA8;&#x8BBA;&#xFF0C;&#x6211;&#x4EEC;&#x5F97;&#x51FA;&#x4E86;&#x8FD9;&#x6837;&#x7684;&#x7ED3;&#x8BBA;&#xFF1A;<strong>&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x9664;&#x4EE5;&#x5B83;&#x7684; spectral norm&#xFF08; <img src="https://www.zhihu.com/equation?tex=A%5ETA" alt="A^TA"> &#x6700;&#x5927;&#x7279;&#x5F81;&#x503C;&#x7684;&#x5F00;&#x6839;&#x53F7; <img src="https://www.zhihu.com/equation?tex=%5Csqrt%7B%5Clambda_1%7D" alt="\sqrt{\lambda_1}"> &#xFF09;&#x53EF;&#x4EE5;&#x4F7F;&#x5176;&#x5177;&#x6709; 1-Lipschitz continuity</strong>&#x3002;</p>
+<h2 id="&#x77E9;&#x9635;&#x7684;&#x5947;&#x5F02;&#x503C;&#x5206;&#x89E3;"><strong>&#x77E9;&#x9635;&#x7684;&#x5947;&#x5F02;&#x503C;&#x5206;&#x89E3;</strong></h2>
+<p>&#x4E0A;&#x6587;&#x63D0;&#x5230;&#x7684;&#x77E9;&#x9635;&#x7684; spectral norm &#x7684;&#x53E6;&#x4E00;&#x4E2A;&#x79F0;&#x547C;&#x662F;&#x77E9;&#x9635;&#x7684;&#x6700;&#x5927;<strong>&#x5947;&#x5F02;&#x503C;</strong>&#x3002;&#x56DE;&#x987E;&#x77E9;&#x9635;&#x7684; SVD &#x5206;&#x89E3;&#xFF1A;</p>
+<p>&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A%3A%5Cmathbb%7BR%7D%5En%5Crightarrow%5Cmathbb%7BR%7D%5Em" alt="&#x56FE;&#x7247;"> &#x5B58;&#x5728;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x79CD;&#x5206;&#x89E3;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=A%3DU\Sigma+V^T\tag{7}" alt="&#x56FE;&#x7247;"></p>
+<p>&#x5176;&#x4E2D;&#xFF1A;</p>
+<ul>
+<li>U &#x662F;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=m\times+m" alt="&#x56FE;&#x7247;"> &#x7684;&#x5355;&#x4F4D;&#x6B63;&#x4EA4;&#x57FA;&#x77E9;&#x9635;</li>
+<li><img src="https://www.zhihu.com/equation?tex=\Sigma" alt="&#x56FE;&#x7247;"> &#x662F;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=m\times+n" alt="&#x56FE;&#x7247;"> &#x7684;&#x5BF9;&#x89D2;&#x9635;&#xFF0C;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x4E3A;<strong>&#x5947;&#x5F02;&#x503C;</strong>&#xFF0C;&#x975E;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x4E3A;0</li>
+<li>V &#x662F;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=n\times+n" alt="&#x56FE;&#x7247;"> &#x7684;&#x5355;&#x4F4D;&#x6B63;&#x4EA4;&#x57FA;&#x77E9;&#x9635;</li>
+</ul>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1g2sjxpm2uvj30k006mmx5.jpg" alt="img">SVD &#x5206;&#x89E3;</p>
+<p>&#xFF08;&#x4E0A;&#x56FE;&#x6765;&#x81EA;&#xFF1A;<a href="https://link.zhihu.com/?target=https%3A//www.cnblogs.com/pinard/p/6251584.html" target="_blank">&#x5947;&#x5F02;&#x503C;&#x5206;&#x89E3;(SVD)&#x539F;&#x7406;&#x4E0E;&#x5728;&#x964D;&#x7EF4;&#x4E2D;&#x7684;&#x5E94;&#x7528; - &#x5218;&#x5EFA;&#x5E73;Pinard - &#x535A;&#x5BA2;&#x56ED;</a>&#xFF09;</p>
+<p>&#x7531;&#x4E8E; U &#x548C; V &#x90FD;&#x662F;&#x5355;&#x4F4D;&#x6B63;&#x4EA4;&#x57FA;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x628A;&#x77E9;&#x9635;&#x4E58;&#x4EE5;&#x5411;&#x91CF;&#x5206;&#x6210;&#x4E09;&#x6B65;&#xFF1A;&#x65CB;&#x8F6C;&#xFF0C;&#x62C9;&#x4F38;&#xFF0C;&#x65CB;&#x8F6C;&#x3002;&#x4E00;&#x524D;&#x4E00;&#x540E;&#x7684;&#x4E24;&#x6B65;&#x65CB;&#x8F6C;&#x4E0D;&#x6539;&#x53D8;&#x5411;&#x91CF;&#x7684;&#x6A21;&#x957F;&#xFF0C;&#x552F;&#x4E00;&#x6539;&#x53D8;&#x5411;&#x91CF;&#x6A21;&#x957F;&#x7684;&#x662F;&#x4E2D;&#x95F4;&#x7684;&#x62C9;&#x4F38;&#xFF0C;&#x5373;&#x4E0E; <img src="https://www.zhihu.com/equation?tex=%5CSigma" alt="\Sigma"> &#x76F8;&#x4E58;&#x7684;&#x90A3;&#x4E00;&#x6B65;&#x3002;&#x800C;&#x77E9;&#x9635;&#x7684; Lipschitz continuity &#x5173;&#x5FC3;&#x7684;&#x6B63;&#x662F;&#x77E9;&#x9635;&#x5BF9;&#x5411;&#x91CF;&#x6A21;&#x957F;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x4E0D;&#x5173;&#x5FC3;&#x65CB;&#x8F6C;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x7814;&#x7A76;&#x4E2D;&#x95F4;&#x7684; <img src="https://www.zhihu.com/equation?tex=%5CSigma" alt="\Sigma"> &#x5373;&#x53EF;&#x3002;&#x800C; <img src="https://www.zhihu.com/equation?tex=%5CSigma" alt="\Sigma"> &#x53C8;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;<strong>&#x5B83;&#x5BF9;&#x5411;&#x91CF;&#x7684;&#x6A21;&#x957F;&#x62C9;&#x957F;&#x7684;&#x6700;&#x5927;&#x503C;&#xFF0C;&#x5C31;&#x662F;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x7684;&#x6700;&#x5927;&#x503C;</strong>&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x77E9;&#x9635;&#x7684;&#x6700;&#x5927;&#x5947;&#x5F02;&#x503C;&#x5373;&#x4E3A;&#x5B83;&#x7684; spectral norm&#x3002;</p>
+<p>&#x6839;&#x636E;&#x516C;&#x5F0F; (7) &#xFF0C;&#x4EE5;&#x53CA; SVD &#x5206;&#x89E3;&#x4E2D; U V &#x90FD;&#x662F;&#x5355;&#x4F4D;&#x6B63;&#x4EA4;&#x57FA;&#xFF0C;&#x5355;&#x4F4D;&#x6B63;&#x4EA4;&#x57FA;&#x7684;&#x8F6C;&#x7F6E;&#x4E58;&#x4EE5;&#x5B83;&#x672C;&#x8EAB;&#x4E3A;&#x5355;&#x4F4D;&#x77E9;&#x9635;&#xFF0C;&#x6709;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+A%5ETA+%26%3D+%28U%5CSigma+V%5ET%29%5ET%28U%5CSigma+V%5ET%29%5C%5C+%26%3DV%5CSigma%5ETU%5ETU%5CSigma+V%5ET+%5C%5C+%26%3DV%5CSigma%5ETI%5CSigma+V%5ET+%5C%5C+%26%3DV%5CSigma%5E2V%5ET%5Ctag%7B8%7D+%5Cend%7Balign%7D" alt="&#x56FE;&#x7247;"></p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x6C42;&#x51FA;<img src="https://www.zhihu.com/equation?tex=A%5ETA" alt="&#x56FE;&#x7247;"> &#x7684;&#x6700;&#x5927;&#x7279;&#x5F81;&#x503C;&#xFF0C;&#x518D;&#x5F00;&#x6839;&#x53F7; &#xFF0C;&#x5C31;&#x6C42;&#x51FA;&#x4E86;&#x77E9;&#x9635;&#x7684;&#x6700;&#x5927;&#x5947;&#x5F02;&#x503C;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x77E9;&#x9635;&#x7684; spectral norm&#xFF0C;&#x548C;&#x4E0A;&#x4E00;&#x5C0F;&#x8282;&#x7684;&#x63A8;&#x5BFC;&#x6B8A;&#x9014;&#x540C;&#x5F52;&#x3002;</p>
+<h2 id="&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;-spectral-normalization"><strong>&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684; Spectral Normalization</strong></h2>
+<p>&#x5BF9;&#x4E8E;&#x590D;&#x5408;&#x51FD;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x6709;&#x8FD9;&#x6837;&#x7684;&#x5B9A;&#x7406;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=||g\circ+f||_{Lip}\leq+||g||_{Lip}\cdot+||f||_{Lip}\tag{9}" alt="&#x56FE;&#x7247;"></p>
+<p>&#x800C;&#x591A;&#x5C42;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#xFF0C;&#x6B63;&#x662F;&#x591A;&#x4E2A;&#x590D;&#x5408;&#x51FD;&#x6570;&#x5D4C;&#x5957;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5D4C;&#x5957;&#x662F;&#xFF1A;&#x4E00;&#x5C42;&#x5377;&#x79EF;&#xFF0C;&#x4E00;&#x5C42;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF0C;&#x518D;&#x4E00;&#x5C42;&#x5377;&#x79EF;&#xFF0C;&#x518D;&#x4E00;&#x5C42;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x6837;&#x5C42;&#x5C42;&#x5305;&#x88F9;&#x8D77;&#x6765;&#x3002;&#x800C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x901A;&#x5E38;&#x9009;&#x53D6;&#x7684; ReLU&#xFF0C;Leaky ReLU &#x90FD;&#x662F; 1-Lipschitz &#x7684;&#xFF0C;&#x5E26;&#x5165;&#x5230; (9) &#x4E2D;&#x76F8;&#x4E58;&#x4E0D;&#x5F71;&#x54CD;&#x603B;&#x4F53;&#x7684; Lipschitz constant&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x4FDD;&#x8BC1;&#x5377;&#x79EF;&#x7684;&#x90E8;&#x5206;&#x662F; 1-Lipschitz continuous &#x7684;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;&#x6574;&#x4E2A;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x90FD;&#x662F; 1-Lipschitz continuous &#x7684;&#x3002;</p>
+<p>&#x800C;&#x5728;&#x56FE;&#x50CF;&#x4E0A;&#x6BCF;&#x4E2A;&#x4F4D;&#x7F6E;&#x7684;&#x5377;&#x79EF;&#x64CD;&#x4F5C;&#xFF0C;&#x6B63;&#x597D;&#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x4E00;&#x4E2A;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x7EA6;&#x675F;&#x5404;&#x5C42;&#x5377;&#x79EF;&#x6838;&#x7684;&#x53C2;&#x6570; <img src="https://www.zhihu.com/equation?tex=W" alt="W"> &#xFF0C;&#x4F7F;&#x5B83;&#x662F; 1-Lipschitz continuous &#x7684;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x6574;&#x4E2A;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684; 1-Lipschitz continuity&#x3002;&#x800C;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#xFF0C;&#x60F3;&#x8BA9;&#x77E9;&#x9635;&#x6EE1;&#x8DB3; 1-Lipschitz continuous&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x8BA9;&#x5B83;&#x6240;&#x6709;&#x5143;&#x7D20;&#x540C;&#x65F6;&#x9664;&#x4EE5;&#x5B83;&#x7684;&#x6700;&#x5927;&#x5947;&#x5F02;&#x503C;&#xFF0C;&#x6216;&#x8005;&#x8BF4;&#x662F;&#x5B83;&#x7684; spectural norm&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x95EE;&#x9898;&#x662F;&#x5982;&#x4F55;&#x8BA1;&#x7B97; <img src="https://www.zhihu.com/equation?tex=W" alt="W"> &#x7684;&#x6700;&#x5927;&#x5947;&#x5F02;&#x503C;&#x3002;</p>
+<p>&#x5BF9;&#x5927;&#x77E9;&#x9635;&#x505A; SVD &#x5206;&#x89E3;&#x8FD0;&#x7B97;&#x91CF;&#x5F88;&#x5927;&#xFF0C;&#x6211;&#x4EEC;&#x4E0D;&#x5E0C;&#x671B;&#x5728;&#x4F18;&#x5316;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6BCF;&#x6B65;&#x90FD;&#x5BF9;&#x5377;&#x79EF;&#x6838;&#x77E9;&#x9635;&#x505A;&#x4E00;&#x6B21; SVD &#x5206;&#x89E3;&#x3002;&#x4E00;&#x4E2A;&#x8FD1;&#x4F3C;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x662F; <strong>power iteration</strong> &#x7B97;&#x6CD5;&#x3002;</p>
+<h2 id="power-iteration"><strong>Power Iteration</strong></h2>
+<p>Power iteration &#x662F;&#x7528;&#x6765;&#x8FD1;&#x4F3C;&#x8BA1;&#x7B97;&#x77E9;&#x9635;&#x6700;&#x5927;&#x7684;&#x7279;&#x5F81;&#x503C;&#xFF08;dominant eigenvalue &#x4E3B;&#x7279;&#x5F81;&#x503C;&#xFF09;&#x548C;&#x5176;&#x5BF9;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF08;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF09;&#x7684;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x77E9;&#x9635; A &#x662F;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=n%5Ctimes+n" alt="&#x56FE;&#x7247;"> &#x7684;&#x6EE1;&#x79E9;&#x7684;&#x65B9;&#x9635;&#xFF0C;&#x5B83;&#x7684;&#x5355;&#x4F4D;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=%5Cnu_1%2C+%5Cnu_2%2C+...+%2C+%5Cnu_n+" alt="&#x56FE;&#x7247;"> &#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x7279;&#x5F81;&#x503C;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=%5Clambda_1%2C+%5Clambda_2%2C+...+%2C+%5Clambda_n+" alt="&#x56FE;&#x7247;"> &#x3002;&#x90A3;&#x4E48;&#x5BF9;&#x4EFB;&#x610F;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=x%3Dx_1%5Ccdot%5Cnu_1%2Bx_2%5Ccdot%5Cnu_2%2B+...+%2Bx_n%5Ccdot+%5Cnu_n+" alt="&#x56FE;&#x7247;"> &#xFF0C;&#x6709;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+Ax+%26%3D+A%28x_1%5Ccdot%5Cnu_1%2Bx_2%5Ccdot%5Cnu_2%2B+...+%2Bx_n%5Ccdot+%5Cnu_n%29+%5C%5C+%26%3Dx_1%28A%5Cnu_1%29%2Bx_2%28A%5Cnu_2%29%2B...%2Bx_n%28A%5Cnu_n%29%5C%5C+%26%3Dx_1%28%5Clambda_1%5Cnu_1%29%2Bx_2%28%5Clambda_2%5Cnu_2%29%2B...%2Bx_n%28%5Clambda_n%5Cnu_n%29%5Ctag%7B10%7D+%5Cend%7Balign%7D" alt="&#x56FE;&#x7247;"></p>
+<p>&#x6211;&#x4EEC;&#x7ECF;&#x8FC7; k &#x6B21;&#x8FED;&#x4EE3;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Balign%7D+A%5Ek+x+%26%3D+x_1%28%5Clambda_1%5Ek%5Cnu_1%29%2Bx_2%28%5Clambda_2%5Ek%5Cnu_2%29%2B...%2Bx_n%28%5Clambda_n%5Ek%5Cnu_n%29+%5C%5C+%26%3D+%5Clambda_1%5Ek%5Cleft%5Bx_1%5Cnu_1%2Bx_2%5Cleft%28%5Cfrac%7B%5Clambda_2%7D%7B%5Clambda_1%7D%5Cright%29%5Ek%5Cnu_2%2B...%2Bx_n%5Cleft%28%5Cfrac%7B%5Clambda_n%7D%7B%5Clambda_1%7D%5Cright%29%5Ek%5Cnu_n%5Cright%5D%5Ctag%7B11%7D+%5Cend%7Balign%7D" alt="&#x56FE;&#x7247;"></p>
+<p>&#x7531;&#x4E8E; <img src="https://www.zhihu.com/equation?tex=\lambda_1&gt;\lambda_2&gt;...&gt;\lambda_n" alt="&#x56FE;&#x7247;"> (&#x4E0D;&#x8003;&#x8651;&#x4E24;&#x4E2A;&#x7279;&#x5F81;&#x503C;&#x76F8;&#x7B49;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x56E0;&#x4E3A;&#x592A;&#x5C11;&#x89C1;&#x4E86;)&#x3002;&#x53EF;&#x77E5;&#xFF0C;&#x7ECF;&#x8FC7; k &#x6B21;&#x8FED;&#x4EE3;&#x540E; <img src="https://www.zhihu.com/equation?tex=%5Clim_%7Bk%5Crightarrow%2B%5Cinfty%7D%28%5Clambda_i%2F%5Clambda_1%29%5Ek%3D0" alt="&#x56FE;&#x7247;"> ( <img src="https://www.zhihu.com/equation?tex=i\neq+1" alt="i\neq 1"> )&#x3002;&#x56E0;&#x6B64;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=\lim_{k\to+%2B\infty}A^kx%3D\lambda_1^kx_1\nu_1\tag{12}" alt="&#x56FE;&#x7247;"></p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x7ECF;&#x8FC7; k &#x6B21;&#x8FED;&#x4EE3;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C06;&#x5F97;&#x5230;&#x77E9;&#x9635;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x7684;&#x7EBF;&#x6027;&#x653E;&#x7F29;&#xFF0C;&#x53EA;&#x8981;&#x628A;&#x8FD9;&#x4E2A;&#x5411;&#x91CF;&#x5F52;&#x4E00;&#x5316;&#xFF0C;&#x5C31;&#x5F97;&#x5230;&#x4E86;&#x8BE5;&#x77E9;&#x9635;&#x7684;&#x5355;&#x4F4D;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x8FDB;&#x800C;&#x53EF;&#x4EE5;&#x89E3;&#x51FA;&#x77E9;&#x9635;&#x7684;&#x4E3B;&#x7279;&#x5F81;&#x503C;&#x3002;</p>
+<p>&#x800C;&#x6211;&#x4EEC;&#x5728;&#x795E;&#x7ECF;&#x7F51;&#x7EDC;&#x4E2D;&#xFF0C;&#x60F3;&#x6C42;&#x7684;&#x662F;&#x6743;&#x91CD;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=W" alt="W"> &#x7684;&#x6700;&#x5927;&#x5947;&#x5F02;&#x503C;&#xFF0C;&#x6839;&#x636E;&#x4E0A;&#x9762;&#x51E0;&#x8282;&#x7684;&#x63A8;&#x5BFC;&#xFF0C;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x5947;&#x5F02;&#x503C;&#x6B63;&#x662F; <img src="https://www.zhihu.com/equation?tex=W^TW" alt="W^TW"> &#x6700;&#x5927;&#x7279;&#x5F81;&#x503C;&#x7684;&#x5F00;&#x65B9; <img src="https://www.zhihu.com/equation?tex=\sqrt{\lambda_1}" alt="&#x56FE;&#x7247;"> &#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x91C7;&#x7528; power iteration &#x7684;&#x65B9;&#x5F0F;&#x6C42;&#x89E3; <img src="https://www.zhihu.com/equation?tex=W^TW" alt="&#x56FE;&#x7247;"> &#x7684;&#x5355;&#x4F4D;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#xFF0C;&#x8FDB;&#x800C;&#x6C42;&#x51FA;&#x6700;&#x5927;&#x7279;&#x5F81;&#x503C; <img src="https://www.zhihu.com/equation?tex=\lambda_1" alt="&#x56FE;&#x7247;"> &#x3002;&#x8BBA;&#x6587;&#x4E2D;&#x7ED9;&#x51FA;&#x7684;&#x7B97;&#x6CD5;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=\tilde{v}%3A%3D+\frac{W^T\tilde{u}}{||W^T\tilde{u}||_2}\\+\tilde{u}%3A%3D\frac{W\tilde{v}}{||W\tilde{v}||_2}\tag{13}" alt="&#x56FE;&#x7247;"></p>
+<p>&#x5982;&#x679C;&#x5355;&#x7EAF;&#x770B;&#x5206;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x53D1;&#x73B0;&#x8FD9;&#x4E24;&#x6B65;&#x5408;&#x8D77;&#x6765;&#x5C31;&#x662F; <img src="https://www.zhihu.com/equation?tex=\tilde{v}%3DW^TW\tilde{v}" alt="&#x56FE;&#x7247;"> &#xFF0C;&#x53CD;&#x590D;&#x8FED;&#x4EE3; (13) &#x4E2D;&#x4E0A;&#x4E0B;&#x4E24;&#x4E2A;&#x5F0F;&#x5B50; &#xFF0C;&#x5373;&#x53EF;&#x5F97;&#x5230;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=W^TW" alt="&#x56FE;&#x7247;"> &#x7684;&#x5355;&#x4F4D;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\tilde{v}" alt="&#x56FE;&#x7247;"> &#x3002;&#x53EA;&#x4E0D;&#x8FC7; (13) &#x7684;&#x6BCF;&#x7B97;&#x201C;&#x534A;&#x201D;&#x6B65;&#x90FD;&#x5F52;&#x4E00;&#x5316;&#x4E00;&#x6B21;&#x3002;&#x5176;&#x5B9E;&#x8FD9;&#x79CD;&#x5F52;&#x4E00;&#x5316;&#x5E76;&#x4E0D;&#x5F71;&#x54CD;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\tilde{v}" alt="&#x56FE;&#x7247;"> &#x7684;&#x65B9;&#x5411;&#x6536;&#x655B;&#x5230;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x7684;&#x65B9;&#x5411;&#xFF0C;&#x800C;&#x53EA;&#x5F71;&#x54CD;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x524D;&#x9762;&#x7684;&#x7CFB;&#x6570;&#x3002;&#x800C;&#x6BCF;&#x6B65;&#x5F52;&#x4E00;&#x5316;&#x4E00;&#x6B21;&#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x6BCF;&#x6B65;&#x90FD;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5355;&#x4F4D;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF;&#x7684;&#x8FD1;&#x4F3C;&#x89E3;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x77E5;&#x9053; <img src="https://www.zhihu.com/equation?tex=W%5ETW" alt="&#x56FE;&#x7247;"> &#x7684;&#x5355;&#x4F4D;&#x4E3B;&#x7279;&#x5F81;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=%5Ctilde%7Bv%7D" alt="&#x56FE;&#x7247;"> &#x540E;&#xFF0C;&#x5982;&#x4F55;&#x6C42;&#x51FA;&#x6700;&#x5927;&#x7279;&#x5F81;&#x503C; <img src="https://www.zhihu.com/equation?tex=%5Clambda_1" alt="&#x56FE;&#x7247;"> &#x5462;&#xFF1F;</p>
+<p><img src="https://www.zhihu.com/equation?tex=\begin{align}+%26W^TW\tilde{v}%3D\lambda_1+v+%2C+||v||_2%3D1\\+%26\Rightarrow\tilde{v}^TW^TW\tilde{v}%3D\lambda_1v^Tv%3D\lambda_1+\\++%26\Rightarrow+\langle+W\tilde{v}%2C+W\tilde{v}\rangle%3D\lambda_1+\\+%26\Rightarrow+||W\tilde{v}||_2%3D\sqrt{\lambda_1}\tag{14}+\end{align}" alt="&#x56FE;&#x7247;"></p>
+<p>&#x800C;&#x5C06;&#x516C;&#x5F0F; (13) &#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x5F0F;&#x5B50;&#x4E24;&#x8FB9;&#x540C;&#x65F6;&#x5DE6;&#x4E58; <img src="https://www.zhihu.com/equation?tex=\tilde{u}^T" alt="&#x56FE;&#x7247;"> :</p>
+<p><img src="https://www.zhihu.com/equation?tex=\begin{align}+\tilde{u}^T\tilde{u}%26%3D\frac{\tilde{u}^TW\tilde{v}}{||W\tilde{v}||_2}\\+1%26%3D\frac{\tilde{u}^TW\tilde{v}}{\sqrt{\lambda_1}}\\+\sqrt{\lambda_1}%26%3D\tilde{u}^TW\tilde{v}\tag{15}+\end{align}+" alt="&#x56FE;&#x7247;"></p>
+<p>&#x6700;&#x7EC8;&#xFF0C;(15) &#x5373;&#x4E3A;&#x8BBA;&#x6587;&#x4E2D;&#x63D0;&#x51FA;&#x7684;&#x6743;&#x91CD;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=W" alt="W"> &#x7684; spectral norm &#x516C;&#x5F0F;&#x3002;</p>
+<p>&#x800C;&#x5728;&#x5177;&#x4F53;&#x7684;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x968F;&#x673A;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E2A;&#x566A;&#x58F0;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\tilde{u}_0" alt="&#x56FE;&#x7247;"> &#x4EE3;&#x5165;&#x516C;&#x5F0F; (13) &#x3002;&#x7531;&#x4E8E;&#x6BCF;&#x6B21;&#x66F4;&#x65B0;&#x53C2;&#x6570;&#x7684; step size &#x5F88;&#x5C0F;&#xFF0C;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=W" alt="&#x56FE;&#x7247;"> &#x7684;&#x53C2;&#x6570;&#x53D8;&#x5316;&#x90FD;&#x5F88;&#x5C0F;&#xFF0C;&#x77E9;&#x9635;&#x53EF;&#x4EE5;&#x957F;&#x65F6;&#x95F4;&#x7EF4;&#x6301;&#x4E0D;&#x53D8;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#x7684; step &#x548C;&#x6C42;&#x77E9;&#x9635;&#x6700;&#x5927;&#x5947;&#x5F02;&#x503C;&#x7684; step &#x878D;&#x5408;&#x5728;&#x4E00;&#x8D77;&#xFF0C;&#x5373;&#x6BCF;&#x66F4;&#x65B0;&#x4E00;&#x6B21;&#x6743;&#x91CD; <img src="https://www.zhihu.com/equation?tex=W" alt="&#x56FE;&#x7247;"> &#xFF0C;&#x66F4;&#x65B0;&#x4E00;&#x6B21; <img src="https://www.zhihu.com/equation?tex=\tilde{u}" alt="&#x56FE;&#x7247;"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\tilde{v}" alt="&#x56FE;&#x7247;">&#xFF0C;&#x5E76;&#x5C06;&#x77E9;&#x9635;&#x5F52;&#x4E00;&#x5316;&#x4E00;&#x6B21;&#xFF08;&#x9664;&#x4EE5;&#x516C;&#x5F0F; (15) &#x8FD1;&#x4F3C;&#x7B97;&#x51FA;&#x6765;&#x7684; spectral norm&#xFF09;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x4EE3;&#x7801;&#x89C1;&#xFF1A;</p>
+<p>christiancosgrove/pytorch-spectral-normalization-gangithub.com<img src="https://ws3.sinaimg.cn/large/006tNc79ly1g2sjxq34pkj303c03ca9v.jpg" alt="&#x56FE;&#x6807;"></p>
+<p>&#x7F16;&#x8F91;&#x4E8E; 2019-01-23</p>
+<p>&#x751F;&#x6210;&#x5BF9;&#x6297;&#x7F51;&#x7EDC;&#xFF08;GAN&#xFF09;</p>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x89C6;&#x89C9;</p>
+<h1 id="&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x77E9;&#x9635;">&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x77E9;&#x9635;</h1>
+<p>&#x3000;&#x3000;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x77E9;&#x9635;&#x662F;&#x8BA1;&#x7B97;&#x6570;&#x5B66;&#x4E2D;&#x5E94;&#x7528;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#x7684;&#x77E9;&#x9635;&#x7C7B;&#xFF0C;&#x5B83;&#x8F83;&#x591A;&#x51FA;&#x73B0;&#x4E8E;&#x7ECF;&#x6D4E;&#x4EF7;&#x503C;&#x6A21;&#x578B;&#x548C;&#x53CD;&#x7F51;&#x7EDC;&#x7CFB;&#x7EDF;&#x7684;&#x7CFB;&#x6570;&#x77E9;&#x9635;&#x53CA;&#x89E3;&#x67D0;&#x4E9B;&#x786E;&#x5B9A;&#x5FAE;&#x5206;&#x65B9;&#x7A0B;&#x7684;&#x6570;&#x503C;&#x89E3;&#x6CD5;&#x4E2D;&#xFF0C;&#x5728;&#x4FE1;&#x606F;&#x8BBA;&#x3001;&#x7CFB;&#x7EDF;&#x8BBA;&#x3001;&#x73B0;&#x4EE3;&#x7ECF;&#x6D4E;&#x5B66;&#x3001;&#x7F51;&#x7EDC;&#x3001;&#x7B97;&#x6CD5;&#x548C;&#x7A0B;&#x5E8F;&#x8BBE;&#x8BA1;&#x7B49;&#x4F17;&#x591A;&#x9886;&#x57DF;&#x90FD;&#x6709;&#x7740;&#x5341;&#x5206;&#x91CD;&#x8981;&#x7684;&#x5E94;&#x7528;&#x3002;&#x3000;&#x3000;&#x5B9A;&#x4E49;&#xFF1A;n&#x9636;&#x65B9;&#x9635;A&#xFF0C;&#x5982;&#x679C;&#x5176;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x5927;&#x4E8E;&#x540C;&#x884C;&#x5176;&#x4ED6;&#x5143;&#x7D20;&#x7EDD;&#x5BF9;&#x503C;&#x4E4B;&#x548C;&#xFF0C;&#x5219;&#x79F0;A&#x662F;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x7684;&#x3002;</p>
+<pre><code>&#x5982;&#x679C;A&#x7684;&#x6BCF;&#x4E2A;&#x5BF9;&#x89D2;&#x5143;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x90FD;&#x6BD4;&#x6240;&#x5728;&#x884C;&#x7684;&#x975E;&#x5BF9;&#x89D2;&#x5143;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x7684;&#x548C;&#x8981;&#x5927;&#xFF0C;&#x5373; |a_ii|&gt;sum{j!=i}|a_ij| &#x5BF9;&#x6240;&#x6709;&#x7684;i&#x6210;&#x7ACB;&#xFF0C;&#x90A3;&#x4E48;&#x79F0;A&#x662F;&#xFF08;&#x884C;&#xFF09;&#x4E25;&#x683C;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x9635;&#x3002; &#x5982;&#x679C;A&apos;&#x662F;&#x884C;&#x4E25;&#x683C;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x9635;&#xFF0C;&#x90A3;&#x4E48;&#x79F0;A&#x662F;&#x5217;&#x4E25;&#x683C;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x9635;&#x3002; &#x4E60;&#x60EF;&#x4E0A;&#x5982;&#x679C;&#x4E0D;&#x6307;&#x660E;&#x54EA;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x8BDD;&#x5C31;&#x8BA4;&#x4E3A;&#x662F;&#x884C;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x3002;
+
+&#x4E25;&#x683C;&#x5BF9;&#x89D2;&#x5360;&#x4F18;&#x77E9;&#x9635;&#x4E00;&#x5B9A;&#x6B63;&#x5B9A;&#x5417;&#xFF1F; &#x4E0D;&#x4E00;&#x5B9A;&#xFF0C;&#x6BD4;&#x5982; &#x8D1F;&#x4E09;&#x9636;&#x5355;&#x4F4D;&#x77E9;&#x9635;
+
+&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#x662F;&#x9AD8;&#x7B49;&#x4EE3;&#x6570;&#x4E2D;&#x4E00;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x5185;&#x5BB9;, &#x6240;&#x8C13;&#x5B9A;&#x578B;&#x5B9E; &#x5BF9;&#x79F0;&#x77E9;&#x9635;&#x662F;&#x6307;&#x6B63;&#x5B9A;&#x3001;&#x8D1F;&#x5B9A;&#x3001;&#x534A;&#x6B63;&#x5B9A;&#x548C;&#x534A;&#x8D1F;&#x5B9A;&#x77E9;&#x9635;, &#x6211;&#x4EEC;&#x9996;&#x5148;&#x56DE; &#x987E;&#x4E00;&#x4E0B;&#x672C;&#x6587;&#x5C06;&#x7528;&#x5230;&#x7684;&#x6709;&#x5173;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#x7684;&#x4E00;&#x4E9B;&#x7ED3;&#x8BBA;: &#x6027;&#x8D28;1: &#x4E00;&#x4E2A;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;A&#x6B63;&#x5B9A;&#x7684;&#x5145;&#x8981;&#x6761;&#x4EF6;&#x662F;&#x5B58;&#x5728;&#x53EF;&#x9006;&#x65B9; &#x9635;C, &#x4F7F;&#x5F97;A=C&#x2032;C&#x3002; &#x6027;&#x8D28;2: &#x4E00;&#x4E2A;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;A&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x5145;&#x8981;&#x6761;&#x4EF6;&#x662F;&#x5B83;&#x7684;&#x6240;&#x6709; &#x4E3B;&#x5B50;&#x5F0F;&#x90FD;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x96F6;&#x3002; &#x6027;&#x8D28;3: &#x4E00;&#x4E2A;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;A&#x8D1F;&#x5B9A;( &#x534A;&#x8D1F;&#x5B9A;) &#x7684;&#x5145;&#x8981;&#x6761;&#x4EF6;&#x662F;- A &#x4E3A;&#x6B63;&#x5B9A;( &#x534A;&#x6B63;&#x5B9A;) &#x3002; &#x6027;&#x8D28;4: n&#x7EF4;&#x6B27;&#x6C0F;&#x7A7A;&#x95F4;&#x4E2D;, &#x4E00;&#x7EC4;&#x57FA;&#x3B5;1,&#x3B5;2, &#x22EF;,&#x3B5;n &#x7684;&#x5EA6;&#x91CF;&#x77E9;&#x9635;A= (aij), &#x5176;&#x4E2D;aij=(&#x3B5;i,&#x3B5;j)&#x4E3A;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;, &#x800C;&#x4E14;&#x77E9;&#x9635;A&#x662F;&#x6B63;&#x5B9A;&#x7684;&#x3002; &#x6027;&#x8D28;5: n&#x7EF4;&#x6B27;&#x6C0F;&#x7A7A;&#x95F4;&#x4E2D;, &#x4E24;&#x7EC4;&#x57FA;&#x3B5;1,&#x3B5;2, &#x22EF;,&#x3B5;n &#x548C;&#x3B7;1 ,&#x3B7;2, &#x22EF;,&#x3B7;n &#x7684;&#x5EA6;&#x91CF;&#x77E9;&#x9635;&#x5206;&#x522B;&#x4E3A;A&#x548C;B, &#x90A3;&#x4E48;A&#x548C;B&#x662F;&#x5408;&#x540C;&#x7684;, &#x5373;&#x82E5;(&#x3B7;1,&#x3B7;2 , &#x22EF;,&#x3B7;n ) =(&#x3B5;1,&#x3B5;2, &#x22EF;,&#x3B5;n)C, &#x5219;&#x6709;B=C&#x2032;AC&#x3002; &#x672C;&#x6587;&#x8981;&#x8BC1;&#x660E;&#x7684;&#x4E3B;&#x8981;&#x5B9A;&#x7406;&#x4E3A;: &#x5B9A;&#x7406;1: A=(aij)&#x4E3A;n&#x9636;&#x6B63;&#x5B9A;&#x77E9;&#x9635;, &#x5219;&#x6709;detA&#x2264; n k=1 &#x220F;akk
+&#x5173;&#x4E8E;&#x5B9A;&#x578B;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x7684;&#x4E00;&#x4E2A;&#x7ED3;&#x8BBA;( &#x957F;&#x6C5F;&#x5E08;&#x8303;&#x5B66;&#x9662;&#x6570;&#x5B66;&#x7CFB;, &#x91CD;&#x5E86;408100)&#x6768;&#x4E16;&#x663E;  
+&#x5BF9;&#x79F0;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x5FC5;&#x987B;&#x76F8;&#x540C;&#x5417;&#xFF1F; &#x4E0D;&#x5FC5;&#x987B;&#xFF0C;&#x4F8B;&#x5982;&#x6240;&#x6709;&#x6EE1;&#x8DB3;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x6B63;&#x6570;&#x7684;&#x5BF9;&#x89D2;&#x77E9;&#x9635;&#x90FD;&#x662F;&#x5BF9;&#x79F0;&#x6B63;&#x5B9A;&#x7684;&#x3002;
+
+&#x4E3A;&#x4EC0;&#x4E48;hermite&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x6A21;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;&#x4E00;&#x5B9A;&#x4F4D;&#x4E8E;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;?
+&#x5229;&#x7528;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x4EFB;&#x4F55;&#x4E3B;&#x5B50;&#x9635;&#x6B63;&#x5B9A;&#x3002; &#x5982;&#x679C;&#x6A21;&#x6700;&#x5927;&#x7684;&#x5143;&#x7D20;A(i,j)&#x4E0D;&#x5728;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#xFF0C;&#x90A3;&#x4E48;&#x4E8C;&#x9636;&#x4E3B;&#x5B50;&#x9635; A(i,i) A(i,j) A(j,i) A(j,j) &#x4E0D;&#x662F;&#x6B63;&#x5B9A;&#x7684;&#x3002;
+&#x5BF9;&#x79F0;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x6700;&#x5927;&#x5143;&#x4E3A;&#x4EC0;&#x4E48;&#x662F;&#x5BF9;&#x89D2;&#x5143;&#xFF1F;
+&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x6240;&#x6709;&#x4E3B;&#x5B50;&#x5F0F;&#x5927;&#x4E8E;0 &#x5219; aij=aji &lt;= max {aii ajj} &#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5BF9;&#x6240;&#x6709;aij&#xFF0C;&#x5728;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x90FD;&#x6709;&#x6BD4;&#x4ED6;&#x5927;&#x7684; &#x6240;&#x4EE5;&#x6BD5;&#x5728;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x53D6;&#x5F97;&#x6700;&#x5927;&#x503C;
+
+
+
+&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x5747;&#x4E3A;0&#x7684;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#xFF0C;&#x5B83;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x5417;&#xFF1F;
+&#x534A;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x662F;&#x975E;&#x8D1F;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x96F6;&#x77E9;&#x9635;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x77E9;&#x9635;&#x3002;&#x8BF7;&#x95EE;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;0&#x4E00;&#x5B9A;&#x80FD;&#x63A8;&#x51FA;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x5417;&#xFF1F;
+&#x534A;&#x6B63;&#x5B9A;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x6240;&#x6709;&#x4E3B;&#x5B50;&#x5F0F;&gt;=0 &#xFF0C;&#x4E3B;&#x5BF9;&#x89D2;&#x5143;&#x662F;&#x4E00;&#x9636;&#x4E3B;&#x5B50;&#x5F0F;&gt;=0&#xFF0C;&#x4F46;&#x5176;&#x4ED6;&#x4E3B;&#x5B50;&#x5F0F;&#x4E0D;&#x4E00;&#x5B9A;&gt;=0&#xFF0C;&#x6545;&#x4E0D;&#x4E00;&#x5B9A;&#x3002;
+&#x6709;&#xFF0C;&#x96F6;&#x77E9;&#x9635;&#x5C31;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x3002;
+
+
+&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x5BF9;&#x89D2;&#x7EBF;&#x7684;&#x5404;&#x5143;&#x7D20;&#x90FD;&#x5927;&#x4E8E;0&#x5417;&#xFF1F;
+&#x76F4;&#x63A5;&#x7528;&#x6B63;&#x5B9A;&#x7684;&#x5B9A;&#x4E49;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002; &#x53D6;x=(0,0,...,1,...,0)&apos;&#xFF0C;&#x5373;&#x7B2C;i&#x4E2A;&#x5143;&#x7D20;&#x4E3A;1&#xFF0C;&#x5176;&#x4F59;&#x4E3A;0&#x7684;&#x5217;&#x5411;&#x91CF;&#xFF0C;&#x90A3;&#x4E48; x&apos;Ax=a_{ii}&gt;0&#x3002;
+&#x90FD;&#x662F;&#x975E;&#x8D1F;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x6709;0&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x80FD;&#x5168;&#x90E8;&#x662F;0&#x3002;
+&#x5E94;&#x8BE5;&#x662F;&#x6B63;&#x786E;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x6570;&#x5B66;&#x5F52;&#x7EB3;&#x6CD5;&#x6765;&#x8BC1;&#x660E;&#x8FD9;&#x4E2A;&#x7ED3;&#x8BBA;&#x3002; &#x9996;&#x5148;&#xFF0C;n&#xFF1D;1&#x65F6;&#xFF0C;&#x662F;&#x663E;&#x7136;&#x6210;&#x7ACB;&#x7684;&#x3002; &#x5047;&#x8BBE;&#xFF0C;n&#xFF1D;k&#x65F6;&#x6210;&#x7ACB;&#x3002; &#x5219;&#xFF0C;&#x5F53;n&#xFF1D;k+1&#x65F6;&#x3002;&#x5219;&#x8003;&#x8651;&#x5176;&#x4E00;&#x4E2A;n&#x9636;&#x4E3B;&#x5B50;&#x5F0F;&#xFF0C;&#x5176;&#x4E5F;&#x662F;&#x6B63;&#x5B9A;&#x7684;&#x3002;&#x5176;&#x5BF9;&#x89D2;&#x5143;&#x7684;&#x5143;&#x7D20;&#x4E4B;&#x548C;&#x5168;&#x90FD;&#x5927;&#x4E8E;0&#x3002;&#x518D;&#x8003;&#x5BDF;&#x53E6;&#x4E00;&#x4E2A;n&#x9636;&#x4E3B;&#x5B50;&#x5F0F;&#xFF0C;&#x5219;&#x5176;&#x5BF9;&#x89D2;&#x5143;&#x7684;&#x5143;&#x7D20;&#x4E5F;&#x5168;&#x5927;&#x4E8E;&#x96F6;&#x3002;&#x7EFC;&#x4E0A;&#x77E5;&#xFF0C;&#x5176;&#x6240;&#x6709;&#x7684;&#x5BF9;&#x89D2;&#x5143;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5927;&#x4E8E;0&#x3002; &#x7EFC;&#x4E0A;&#x77E5;&#xFF0C;&#x547D;&#x9898;&#x5F97;&#x8BC1;&#x3002;
+
+
+&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x5BF9;&#x89D2;&#x7EBF;&#x7684;&#x5143;&#x7D20;aii&#x90FD;&#x5927;&#x4E8E;0&#x5417;&#xFF1F;
+&#x53D6;x&#x4E3A;&#x5355;&#x4F4D;&#x9635;&#x7684;&#x7B2C;i&#x5217;&#xFF0C;&#x7531;x&apos;Ax&gt;0&#x5373;&#x5F97;&#x3002;
+
+&#x7EAF;&#x91CF;&#x9635;&#x5C31;&#x662F;A=aE &#x5176;&#x4E2D;a&#x4E3A;&#x5E38;&#x6570;&#xFF0C;E&#x4E3A;&#x5355;&#x4F4D;&#x77E9;&#x9635; &#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x6240;&#x6709;&#x7684;&#x7279;&#x5F81;&#x503C;&#x90FD;&#x662F;&#x5927;&#x4E8E;&#x96F6;&#x7684;&#xFF0C; &#x800C;&#x77E9;&#x9635;&#x7684;&#x8FF9;(&#x5373;&#xFF1A;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E4B;&#x548C;)=&#x6240;&#x6709;&#x7279;&#x5F81;&#x503C;&#x7684;&#x548C;&gt;0
+
+
+&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x5747;&#x4E3A;0&#x7684;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#xFF0C;&#x5B83;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x5417;&#xFF1F;
+&#x534A;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x662F;&#x975E;&#x8D1F;&#x7684;&#xFF0C;&#x800C;&#x4E14;&#x96F6;&#x77E9;&#x9635;&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x77E9;&#x9635;&#x3002;&#x8BF7;&#x95EE;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;0&#x4E00;&#x5B9A;&#x80FD;&#x63A8;&#x51FA;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x5417;&#xFF1F;
+&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x4E2D;&#x4EC0;&#x4E48;&#x53EB;&#x7EAF;&#x91CF;&#xFF1F;&#x4E3A;&#x4EC0;&#x4E48;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x5143;&#x7D20;&#x90FD;&#x5927;&#x4E8E;0&#xFF1F;
+&#x534A;&#x6B63;&#x5B9A;&#xFF0C;&#x7B49;&#x4EF7;&#x4E8E;&#x6240;&#x6709;&#x4E3B;&#x5B50;&#x5F0F;&gt;=0 &#xFF0C;&#x4E3B;&#x5BF9;&#x89D2;&#x5143;&#x662F;&#x4E00;&#x9636;&#x4E3B;&#x5B50;&#x5F0F;&gt;=0&#xFF0C;&#x4F46;&#x5176;&#x4ED6;&#x4E3B;&#x5B50;&#x5F0F;&#x4E0D;&#x4E00;&#x5B9A;&gt;=0&#xFF0C;&#x6545;&#x4E0D;&#x4E00;&#x5B9A;&#x3002;
+&#x6709;&#xFF0C;&#x96F6;&#x77E9;&#x9635;&#x5C31;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x3002;
+
+&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;0&#x3001;&#x975E;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;0&#x7684;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#xFF0C;&#x5B83;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x5417;&#xFF1F;
+&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x4E8C;&#x9636;&#x77E9;&#x9635;&#xFF0C;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;0&#x3001;&#x975E;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;1&#x3002;&#x800C;&#x5B83;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x4E3A;-1&#x3002;
+
+
+
+
+
+&#x8BF7;&#x95EE;&#xFF0C;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;0&#x3001;&#x975E;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;0&#x7684;&#x5BF9;&#x79F0;&#x77E9;&#x9635;&#xFF0C;&#x5B83;&#x662F;&#x534A;&#x6B63;&#x5B9A;&#x7684;&#x5417;&#xFF1F;
+&#x4E0D;&#x4E00;&#x5B9A;&#x662F;&#xFF0C;&#x6700;&#x7B80;&#x5355;&#x7684;&#xFF0C;&#x4E8C;&#x9636;&#x77E9;&#x9635;&#xFF0C;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;0&#x3001;&#x975E;&#x5BF9;&#x89D2;&#x7EBF;&#x5143;&#x7D20;&#x4E3A;1&#x3002;&#x800C;&#x5B83;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x4E3A;-1
+
+
+
+&#x4E3A;&#x4EC0;&#x4E48;&#x8BF4;&#x534A;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x884C;&#x5217;&#x5F0F;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;0?
+&#x56E0;&#x4E3A;&#x534A;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x7684;&#x7279;&#x5F81;&#x503C;&gt;=0 &#x7279;&#x522B;&#x9644;&#x52A0;&#x5B9A;&#x4E49;&#xFF0C;&#x534A;&#x6B63;&#x5B9A;&#x77E9;&#x9635;&#x4E3A;&#x5BF9;&#x79F0;&#x77E9;&#x9635; &#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5BF9;&#x89D2;&#x5316;(&#x5B9A;&#x7406;) A=P*B*P^-1 |A|=|B|&gt;=0
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Isolating_Sources_of_Disentanglement_in_VAEs.html" class="navigation navigation-prev " aria-label="Previous page: Isolating Sources of Disentanglement in VAEs">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Unbalanced_sample_loss.html" class="navigation navigation-next " aria-label="Next page: 不均衡样本loss">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Spectral Normalization 谱归一化","level":"1.6.8","depth":2,"next":{"title":"不均衡样本loss","level":"1.6.9","depth":2,"path":"paper/Unbalanced_sample_loss.md","ref":"paper/Unbalanced_sample_loss.md","articles":[]},"previous":{"title":"Isolating Sources of Disentanglement in VAEs","level":"1.6.7","depth":2,"path":"paper/Isolating_Sources_of_Disentanglement_in_VAEs.md","ref":"paper/Isolating_Sources_of_Disentanglement_in_VAEs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"paper/Spectral_Normalization.md","mtime":"2019-10-25T10:04:53.055Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

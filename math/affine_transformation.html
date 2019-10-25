@@ -1,0 +1,1037 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>仿射变换 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="graph.html" />
+    
+    
+    <link rel="prev" href="distribution_show.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/0.html">
+            
+                <a href="../introduction/0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../introduction/AI_system.html">
+            
+                <a href="../introduction/AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../code_technique/">
+            
+                <a href="../code_technique/">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../code_technique/python/python_technique.html">
+            
+                <a href="../code_technique/python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../code_technique/python/sort.html">
+            
+                <a href="../code_technique/python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../code_technique/python/opencv.html">
+            
+                <a href="../code_technique/python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../code_technique/pytorch/pytorch1.html">
+            
+                <a href="../code_technique/pytorch/pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../code_technique/pytorch/pytorch2.html">
+            
+                <a href="../code_technique/pytorch/pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../code_technique/pytorch/pytorch_train.html">
+            
+                <a href="../code_technique/pytorch/pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../code_technique/pytorch/pytorch_.html">
+            
+                <a href="../code_technique/pytorch/pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../code_technique/pytorch/pytorch_vision.html">
+            
+                <a href="../code_technique/pytorch/pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                <a href="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../code_technique/pytorch/SPP.html">
+            
+                <a href="../code_technique/pytorch/SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux/linux_technique.html">
+            
+                <a href="../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux/linux_GPU.html">
+            
+                <a href="../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../paper/">
+            
+                <a href="../paper/">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../paper/paper_write.html">
+            
+                <a href="../paper/paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../paper/Image_to_Image.html">
+            
+                <a href="../paper/Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../paper/GNN.html">
+            
+                <a href="../paper/GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../paper/GMMN.html">
+            
+                <a href="../paper/GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../paper/Deformable_Kernels.html">
+            
+                <a href="../paper/Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../paper/Spectral_Normalization.html">
+            
+                <a href="../paper/Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../paper/Unbalanced_sample_loss.html">
+            
+                <a href="../paper/Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../paper/NN.html">
+            
+                <a href="../paper/NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../super_resolution/">
+            
+                <a href="../super_resolution/">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../super_resolution/SR_summarize.html">
+            
+                <a href="../super_resolution/SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../super_resolution/SR.html">
+            
+                <a href="../super_resolution/SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../super_resolution/code_dataset.html">
+            
+                <a href="../super_resolution/code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../super_resolution/baseline.html">
+            
+                <a href="../super_resolution/baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../super_resolution/loss.html">
+            
+                <a href="../super_resolution/loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../data/">
+            
+                <a href="../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../data/picture.html">
+            
+                <a href="../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../data/picture_enhance.html">
+            
+                <a href="../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../data/data.html">
+            
+                <a href="../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../data/imaaug.html">
+            
+                <a href="../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="matrix.html">
+            
+                <a href="matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="distribution_show.html">
+            
+                <a href="distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.2.3" data-path="affine_transformation.html">
+            
+                <a href="affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="graph.html">
+            
+                <a href="graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../other/discriminator_train.html">
+            
+                <a href="../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../other/FLOPS.html">
+            
+                <a href="../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >仿射变换</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6587;&#x7AE0;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>\1. &#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF08;affine transformation&#xFF09;</p>
+<p>\2. Jacobian &#x77E9;&#x9635;&#x4E0E;&#x884C;&#x5217;&#x5F0F;</p>
+<ul>
+<li>2.1 Jacobian &#x77E9;&#x9635;</li>
+<li>2.2 Jacobian &#x884C;&#x5217;&#x5F0F;</li>
+<li>2.2.1 &#x7EBF;&#x6027;&#x53D8;&#x6362;&#x5C06;&#x9762;&#x79EF;&#x4F38;&#x7F29;</li>
+<li>2.2.2 Jacobian &#x884C;&#x5217;&#x5F0F;&#x610F;&#x4E49;</li>
+<li>2.2.3 Jacobian &#x884C;&#x5217;&#x5F0F;&#x7528;&#x9014;</li>
+</ul>
+<p>\3. Jacobian &#x4E0E; Hessian</p>
+<hr>
+<h2 id="1-&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF08;affine-transformation&#xFF09;"><strong>1. &#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF08;affine transformation&#xFF09;</strong></h2>
+<p>&#x8BBE; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x4E3A;&#x4E00; <img src="https://www.zhihu.com/equation?tex=n\times+n" alt="n\times n"> &#x9636;&#x5B9E;&#x77E9;&#x9635;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=\mathbf{b}" alt="\mathbf{b}"> &#x662F; <img src="https://www.zhihu.com/equation?tex=n" alt="n"> &#x7EF4;&#x5411;&#x91CF;&#xFF0C;&#x5B9A;&#x4E49;&#x4E8E;&#x51E0;&#x4F55;&#x7A7A;&#x95F4; <img src="https://www.zhihu.com/equation?tex=\mathbb{R}^{n}" alt="\mathbb{R}^{n}"> &#x7684;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x5177;&#x6709;&#x4E0B;&#x5217;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DA%5Cmathbf%7Bx%7D%2B%5Cmathbf%7Bb%7D%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})%3DA\mathbf{x}%2B\mathbf{b}\\)=A\mathbf{x}+\mathbf{b}\\"></p>
+<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x7531;&#x4E00;&#x7EBF;&#x6027;&#x53D8;&#x6362;&#x52A0;&#x4E0A;&#x4E00;&#x5E73;&#x79FB;&#x91CF;&#x6784;&#x6210;&#x3002;&#x56E0;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7B0%7D%29%3D%5Cmathbf%7Bb%7D" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{0})%3D\mathbf{b})=\mathbf{b}"> &#x3002;&#x9664;&#x975E;&#x5E73;&#x79FB;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\mathbf{b}" alt="\mathbf{b}"> &#x4E3A;&#x96F6;&#xFF0C;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x624D;&#x662F;&#x7EBF;&#x6027;&#x53D8;&#x6362;&#x3002;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x6709;&#x4E24;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x6027;&#x8D28;&#xFF1A;&#x5171;&#x7EBF;(collinearity)&#x4E0D;&#x53D8;&#x6027;&#x548C;&#x6BD4;&#x4F8B;&#x4E0D;&#x53D8;&#x6027;&#xFF0C;&#x610F;&#x601D;&#x662F; <img src="https://www.zhihu.com/equation?tex=\mathbb{R}^{n}" alt="\mathbb{R}^{n}"> &#x7684;&#x4EFB;&#x4E00;&#x76F4;&#x7EBF;&#x7ECF;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x7684;&#x50CF;(image)&#x4ECD;&#x662F;&#x4E00;&#x76F4;&#x7EBF;&#xFF0C;&#x800C;&#x4E14;&#x76F4;&#x7EBF;&#x4E0A;&#x5404;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x6BD4;&#x4F8B;&#x7EF4;&#x6301;&#x4E0D;&#x53D8;&#x3002;</p>
+<p><em>&#x8BC1;&#x660E;&#xFF1A;</em></p>
+<p>&#x8BBE; <img src="https://www.zhihu.com/equation?tex=L" alt="L"> &#x4E3A; <img src="https://www.zhihu.com/equation?tex=\mathbb{R}^{n}" alt="\mathbb{R}^{n}"> &#x4E2D;&#x4EFB;&#x4E00;&#x76F4;&#x7EBF;&#xFF0C;&#x5176;&#x8868;&#x8FBE;&#x5F0F;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=L%3D\{t\mathbf{v}%2B\mathbf{u}|t\in+\mathbb{R}\}" alt="L=\{t\mathbf{v}+\mathbf{u}|t\in \mathbb{R}\}"> &#xFF0C;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\mathbf{v}\neq+\mathbf{0}" alt="\mathbf{v}\neq \mathbf{0}"> &#x4EE3;&#x8868;&#x76F4;&#x7EBF;&#x6307;&#x5411;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=\mathbf{u}" alt="\mathbf{u}">&#x662F;&#x76F4;&#x7EBF;&#x4E0A;&#x4E00;&#x70B9;&#x3002;&#x4EE4; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}_1%2C\mathbf{p}_2%2C\mathbf{p}_3" alt="\mathbf{p}_1,\mathbf{p}_2,\mathbf{p}_3"> &#x4E3A;&#x76F4;&#x7EBF; <img src="https://www.zhihu.com/equation?tex=L" alt="L"> &#x4E0A;&#x7684;&#x4E09;&#x4E2A;&#x76F8;&#x5F02;&#x70B9;&#xFF0C;&#x4E5F;&#x5C31;&#x662F; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}_i%3Dt_i\mathbf{v}%2B\mathbf{u}%2Ci%3D1%2C2%2C3" alt="\mathbf{p}_i=t_i\mathbf{v}+\mathbf{u},i=1,2,3"> &#xFF0C;&#x6B64;&#x4E09;&#x70B9;&#x7ECF;&#x4EFF;&#x5C04;&#x53D8;&#x6362; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DA%5Cmathbf%7Bx%7D%2B%5Cmathbf%7Bb%7D" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})%3DA\mathbf{x}%2B\mathbf{b})=A\mathbf{x}+\mathbf{b}"> &#x540E;&#x7684;&#x65B0;&#x4F4D;&#x7F6E;&#x5206;&#x522B;&#x4E3A;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Beqnarray%7D%5Cmathbf%7Bp%7D%27_i%26%3D%26T%28%5Cmathbf%7Bp%7D_i%29%5C%5C+%26%3D%26A%28t_i+%5Cmathbf%7Bv%7D%2B%5Cmathbf%7Bu%7D%29%2B%5Cmathbf%7Bb%7D%5C%5C+%26%3D%26t_i+A%5Cmathbf%7Bv%7D%2BA%5Cmathbf%7Bu%7D%2B%5Cmathbf%7Bb%7D%2Ci%3D1%2C2%2C3%5Cend%7Beqnarray%7D%5C%5C" alt="\begin{eqnarray}\mathbf{p}&apos;_i&amp;=&amp;T(https://www.zhihu.com/equation?tex=\begin{eqnarray}\mathbf{p}&apos;_i%26%3D%26T(\mathbf{p}_i)\\+%26%3D%26A(t_i+\mathbf{v}%2B\mathbf{u})%2B\mathbf{b}\\+%26%3D%26t_i+A\mathbf{v}%2BA\mathbf{u}%2B\mathbf{b}%2Ci%3D1%2C2%2C3\end{eqnarray}\\)\\ &amp;=&amp;A(t_i \mathbf{v}+\mathbf{u})+\mathbf{b}\\ &amp;=&amp;t_i A\mathbf{v}+A\mathbf{u}+\mathbf{b},i=1,2,3\end{eqnarray}\\"></p>
+<p>&#x4EE4; <img src="https://www.zhihu.com/equation?tex=\mathbf{v}&apos;%3DA\mathbf{v}%2C\mathbf{u}&apos;%3DA\mathbf{u}%2B\mathbf{b}" alt="\mathbf{v}&apos;=A\mathbf{v},\mathbf{u}&apos;=A\mathbf{u}+\mathbf{b}"> &#xFF0C;&#x65B0;&#x7684;&#x4F4D;&#x7F6E;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x6210; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}&apos;_i%3Dt_i\mathbf{v}&apos;%2B\mathbf{u}&apos;" alt="\mathbf{p}&apos;_i=t_i\mathbf{v}&apos;+\mathbf{u}&apos;"> &#xFF0C;&#x6240;&#x4EE5;&#x4E09;&#x4E2A;&#x70B9;&#x7ECF;&#x8FC7;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x540E;&#x4ECD;&#x5728;&#x540C;&#x4E00;&#x6761;&#x76F4;&#x7EBF; <img src="https://www.zhihu.com/equation?tex=L&apos;%3D\{t\mathbf{v}&apos;%2B\mathbf{u}&apos;|t\in+\mathbb{R}\}" alt="L&apos;=\{t\mathbf{v}&apos;+\mathbf{u}&apos;|t\in \mathbb{R}\}"> &#x3002;&#x4E0B;&#x9762;&#x8BA1;&#x7B97;&#x4E09;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x8DDD;&#x79BB;&#x6BD4;&#x4F8B;&#xFF1A;
+<span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mrow><mo fence="true">&#x2225;</mo><msubsup><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msubsup><mo>&#x2212;</mo><msubsup><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>1</mn></mrow><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msubsup><mo fence="true">&#x2225;</mo></mrow></mrow><mrow><mrow><mo fence="true">&#x2225;</mo><msubsup><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>3</mn></mrow><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msubsup><mo>&#x2212;</mo><msubsup><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>2</mn></mrow><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msubsup><mo fence="true">&#x2225;</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mo fence="true">&#x2225;</mo><mrow><mo fence="true">(</mo><msub><mi>t</mi><mrow><mn>2</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>t</mi><mrow><mn>1</mn></mrow></msub><mo fence="true">)</mo></mrow><msup><mrow><mi mathvariant="bold">v</mi></mrow><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msup><mo fence="true">&#x2225;</mo></mrow></mrow><mrow><mrow><mo fence="true">&#x2225;</mo><mrow><mo fence="true">(</mo><msub><mi>t</mi><mrow><mn>3</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>t</mi><mrow><mn>2</mn></mrow></msub><mo fence="true">)</mo></mrow><msup><mrow><mi mathvariant="bold">v</mi></mrow><mrow><mi mathvariant="normal">&#x2032;</mi></mrow></msup><mo fence="true">&#x2225;</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mo fence="true">&#x2225;</mo><mrow><mo fence="true">(</mo><msub><mi>t</mi><mrow><mn>2</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>t</mi><mrow><mn>1</mn></mrow></msub><mo fence="true">)</mo></mrow><mrow><mi mathvariant="bold">v</mi></mrow><mo fence="true">&#x2225;</mo></mrow></mrow><mrow><mrow><mo fence="true">&#x2225;</mo><mrow><mo fence="true">(</mo><msub><mi>t</mi><mrow><mn>3</mn></mrow></msub><mo>&#x2212;</mo><msub><mi>t</mi><mrow><mn>2</mn></mrow></msub><mo fence="true">)</mo></mrow><mrow><mi mathvariant="bold">v</mi></mrow><mo fence="true">&#x2225;</mo></mrow></mrow></mfrac><mo>=</mo><mfrac><mrow><mrow><mo fence="true">&#x2225;</mo><msub><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>2</mn></mrow></msub><mo>&#x2212;</mo><msub><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>1</mn></mrow></msub><mo fence="true">&#x2225;</mo></mrow></mrow><mrow><mrow><mo fence="true">&#x2225;</mo><msub><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>3</mn></mrow></msub><mo>&#x2212;</mo><msub><mrow><mi mathvariant="bold">p</mi></mrow><mrow><mn>2</mn></mrow></msub><mo fence="true">&#x2225;</mo></mrow></mrow></mfrac></mrow><annotation encoding="application/x-tex">
+\frac{\left\|\mathbf{p}_{2}^{\prime}-\mathbf{p}_{1}^{\prime}\right\|}{\left\|\mathbf{p}_{3}^{\prime}-\mathbf{p}_{2}^{\prime}\right\|}=\frac{\left\|\left(t_{2}-t_{1}\right) \mathbf{v}^{\prime}\right\|}{\left\|\left(t_{3}-t_{2}\right) \mathbf{v}^{\prime}\right\|}=\frac{\left\|\left(t_{2}-t_{1}\right) \mathbf{v}\right\|}{\left\|\left(t_{3}-t_{2}\right) \mathbf{v}\right\|}=\frac{\left\|\mathbf{p}_{2}-\mathbf{p}_{1}\right\|}{\left\|\mathbf{p}_{3}-\mathbf{p}_{2}\right\|}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.428892em;"></span><span class="strut bottom" style="height:2.3811999999999998em;vertical-align:-0.9523079999999999em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.6859999999999999em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="minner textstyle cramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="mord"><span class="mord textstyle cramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.26630799999999993em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span></span><span style="top:-0.34480000000000005em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle cramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.26630799999999993em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.34480000000000005em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.24810799999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.24810799999999997em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="minner textstyle cramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="minner textstyle cramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="mord"><span class="mord textstyle cramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.289em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span style="top:-0.2300000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">&#x2032;</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="minner textstyle cramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="minner textstyle cramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="mord textstyle cramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span style="top:-0.2300000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit">t</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="mord textstyle uncramped"><span class="mord mathbf" style="margin-right:0.01597em;">v</span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="minner textstyle cramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="mord"><span class="mord textstyle cramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">3</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle cramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span style="top:-0.2300000000000001em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord textstyle uncramped"><span class="mord mathbf">p</span></span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2225;</span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:1em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span></span></span></span></span>
+&#x8BC1;&#x6BD5;&#x3002;</p>
+<hr>
+<h2 id="2-jacobian-&#x77E9;&#x9635;&#x4E0E;&#x884C;&#x5217;&#x5F0F;"><strong>2. Jacobian &#x77E9;&#x9635;&#x4E0E;&#x884C;&#x5217;&#x5F0F;</strong></h2>
+<p>&#x5047;&#x8BBE; <img src="https://www.zhihu.com/equation?tex=F%3A\mathbb{R}^{n}\rightarrow+\mathbb{R}^{m}" alt="F:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}"> &#x662F;&#x8FD9;&#x6837;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5BF9;&#x4E8E; <img src="https://www.zhihu.com/equation?tex=n" alt="n"> &#x7EF4;&#x5B9E;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=%5Cmathbf%7Bx%7D%3D%28x_1%2Cx_2%2C%5Ccdots%2Cx_n%29%5E%7BT%7D%EF%BC%8CF%28%5Cmathbf%7Bx%7D%29" alt="\mathbf{x}=(https://www.zhihu.com/equation?tex=\mathbf{x}%3D(x_1%2Cx_2%2C\cdots%2Cx_n)^{T}&#xFF0C;F(\mathbf{x}))^{T}&#xFF0C;F(\mathbf{x})"> &#x5177;&#x6709;&#x4E0B;&#x5217;&#x5F62;&#x5F0F;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=F%28%5Cmathbf%7Bx%7D%29%3D%5Cbegin%7Bbmatrix%7D+f_1%28x_1%2C%5Ccdots%2Cx_n%29%5C%5C+%5Cvdots+%5C%5C+f_m%28x_1%2C%5Ccdots%2Cx_n%29+%5Cend%7Bbmatrix%7D%5C%5C" alt="F(https://www.zhihu.com/equation?tex=F(\mathbf{x})%3D\begin{bmatrix}+f_1(x_1%2C\cdots%2Cx_n)\\+\vdots+\\+f_m(x_1%2C\cdots%2Cx_n)+\end{bmatrix}\\)=\begin{bmatrix} f_1(x_1,\cdots,x_n)\\ \vdots \\ f_m(x_1,\cdots,x_n) \end{bmatrix}\\"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=f_j%3AD\rightarrow\mathbb{R}%2CD\subseteq\mathbb{R}^n" alt="f_j:D\rightarrow\mathbb{R},D\subseteq\mathbb{R}^n"> &#x662F; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x7684;&#x5B9A;&#x4E49;&#x57DF;&#x3002;&#x5982;&#x679C;&#x5411;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x7684;&#x6570;&#x5B66;&#x5F62;&#x5F0F;&#x76F8;&#x5F53;&#x7684;&#x590D;&#x6742;&#xFF0C;&#x4E00;&#x822C;&#x53EF;&#x4EE5;&#x7528;&#x7EBF;&#x6027;&#x5316;&#x8FDB;&#x884C;&#x7B80;&#x5316;&#x3002;&#x5BF9;&#x4E8E;&#x5355;&#x53D8;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=f%28x%29" alt="f(https://www.zhihu.com/equation?tex=f(x))"> &#xFF0C;&#x5728; <img src="https://www.zhihu.com/equation?tex=x%3Dp" alt="x=p"> &#x9644;&#x8FD1;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7528;&#x76F4;&#x7EBF; <img src="https://www.zhihu.com/equation?tex=y%3Dax%2Bb" alt="y=ax+b"> &#xFF0C;&#x8FD1;&#x4F3C; <img src="https://www.zhihu.com/equation?tex=f%28x%29" alt="f(https://www.zhihu.com/equation?tex=f(x))"> &#x3002;&#x63A8;&#x7406;&#x81F3;&#x591A;&#x53D8;&#x91CF;&#xFF0C;&#x4EE4; <img src="https://www.zhihu.com/equation?tex=T%3A\mathbb{R}^n\rightarrow+\mathbb{R}^m" alt="T:\mathbb{R}^n\rightarrow \mathbb{R}^m"> &#x4E3A;&#x4E00;&#x4E2A;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#xFF0C;&#x8868;&#x793A;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DA%5Cmathbf%7Bx%7D%2B%5Cmathbf%7Bb%7D%5C%5C" alt="T(\mathbf{x})=A\mathbf{x}+\mathbf{b}\\"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x4E3A;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=m\times+n" alt="m\times n"> &#x9636;&#x5B9E;&#x77E9;&#x9635;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=\mathbf{b}\in\mathbb{R}^m" alt="\mathbf{b}\in\mathbb{R}^m"> &#x3002;&#x4E0B;&#x9762;&#x89E3;&#x91CA;&#x5982;&#x4F55;&#x4EE5;&#x4EFF;&#x5C04;&#x53D8;&#x5316; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#x8FD1;&#x4F3C;&#x5411;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#xFF0C;&#x7531;&#x6B64;&#x884D;&#x751F;&#x51FA; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x7684;&#x5BFC;&#x6570;&#x77E9;&#x9635;&#xFF0C;&#x5373;Jacobian&#x77E9;&#x9635;&#x3002;</p>
+<p><strong>2.1 Jacobian &#x77E9;&#x9635;</strong></p>
+<p>&#x6211;&#x4EEC;&#x7684;&#x76EE;&#x6807;&#x662F;&#x5728; <img src="https://www.zhihu.com/equation?tex=p\in+D" alt="p\in D"> &#x7684;&#x9644;&#x8FD1;&#x8303;&#x56F4;&#x4F7F;&#x7528;&#x5F62;&#x5F0F;&#x7B80;&#x5355;&#x7684;&#x4EFF;&#x5C04;&#x53D8;&#x6362; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DA%5Cmathbf%7Bx%7D%2B%5Cmathbf%7Bb%7D" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})%3DA\mathbf{x}%2B\mathbf{b})=A\mathbf{x}+\mathbf{b}"> &#x8FD1;&#x4F3C; <img src="https://www.zhihu.com/equation?tex=F%28%5Cmathbf%7Bx%7D%29" alt="F(https://www.zhihu.com/equation?tex=F(\mathbf{x}))"> &#xFF0C;&#x56E0;&#x6B64;&#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x70B9;&#xFF0C;&#x6211;&#x4EEC;&#x6709; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bp%7D%29%3DF%28%5Cmathbf%7Bp%7D%29" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{p})%3DF(\mathbf{p}))=F(\mathbf{p})"> &#x3002;&#x56E0;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DA%5Cmathbf%7Bx%7D%2B%5Cmathbf%7Bb%7D" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})%3DA\mathbf{x}%2B\mathbf{b})=A\mathbf{x}+\mathbf{b}"> &#xFF0C;&#x53C8;&#x6709; <img src="https://www.zhihu.com/equation?tex=F%28%5Cmathbf%7Bp%7D%29%3DA%5Cmathbf%7Bp%7D%2B%5Cmathbf%7Bb%7D" alt="F(https://www.zhihu.com/equation?tex=F(\mathbf{p})%3DA\mathbf{p}%2B\mathbf{b})=A\mathbf{p}+\mathbf{b}"> &#x6216; <img src="https://www.zhihu.com/equation?tex=%5Cmathbf%7Bb%7D%3DF%28%5Cmathbf%7Bp%7D%29-A%5Cmathbf%7Bp%7D" alt="\mathbf{b}=F(https://www.zhihu.com/equation?tex=\mathbf{b}%3DF(\mathbf{p})-A\mathbf{p})-A\mathbf{p}"> &#xFF0C;&#x6240;&#x4EE5;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DA%28%5Cmathbf%7Bx%7D-%5Cmathbf%7Bp%7D%29%2BF%28%5Cmathbf%7Bp%7D%29%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})%3DA(\mathbf{x}-\mathbf{p})%2BF(\mathbf{p})\\)=A(\mathbf{x}-\mathbf{p})+F(\mathbf{p})\\"></p>
+<p>&#x63A5;&#x7740;&#x8981;&#x627E;&#x51FA; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x4F7F;&#x5F97;&#x4EFF;&#x5C04;&#x53D8;&#x6362; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x70B9;&#x9644;&#x8FD1;&#x6700;&#x8FD1;&#x4F3C;&#x4E8E; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x3002;&#x81EA;&#x7136;&#x5730;&#xFF0C;&#x5F53; <img src="https://www.zhihu.com/equation?tex=\mathbf{x}+\rightarrow+\mathbf{p}" alt="\mathbf{x} \rightarrow \mathbf{p}"> &#xFF0C;&#x7B26;&#x5408;&#x6700;&#x8FD1;&#x4F3C;&#x6761;&#x4EF6;&#x7684; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#x5E94;&#x4F7F;&#x8BEF;&#x5DEE; <img src="https://www.zhihu.com/equation?tex=F%28%5Cmathbf%7Bx%7D%29-T%28%5Cmathbf%7Bx%7D%29" alt="F(https://www.zhihu.com/equation?tex=F(\mathbf{x})-T(\mathbf{x}))-T(\mathbf{x})"> &#x66F4;&#x5FEB;&#x7684;&#x8D8B;&#x4E8E; <img src="https://www.zhihu.com/equation?tex=\mathbf{0}" alt="\mathbf{0}"> &#xFF08;&#x96F6;&#x5411;&#x91CF;&#xFF09;&#x3002;&#x82E5;&#x5B58;&#x5728;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=m\times+n" alt="m\times n"> &#x9636;&#x5B9E;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A" alt="A">&#x4F7F;&#x5F97;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cunderset%7B%5Cmathbf%7Bx%7D+%5Crightarrow+%5Cmathbf%7Bp%7D%7D%7Blim%7D%5Cfrac%7BF%28%5Cmathbf%7Bx%7D%29-F%28%5Cmathbf%7Bp%7D%29-A%28%5Cmathbf%7Bx%7D-%5Cmathbf%7Bp%7D%29%7D%7B%5Cleft+%5C%7C+%5Cmathbf%7Bx%7D-%5Cmathbf%7Bp%7D%5Cright+%5C%7C%7D%3D%5Cmathbf%7B0%7D%5C%5C" alt="\underset{\mathbf{x} \rightarrow \mathbf{p}}{lim}\frac{F(https://www.zhihu.com/equation?tex=\underset{\mathbf{x}+\rightarrow+\mathbf{p}}{lim}\frac{F(\mathbf{x})-F(\mathbf{p})-A(\mathbf{x}-\mathbf{p})}{\left+\|+\mathbf{x}-\mathbf{p}\right+\|}%3D\mathbf{0}\\)-F(\mathbf{p})-A(\mathbf{x}-\mathbf{p})}{\left \| \mathbf{x}-\mathbf{p}\right \|}=\mathbf{0}\\"></p>
+<p>&#x6211;&#x4EEC;&#x8BF4; <img src="https://www.zhihu.com/equation?tex=F%3A\mathbb{R}^{n}\rightarrow+\mathbb{R}^{m}" alt="F:\mathbb{R}^{n}\rightarrow \mathbb{R}^{m}"> &#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x53EF;&#x5BFC;(differentiable)&#x3002;&#x4E3A;&#x4E86;&#x8BA9; <img src="https://www.zhihu.com/equation?tex=\mathbf{x}" alt="\mathbf{x}"> &#x4ECE;&#x4EFB;&#x610F;&#x65B9;&#x5411;&#x903C;&#x8FD1; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#xFF0C;&#x6211;&#x4EEC;&#x53E6;&#x8981;&#x6C42; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x662F;&#x5B9A;&#x4E49;&#x57DF; <img src="https://www.zhihu.com/equation?tex=D" alt="D"> &#x7684;&#x4E00;&#x4E2A;&#x5185;&#x70B9;(interior point)&#xFF0C;&#x610F;&#x601D;&#x662F; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x7684;&#x9644;&#x8FD1;&#x70B9;&#x90FD;&#x5C5E;&#x4E8E; <img src="https://www.zhihu.com/equation?tex=D" alt="D"> &#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x8BC1;&#x660E;&#x82E5;&#x5411;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x70B9;&#x53EF;&#x5BFC;&#xFF0C;&#x5219; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x7531; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x552F;&#x4E00;&#x51B3;&#x5B9A;&#x3002;&#x8003;&#x8651; <img src="https://www.zhihu.com/equation?tex=\mathbb{R}^{n}" alt="\mathbb{R}^{n}"> &#x7684;&#x6807;&#x51C6;&#x57FA;&#x5E95; <img src="https://www.zhihu.com/equation?tex=\{\mathbf{e}_1%2C\cdots%2C\mathbf{e}_2\}" alt="\{\mathbf{e}_1,\cdots,\mathbf{e}_2\}"> &#xFF0C;&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=\mathbf{e}_j" alt="\mathbf{e}_j"> &#x7B2C; <img src="https://www.zhihu.com/equation?tex=j" alt="j"> &#x5143;&#x7D20;&#x4E3A;1&#xFF0C;&#x5176;&#x4F59;&#x4E3A;0&#x3002;&#x8BBE; <img src="https://www.zhihu.com/equation?tex=h" alt="h"> &#x4E3A;&#x4E00;&#x6781;&#x5C0F;&#x6570;&#x4F7F;&#x5F97; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}%2Bh\mathbf{e}_j%2Cj%3D1%2C\cdots%2Cn" alt="\mathbf{p}+h\mathbf{e}_j,j=1,\cdots,n"> &#xFF0C;&#x5C5E;&#x4E8E;&#x5B9A;&#x4E49;&#x57DF; <img src="https://www.zhihu.com/equation?tex=D" alt="D"> &#x3002;&#x5982;&#x679C; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x53EF;&#x5BFC;&#xFF0C;&#x5C31;&#x6709;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cunderset%7Bh+%5Crightarrow+0%7D%7Blim%7D%5Cfrac%7BF%28%5Cmathbf%7Bp%7D%2Bh%5Cmathbf%7Be%7D_j%29-F%28%5Cmathbf%7Bp%7D%29-A%28h%5Cmathbf%7Be%7D_j%29%7D%7Bh%7D%3D%5Cmathbf%7B0%7D%2Cj%3D1%2C%5Ccdots%2Cn%5C%5C" alt="\underset{h \rightarrow 0}{lim}\frac{F(https://www.zhihu.com/equation?tex=\underset{h+\rightarrow+0}{lim}\frac{F(\mathbf{p}%2Bh\mathbf{e}_j)-F(\mathbf{p})-A(h\mathbf{e}_j)}{h}%3D\mathbf{0}%2Cj%3D1%2C\cdots%2Cn\\)-F(\mathbf{p})-A(h\mathbf{e}_j)}{h}=\mathbf{0},j=1,\cdots,n\\"></p>
+<p>&#x56E0;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=A%28h%5Cmathbf%7Be%7D_j%29%3Dh%28A%5Cmathbf%7Be%7D_j%29" alt="A(https://www.zhihu.com/equation?tex=A(h\mathbf{e}_j)%3Dh(A\mathbf{e}_j))=h(A\mathbf{e}_j)"> &#xFF0C;&#x53EF;&#x77E5;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cunderset%7Bh+%5Crightarrow+0%7D%7Blim%7D%5Cfrac%7BF%28%5Cmathbf%7Bp%7D%2Bh%5Cmathbf%7Be%7D_j%29-F%28%5Cmathbf%7Bp%7D%29%7D%7Bh%7D%3DA%5Cmathbf%7Be%7D_j%5C%5C" alt="\underset{h \rightarrow 0}{lim}\frac{F(https://www.zhihu.com/equation?tex=\underset{h+\rightarrow+0}{lim}\frac{F(\mathbf{p}%2Bh\mathbf{e}_j)-F(\mathbf{p})}{h}%3DA\mathbf{e}_j\\)-F(\mathbf{p})}{h}=A\mathbf{e}_j\\"></p>
+<p>&#x4E0A;&#x5F0F;&#x7B49;&#x53F7;&#x5DE6;&#x8FB9;&#x5373;&#x4E3A;&#x504F;&#x5BFC;&#x6570;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cpartial+F%7D%7B%5Cpartial+x_j%7D%28%5Cmathbf%7Bp%7D%29%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+f_1%7D%7B%5Cpartial+x_j%7D%28%5Cmathbf%7Bp%7D%29%5C%5C+%5Cfrac%7B%5Cpartial+f_2%7D%7B%5Cpartial+x_j%7D%28%5Cmathbf%7Bp%7D%29%5C%5C+%5Cvdots+%5C%5C+%5Cfrac%7B%5Cpartial+f_m%7D%7B%5Cpartial+x_j%7D%28%5Cmathbf%7Bp%7D%29+%5Cend%7Bbmatrix%7D%5C%5C" alt="\frac{\partial F}{\partial x_j}(https://www.zhihu.com/equation?tex=\frac{\partial+F}{\partial+x_j}(\mathbf{p})%3D\begin{bmatrix}+\frac{\partial+f_1}{\partial+x_j}(\mathbf{p})\\+\frac{\partial+f_2}{\partial+x_j}(\mathbf{p})\\+\vdots+\\+\frac{\partial+f_m}{\partial+x_j}(\mathbf{p})+\end{bmatrix}\\)=\begin{bmatrix} \frac{\partial f_1}{\partial x_j}(\mathbf{p})\\ \frac{\partial f_2}{\partial x_j}(\mathbf{p})\\ \vdots \\ \frac{\partial f_m}{\partial x_j}(\mathbf{p}) \end{bmatrix}\\"></p>
+<p>&#x7B49;&#x53F7;&#x53F3;&#x8FB9;&#x7B49;&#x4E8E;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x7684;&#x7B2C; <img src="https://www.zhihu.com/equation?tex=j" alt="j"> &#x5217;&#xFF0C;&#x6545;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=A%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+f_%7B1%7D%7D%7B%5Cpartial+x_%7B1%7D%7D%28%5Cmathbf%7Bp%7D%29+%26+%5Cfrac%7B%5Cpartial+f_%7B1%7D%7D%7B%5Cpartial+x_%7B2%7D%7D%28%5Cmathbf%7Bp%7D%29+%26%5Ccdots+%26+%5Cfrac%7B%5Cpartial+f_%7B1%7D%7D%7B%5Cpartial+x_%7Bn%7D%7D+%28%5Cmathbf%7Bp%7D%29%5C%5C+%5Cfrac%7B%5Cpartial+f_%7B2%7D%7D%7B%5Cpartial+x_%7B1%7D%7D%28%5Cmathbf%7Bp%7D%29+%26+%5Cfrac%7B%5Cpartial+f_%7B2%7D%7D%7B%5Cpartial+x_%7B2%7D%7D%28%5Cmathbf%7Bp%7D%29%26%5Ccdots+%26+%5Cfrac%7B%5Cpartial+f_%7B2%7D%7D%7B%5Cpartial+x_%7Bn%7D%7D%28%5Cmathbf%7Bp%7D%29+%5C%5C+%5Cvdots+%26+%5Cvdots+%26+%5Cddots+%26+%5Cvdots+%5C%5C+%5Cfrac%7B%5Cpartial+f_%7Bm%7D%7D%7B%5Cpartial+x_%7B1%7D%7D+%28%5Cmathbf%7Bp%7D%29+%26%5Cfrac%7B%5Cpartial+f_%7Bm%7D%7D%7B%5Cpartial+x_%7B2%7D%7D%28%5Cmathbf%7Bp%7D%29%26%5Ccdots+%26%5Cfrac%7B%5Cpartial+f_%7Bm%7D%7D%7B%5Cpartial+x_%7Bn%7D%7D+%28%5Cmathbf%7Bp%7D%29+%5Cend%7Bbmatrix%7D%5C%5C" alt="A=\begin{bmatrix} \frac{\partial f_{1}}{\partial x_{1}}(https://www.zhihu.com/equation?tex=A%3D\begin{bmatrix}+\frac{\partial+f_{1}}{\partial+x_{1}}(\mathbf{p})+%26+\frac{\partial+f_{1}}{\partial+x_{2}}(\mathbf{p})+%26\cdots+%26+\frac{\partial+f_{1}}{\partial+x_{n}}+(\mathbf{p})\\+\frac{\partial+f_{2}}{\partial+x_{1}}(\mathbf{p})+%26+\frac{\partial+f_{2}}{\partial+x_{2}}(\mathbf{p})%26\cdots+%26+\frac{\partial+f_{2}}{\partial+x_{n}}(\mathbf{p})+\\+\vdots+%26+\vdots+%26+\ddots+%26+\vdots+\\+\frac{\partial+f_{m}}{\partial+x_{1}}+(\mathbf{p})+%26\frac{\partial+f_{m}}{\partial+x_{2}}(\mathbf{p})%26\cdots+%26\frac{\partial+f_{m}}{\partial+x_{n}}+(\mathbf{p})+\end{bmatrix}\\) &amp; \frac{\partial f_{1}}{\partial x_{2}}(\mathbf{p}) &amp;\cdots &amp; \frac{\partial f_{1}}{\partial x_{n}} (\mathbf{p})\\ \frac{\partial f_{2}}{\partial x_{1}}(\mathbf{p}) &amp; \frac{\partial f_{2}}{\partial x_{2}}(\mathbf{p})&amp;\cdots &amp; \frac{\partial f_{2}}{\partial x_{n}}(\mathbf{p}) \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial f_{m}}{\partial x_{1}} (\mathbf{p}) &amp;\frac{\partial f_{m}}{\partial x_{2}}(\mathbf{p})&amp;\cdots &amp;\frac{\partial f_{m}}{\partial x_{n}} (\mathbf{p}) \end{bmatrix}\\"></p>
+<p>&#x8FD9;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=m\times+n" alt="m\times n"> &#x9636;&#x5B9E;&#x4E3E;&#x8BC1;&#x79F0;&#x4E3A;&#x5411;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x7684;Jacobian&#x77E9;&#x9635;&#x6216;&#x5BFC;&#x6570;&#x77E9;&#x9635;(derivative matrix)&#xFF0C;&#x8BB0;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=J%28%5Cmathbf%7Bp%7D%29" alt="J(https://www.zhihu.com/equation?tex=J(\mathbf{p}))"> &#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x53EF;&#x5BFC;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x5728; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x7684;&#x6700;&#x4F73;&#x4EFF;&#x5C04;&#x8FD1;&#x4F3C;&#x662F;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29%3DF%28%5Cmathbf%7Bp%7D%29%2BJ%28%5Cmathbf%7Bp%7D%29%28%5Cmathbf%7Bx%7D-%5Cmathbf%7Bp%7D%29%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})%3DF(\mathbf{p})%2BJ(\mathbf{p})(\mathbf{x}-\mathbf{p})\\)=F(\mathbf{p})+J(\mathbf{p})(\mathbf{x}-\mathbf{p})\\"></p>
+<p>&#x8BBE; <img src="https://www.zhihu.com/equation?tex=\mathbf{h}%3D\mathbf{x}-\mathbf{p}" alt="\mathbf{h}=\mathbf{x}-\mathbf{p}"> &#xFF0C;&#x5219; <img src="https://www.zhihu.com/equation?tex=F%28%5Cmathbf%7Bx%7D%29%3DF%28%5Cmathbf%7Bp%7D%2B%5Cmathbf%7Bh%7D%29" alt="F(https://www.zhihu.com/equation?tex=F(\mathbf{x})%3DF(\mathbf{p}%2B\mathbf{h}))=F(\mathbf{p}+\mathbf{h})"> &#x7684;&#x6CF0;&#x52D2;&#x5C55;&#x5F00;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=F%28%5Cmathbf%7Bp%7D%2B%5Cmathbf%7Bh%7D%29%3DF%28%5Cmathbf%7Bp%7D%29%2BJ%28%5Cmathbf%7Bp%7D%29%5Cmathbf%7Bh%7D%2Bo%28%5Cleft+%5C%7C+%5Cmathbf%7Bh%7D%5Cright+%5C%7C%29%5E2%5C%5C" alt="F(https://www.zhihu.com/equation?tex=F(\mathbf{p}%2B\mathbf{h})%3DF(\mathbf{p})%2BJ(\mathbf{p})\mathbf{h}%2Bo(\left+\|+\mathbf{h}\right+\|)^2\\)=F(\mathbf{p})+J(\mathbf{p})\mathbf{h}+o(\left \| \mathbf{h}\right \|)^2\\"></p>
+<p>&#x56E0;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bp%7D%29%3DF%28%5Cmathbf%7Bp%7D%29" alt="T(\mathbf{p})=F(\mathbf{p})"> &#xFF0C;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29-T%28%5Cmathbf%7Bp%7D%29%3DJ%28%5Cmathbf%7Bp%7D%29%28%5Cmathbf%7Bx%7D-%5Cmathbf%7Bp%7D%29%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})-T(\mathbf{p})%3DJ(\mathbf{p})(\mathbf{x}-\mathbf{p})\\)-T(\mathbf{p})=J(\mathbf{p})(\mathbf{x}-\mathbf{p})\\"></p>
+<p>&#x4E0A;&#x5F0F;&#x6307;&#x51FA;&#x4EFF;&#x5C04;&#x53D8;&#x6362;&#x7684;&#x6539;&#x53D8;&#x91CF; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bx%7D%29-T%28%5Cmathbf%7Bp%7D%29" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{x})-T(\mathbf{p}))-T(\mathbf{p})"> &#x662F;&#x81EA;&#x53D8;&#x91CF;&#x7684;&#x6539;&#x53D8;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\mathbf{x}-\mathbf{p}" alt="\mathbf{x}-\mathbf{p}"> &#x7684;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x3002;Jacobian&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=J%28%5Cmathbf%7Bp%7D%29" alt="J(https://www.zhihu.com/equation?tex=J(\mathbf{p}))"> &#x5373;&#x4E3A;&#x7EBF;&#x6027;&#x53D8;&#x6362;&#x77E9;&#x9635;&#x3002;&#x76F4;&#x767D;&#x7684;&#x8BF4;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5C06;&#x975E;&#x7EBF;&#x6027;&#x51FD;&#x6570;&#x7ED9;&#x4E88;&#x7EBF;&#x6027;&#x8F6C;&#x6362;&#x65F6;&#xFF0C;Jacobian&#x77E9;&#x9635;&#x5C31;&#x662F;&#x63CF;&#x8FF0;&#x8BE5;&#x7EBF;&#x6027;&#x5173;&#x7CFB;&#x7684;&#x77E9;&#x9635;&#x3002;</p>
+<p>&#x4E3E;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;&#x6781;&#x5750;&#x6807;&#x4E0E;&#x5361;&#x6C0F;&#x5750;&#x6807;&#x7684;&#x8F6C;&#x6362;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cbegin%7Bbmatrix%7Dr~cos%5Ctheta%5C%5C+r~sin%5Ctheta%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7DX%28r%2C%5Ctheta%29%5C%5C+Y%28r%2C%5Ctheta%29%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7Dx%5C%5C+y%5Cend%7Bbmatrix%7D%5C%5C" alt="\begin{bmatrix}r~cos\theta\\ r~sin\theta\end{bmatrix}=\begin{bmatrix}X(https://www.zhihu.com/equation?tex=\begin{bmatrix}r~cos\theta\\+r~sin\theta\end{bmatrix}%3D\begin{bmatrix}X(r%2C\theta)\\+Y(r%2C\theta)\end{bmatrix}%3D\begin{bmatrix}x\\+y\end{bmatrix}\\)\\ Y(r,\theta)\end{bmatrix}=\begin{bmatrix}x\\ y\end{bmatrix}\\"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=r\geqslant+0%2C0\leqslant+\theta+\leqslant+\pi%2F2" alt="r\geqslant 0,0\leqslant \theta \leqslant \pi/2"> &#x3002;</p>
+<p>Jacobian&#x77E9;&#x9635;&#x8BA1;&#x7B97;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=J%28r%2C%5Ctheta%29%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+r%7D+%26%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Ctheta%7D+%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+r%7D+%26+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Ctheta%7D+%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+r~cos%5Ctheta%7D%7B%5Cpartial+r%7D+%26%5Cfrac%7B%5Cpartial+r~cos%5Ctheta%7D%7B%5Cpartial+%5Ctheta%7D+%5C%5C+%5Cfrac%7B%5Cpartial+r~sin%5Ctheta%7D%7B%5Cpartial+r%7D+%26+%5Cfrac%7B%5Cpartial+r~sin%5Ctheta%7D%7B%5Cpartial+%5Ctheta%7D+%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D+cos%5Ctheta%26-rsin%5Ctheta+%5C%5C+sin%5Ctheta+%26+rcos%5Ctheta+%5Cend%7Bbmatrix%7D%5C%5C" alt="J(https://www.zhihu.com/equation?tex=J(r%2C\theta)%3D\begin{bmatrix}+\frac{\partial+x}{\partial+r}+%26\frac{\partial+x}{\partial+\theta}+\\+\frac{\partial+y}{\partial+r}+%26+\frac{\partial+y}{\partial+\theta}+\end{bmatrix}%3D\begin{bmatrix}+\frac{\partial+r~cos\theta}{\partial+r}+%26\frac{\partial+r~cos\theta}{\partial+\theta}+\\+\frac{\partial+r~sin\theta}{\partial+r}+%26+\frac{\partial+r~sin\theta}{\partial+\theta}+\end{bmatrix}%3D\begin{bmatrix}+cos\theta%26-rsin\theta+\\+sin\theta+%26+rcos\theta+\end{bmatrix}\\)=\begin{bmatrix} \frac{\partial x}{\partial r} &amp;\frac{\partial x}{\partial \theta} \\ \frac{\partial y}{\partial r} &amp; \frac{\partial y}{\partial \theta} \end{bmatrix}=\begin{bmatrix} \frac{\partial r~cos\theta}{\partial r} &amp;\frac{\partial r~cos\theta}{\partial \theta} \\ \frac{\partial r~sin\theta}{\partial r} &amp; \frac{\partial r~sin\theta}{\partial \theta} \end{bmatrix}=\begin{bmatrix} cos\theta&amp;-rsin\theta \\ sin\theta &amp; rcos\theta \end{bmatrix}\\"></p>
+<p>&#x82E5; <img src="https://www.zhihu.com/equation?tex=%5Cmathbf%7Bu%7D%28t%29%3D%5Cbegin%7Bbmatrix%7D+r%28t%29%5C%5C+%5Ctheta%28t%29+%5Cend%7Bbmatrix%7D" alt="\mathbf{u}(https://www.zhihu.com/equation?tex=\mathbf{u}(t)%3D\begin{bmatrix}+r(t)\\+\theta(t)+\end{bmatrix})=\begin{bmatrix} r(t)\\ \theta(t) \end{bmatrix}"> &#x662F;&#x6781;&#x5750;&#x6807;&#x5E73;&#x9762;&#x4E0A;&#x7684;&#x4E00;&#x6761;&#x66F2;&#x7EBF;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=%5Cmathbf%7Bx%7D%28t%29%3D%5Cbegin%7Bbmatrix%7D+x%28t%29%5C%5C+y%28t%29+%5Cend%7Bbmatrix%7D" alt="\mathbf{x}(https://www.zhihu.com/equation?tex=\mathbf{x}(t)%3D\begin{bmatrix}+x(t)\\+y(t)+\end{bmatrix})=\begin{bmatrix} x(t)\\ y(t) \end{bmatrix}"> &#x662F;&#x5361;&#x5F0F;&#x5750;&#x6807;&#x5E73;&#x9762;&#x7684;&#x6620;&#x5C04;&#x66F2;&#x7EBF;&#xFF0C;&#x4F7F;&#x7528;&#x94FE;&#x5F0F;&#x6CD5;&#x5219;(chain rule)&#xFF0C; <img src="https://www.zhihu.com/equation?tex=\frac{\mathrm{d}+\mathbf{x}}{\mathrm{d}+t}" alt="\frac{\mathrm{d} \mathbf{x}}{\mathrm{d} t}"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\frac{\mathrm{d}\mathbf{u}}{\mathrm{d}+t}" alt="\frac{\mathrm{d}\mathbf{u}}{\mathrm{d} t}"> &#x5177;&#x6709;&#x4E0B;&#x5217;&#x5173;&#x7CFB;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cfrac%7B%5Cmathrm%7Bd%7D+%5Cmathbf%7Bx%7D%7D%7B%5Cmathrm%7Bd%7D+t%7D%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cmathrm%7Bd%7D+x%7D%7B%5Cmathrm%7Bd%7D+t%7D%5C%5C+%5Cfrac%7B%5Cmathrm%7Bd%7D+y%7D%7B%5Cmathrm%7Bd%7D+t%7D+%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+r%7D%5Cfrac%7B%5Cmathrm%7Bd%7D+r%7D%7B%5Cmathrm%7Bd%7D+t%7D%2B%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Ctheta%7D%5Cfrac%7B%5Cmathrm%7Bd%7D+%5Ctheta%7D%7B%5Cmathrm%7Bd%7D+t%7D%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+r%7D%5Cfrac%7B%5Cmathrm%7Bd%7D+r%7D%7B%5Cmathrm%7Bd%7D+t%7D%2B%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Ctheta%7D%5Cfrac%7B%5Cmathrm%7Bd%7D+%5Ctheta%7D%7B%5Cmathrm%7Bd%7D+t%7D+%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+r%7D+%26+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Ctheta%7D%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+r%7D+%26+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Ctheta%7D+%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cmathrm%7Bd%7D+r%7D%7B%5Cmathrm%7Bd%7D+t%7D%5C%5C+%5Cfrac%7B%5Cmathrm%7Bd%7D+%5Ctheta%7D%7B%5Cmathrm%7Bd%7D+t%7D+%5Cend%7Bbmatrix%7D%3DJ%28r%2C%5Ctheta%29%5Cfrac%7B%5Cmathrm%7Bd%7D%5Cmathbf%7Bu%7D%7D%7B%5Cmathrm%7Bd%7D+t%7D%5C%5C" alt="\frac{\mathrm{d} \mathbf{x}}{\mathrm{d} t}=\begin{bmatrix} \frac{\mathrm{d} x}{\mathrm{d} t}\\ \frac{\mathrm{d} y}{\mathrm{d} t} \end{bmatrix}=\begin{bmatrix} \frac{\partial x}{\partial r}\frac{\mathrm{d} r}{\mathrm{d} t}+\frac{\partial x}{\partial \theta}\frac{\mathrm{d} \theta}{\mathrm{d} t}\\ \frac{\partial y}{\partial r}\frac{\mathrm{d} r}{\mathrm{d} t}+\frac{\partial y}{\partial \theta}\frac{\mathrm{d} \theta}{\mathrm{d} t} \end{bmatrix}=\begin{bmatrix} \frac{\partial x}{\partial r} &amp; \frac{\partial x}{\partial \theta}\\ \frac{\partial y}{\partial r} &amp; \frac{\partial y}{\partial \theta} \end{bmatrix}\begin{bmatrix} \frac{\mathrm{d} r}{\mathrm{d} t}\\ \frac{\mathrm{d} \theta}{\mathrm{d} t} \end{bmatrix}=J(https://www.zhihu.com/equation?tex=\frac{\mathrm{d}+\mathbf{x}}{\mathrm{d}+t}%3D\begin{bmatrix}+\frac{\mathrm{d}+x}{\mathrm{d}+t}\\+\frac{\mathrm{d}+y}{\mathrm{d}+t}+\end{bmatrix}%3D\begin{bmatrix}+\frac{\partial+x}{\partial+r}\frac{\mathrm{d}+r}{\mathrm{d}+t}%2B\frac{\partial+x}{\partial+\theta}\frac{\mathrm{d}+\theta}{\mathrm{d}+t}\\+\frac{\partial+y}{\partial+r}\frac{\mathrm{d}+r}{\mathrm{d}+t}%2B\frac{\partial+y}{\partial+\theta}\frac{\mathrm{d}+\theta}{\mathrm{d}+t}+\end{bmatrix}%3D\begin{bmatrix}+\frac{\partial+x}{\partial+r}+%26+\frac{\partial+x}{\partial+\theta}\\+\frac{\partial+y}{\partial+r}+%26+\frac{\partial+y}{\partial+\theta}+\end{bmatrix}\begin{bmatrix}+\frac{\mathrm{d}+r}{\mathrm{d}+t}\\+\frac{\mathrm{d}+\theta}{\mathrm{d}+t}+\end{bmatrix}%3DJ(r%2C\theta)\frac{\mathrm{d}\mathbf{u}}{\mathrm{d}+t}\\)\frac{\mathrm{d}\mathbf{u}}{\mathrm{d} t}\\"></p>
+<p>&#x4ECE;&#x51E0;&#x4F55;&#x4E0A;&#x8BF4;&#xFF0C;Jacobian&#x77E9;&#x9635;&#x5C06;&#x6781;&#x5750;&#x6807;&#x5E73;&#x9762;&#x7684;&#x5207;&#x5411;&#x91CF;&#x6620;&#x81F3;&#x5361;&#x5F0F;&#x5750;&#x6807;&#x5E73;&#x9762;&#x7684;&#x5207;&#x5411;&#x91CF;&#x3002;</p>
+<p><strong>2.2 Jacobian &#x884C;&#x5217;&#x5F0F;</strong></p>
+<ul>
+<li><strong>2.2.1 &#x7EBF;&#x6027;&#x53D8;&#x6362;&#x5C06;&#x9762;&#x79EF;&#x4F38;&#x7F29;</strong></li>
+</ul>
+<p>&#x8003;&#x8651;&#x4ECE; <img src="https://www.zhihu.com/equation?tex=\mathbb{R}^2" alt="\mathbb{R}^2"> &#x6620;&#x5C04;&#x81F3; <img src="https://www.zhihu.com/equation?tex=\mathbb{R}^2" alt="\mathbb{R}^2"> &#x7684;&#x7EBF;&#x6027;&#x53D8;&#x6362;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28x%2Cy%29%3D%5Cbegin%7Bbmatrix%7D4x-2y%5C%5C+2x%2B3y%5Cend%7Bbmatrix%7D%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(x%2Cy)%3D\begin{bmatrix}4x-2y\\+2x%2B3y\end{bmatrix}\\)=\begin{bmatrix}4x-2y\\ 2x+3y\end{bmatrix}\\"></p>
+<p>&#x8BBE;&#x533A;&#x57DF; <img src="https://www.zhihu.com/equation?tex=S_1%3D%5C%7B%28x%2Cy%29%7C0%5Cleqslant+x%2Cy%5Cleqslant+1%5C%7D" alt="S_1=\{(https://www.zhihu.com/equation?tex=S_1%3D\{(x%2Cy)|0\leqslant+x%2Cy\leqslant+1\})|0\leqslant x,y\leqslant 1\}"> &#xFF0C;&#x4E14; <img src="https://www.zhihu.com/equation?tex=T%28S_1%29" alt="T(https://www.zhihu.com/equation?tex=T(S_1))"> &#x4EE3;&#x8868; <img src="https://www.zhihu.com/equation?tex=S_1" alt="S_1"> &#x4E2D;&#x6240;&#x6709;&#x70B9;&#x7ECF; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#x6620;&#x5C04;&#x540E;&#x7684;&#x96C6;&#x5408;&#xFF0C;&#x6C42; <img src="https://www.zhihu.com/equation?tex=T%28S_1%29" alt="T(https://www.zhihu.com/equation?tex=T(S_1))"> &#x7684;&#x9762;&#x79EF;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x5355;&#x4F4D;&#x6B63;&#x65B9;&#x5F62;&#x53EF;&#x76F4;&#x63A5;&#x7528;&#x4E24;&#x8FB9; <img src="https://www.zhihu.com/equation?tex=\mathbf{e}_1%3D\begin{bmatrix}1\\+0\end{bmatrix}" alt="\mathbf{e}_1=\begin{bmatrix}1\\ 0\end{bmatrix}"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\mathbf{e}_2%3D\begin{bmatrix}0\\+1\end{bmatrix}" alt="\mathbf{e}_2=\begin{bmatrix}0\\ 1\end{bmatrix}"> &#x8868;&#x793A;&#xFF0C;&#x5373;
+<img src="https://www.zhihu.com/equation?tex=S_1%3D\{x\mathbf{e}_1%2By\mathbf{e}_2|0\leqslant+x%2Cy\leqslant+1\}\\" alt="S_1=\{x\mathbf{e}_1+y\mathbf{e}_2|0\leqslant x,y\leqslant 1\}\\"></p>
+<p>&#x8BBE; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x4E3A;&#x7EBF;&#x6027;&#x53D8;&#x6362; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#x53C2;&#x8003;&#x6807;&#x51C6;&#x57FA;&#x5E95;&#x7684;&#x8868;&#x793A;&#x77E9;&#x9635;&#xFF0C;&#x5C31;&#x6709; <img src="https://www.zhihu.com/equation?tex=T%28%5Cmathbf%7Bv%7D%29%3DA%5Cmathbf%7Bv%7D" alt="T(https://www.zhihu.com/equation?tex=T(\mathbf{v})%3DA\mathbf{v})=A\mathbf{v}"> &#xFF0C;&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=A%3D[\mathbf{a}_1%2C\mathbf{a}_2]" alt="A=[\mathbf{a}_1,\mathbf{a}_2]"> &#xFF0C;&#x4E0A;&#x4F8B;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=A%3D\begin{bmatrix}+4+%26-2+\\+2+%263+\end{bmatrix}" alt="A=\begin{bmatrix} 4 &amp;-2 \\ 2 &amp;3 \end{bmatrix}"> &#x3002;&#x7B97;&#x51FA; <img src="https://www.zhihu.com/equation?tex=x\mathbf{e}_1%2By\mathbf{e}_2" alt="x\mathbf{e}_1+y\mathbf{e}_2"> &#x7ECF;&#x8FC7; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#x6620;&#x5C04;&#x7684;&#x50CF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28x%5Cmathbf%7Be%7D_1%2By%5Cmathbf%7Be%7D_2%29%3DA%28x%5Cmathbf%7Be%7D_1%2By%5Cmathbf%7Be%7D_2%29%3DxA%5Cmathbf%7Be%7D_1%2ByA%5Cmathbf%7Be%7D_2%3Dx%5Cmathbf%7Ba%7D_1%2By%5Cmathbf%7Ba%7D_2%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(x\mathbf{e}_1%2By\mathbf{e}_2)%3DA(x\mathbf{e}_1%2By\mathbf{e}_2)%3DxA\mathbf{e}_1%2ByA\mathbf{e}_2%3Dx\mathbf{a}_1%2By\mathbf{a}_2\\)=A(x\mathbf{e}_1+y\mathbf{e}_2)=xA\mathbf{e}_1+yA\mathbf{e}_2=x\mathbf{a}_1+y\mathbf{a}_2\\"></p>
+<p>&#x4E5F;&#x5C31;&#x6709;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28S_1%29%3D%5C%7Bx%5Cmathbf%7Ba%7D_1%2By%5Cmathbf%7Ba%7D_2%7C0%5Cleqslant+x%2Cy%5Cleqslant+1%5C%7D%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(S_1)%3D\{x\mathbf{a}_1%2By\mathbf{a}_2|0\leqslant+x%2Cy\leqslant+1\}\\)=\{x\mathbf{a}_1+y\mathbf{a}_2|0\leqslant x,y\leqslant 1\}\\"></p>
+<p>&#x8FD9;&#x8868;&#x660E; <img src="https://www.zhihu.com/equation?tex=T%28S_1%29" alt="T(https://www.zhihu.com/equation?tex=T(S_1))"> &#x5176;&#x5B9E;&#x5C31;&#x662F; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x7684;&#x5217;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\mathbf{a}_1" alt="\mathbf{a}_1"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\mathbf{a}_2" alt="\mathbf{a}_2"> &#x6240;&#x8868;&#x793A;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x3002;&#x4E8C;&#x9636;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#x7684;&#x884C;&#x5217;&#x5F0F;&#x7EDD;&#x5BF9;&#x503C;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=\mathbf{a}_1" alt="\mathbf{a}_1"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\mathbf{a}_2" alt="\mathbf{a}_2"> &#x6240;&#x5F62;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x7684;&#x9762;&#x79EF;&#xFF0C;&#x6545; <img src="https://www.zhihu.com/equation?tex=%5Cupsilon+%28T%28S_1%29%29%3D%5Cleft+%7Cdet+A+%5Cright+%7C" alt="\upsilon (https://www.zhihu.com/equation?tex=\upsilon+(T(S_1))%3D\left+|det+A+\right+|)=\left |det A \right |"> &#xFF0C;&#x8FD9;&#x91CC; <img src="https://www.zhihu.com/equation?tex=%5Cupsilon+%28T%28S_1%29%29" alt="\upsilon (https://www.zhihu.com/equation?tex=\upsilon+(T(S_1)))"> &#x8868;&#x793A; <img src="https://www.zhihu.com/equation?tex=T%28S_1%29" alt="T(https://www.zhihu.com/equation?tex=T(S_1))"> &#x7684;&#x9762;&#x79EF;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x63A8;&#x5E7F;&#x4E00;&#x4E0B;&#xFF0C;&#x8003;&#x8651; <img src="https://www.zhihu.com/equation?tex=S_2" alt="S_2"> &#x4E3A;&#x4E8C;&#x7EF4;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=\mathbf{b}_1" alt="\mathbf{b}_1"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\mathbf{b}_2" alt="\mathbf{b}_2"> &#x6240;&#x5F62;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#xFF0C;&#x4EE5;&#x540C;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x53EF;&#x5F97;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28x%5Cmathbf%7Bb%7D_1%2By%5Cmathbf%7Bb%7D_2%29%3DA%28x%5Cmathbf%7Bb%7D_1%2By%5Cmathbf%7Bb%7D_2%29%3DxA%5Cmathbf%7Bb%7D_1%2ByA%5Cmathbf%7Bb%7D_2%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(x\mathbf{b}_1%2By\mathbf{b}_2)%3DA(x\mathbf{b}_1%2By\mathbf{b}_2)%3DxA\mathbf{b}_1%2ByA\mathbf{b}_2\\)=A(x\mathbf{b}_1+y\mathbf{b}_2)=xA\mathbf{b}_1+yA\mathbf{b}_2\\"></p>
+<p>&#x56E0;&#x6B64; <img src="https://www.zhihu.com/equation?tex=T%28S_2%29" alt="T(https://www.zhihu.com/equation?tex=T(S_2))"> &#x5176;&#x5B9E;&#x4E3A;&#x5411;&#x91CF; <img src="https://www.zhihu.com/equation?tex=A\mathbf{b}_1" alt="A\mathbf{b}_1"> &#x548C; <img src="https://www.zhihu.com/equation?tex=A\mathbf{b}_2" alt="A\mathbf{b}_2"> &#x6240;&#x8868;&#x793A;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x3002;&#x8BBE; <img src="https://www.zhihu.com/equation?tex=B%3D[\mathbf{b}_1%2C\mathbf{b}_2]" alt="B=[\mathbf{b}_1,\mathbf{b}_2]"> &#xFF0C; <img src="https://www.zhihu.com/equation?tex=T%28S_2%29" alt="T(https://www.zhihu.com/equation?tex=T(S_2))"> &#x7B49;&#x4E8E;&#x77E9;&#x9635;&#x76F8;&#x4E58; <img src="https://www.zhihu.com/equation?tex=AB%3D[A\mathbf{b}_1%2CA\mathbf{b}_2]" alt="AB=[A\mathbf{b}_1,A\mathbf{b}_2]"> &#x7684;&#x4E24;&#x8FB9;&#x6240;&#x5F62;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#xFF0C;&#x53EF;&#x5F97;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cupsilon+%28T%28S_2%29%29%3D%5Cleft+%7Cdet+%28AB%29+%5Cright+%7C%3D%5Cleft+%7Cdet+A+%5Cright+%7C%5Cleft+%7Cdet+B+%5Cright+%7C%5C%5C" alt="\upsilon (https://www.zhihu.com/equation?tex=\upsilon+(T(S_2))%3D\left+|det+(AB)+\right+|%3D\left+|det+A+\right+|\left+|det+B+\right+|\\)=\left |det (AB) \right |=\left |det A \right |\left |det B \right |\\"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=\left+|det+B+\right+|" alt="\left |det B \right |"> &#x7B49;&#x4E8E;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62; <img src="https://www.zhihu.com/equation?tex=S_2" alt="S_2"> &#x7684;&#x9762;&#x79EF;&#xFF0C;&#x53EF;&#x5F97;&#x5230;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cupsilon+%28T%28S_2%29%29%3D%5Cleft+%7Cdet+A+%5Cright+%7C%5Cupsilon+%28S_2%29%5C%5C" alt="\upsilon (https://www.zhihu.com/equation?tex=\upsilon+(T(S_2))%3D\left+|det+A+\right+|\upsilon+(S_2)\\)=\left |det A \right |\upsilon (S_2)\\"></p>
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;&#x8868;&#x660E;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62; <img src="https://www.zhihu.com/equation?tex=S_2" alt="S_2"> &#x7ECF;&#x7EBF;&#x6027;&#x53D8;&#x6362; <img src="https://www.zhihu.com/equation?tex=T" alt="T"> &#xFF08;&#x53C2;&#x8003;&#x6807;&#x51C6;&#x57FA;&#x5E95;&#x7684;&#x77E9;&#x9635;&#x8868;&#x793A;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=A" alt="A"> &#xFF09;&#xFF0C;&#x9762;&#x79EF;&#x4F38;&#x7F29;&#x4E86; <img src="https://www.zhihu.com/equation?tex=\left+|det+A+\right+|" alt="\left |det A \right |"> &#x500D;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62; <img src="https://www.zhihu.com/equation?tex=S_2" alt="S_2"> &#x5728;&#x5E73;&#x9762;&#x4E0A;&#x79FB;&#x52A8;&#xFF0C;&#x524D;&#x8FF0;&#x7684;&#x7ED3;&#x679C;&#x4F9D;&#x7136;&#x6210;&#x7ACB;&#x5417;&#xFF1F;&#x8003;&#x8651;</p>
+<p><img src="https://www.zhihu.com/equation?tex=S_3%3D\{x\mathbf{b}_1%2By\mathbf{b}_2%2B\mathbf{p}|0\leqslant+x%2Cy\leqslant+1\}\\" alt="S_3=\{x\mathbf{b}_1+y\mathbf{b}_2+\mathbf{p}|0\leqslant x,y\leqslant 1\}\\"></p>
+<p>&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=\mathbf{p}" alt="\mathbf{p}"> &#x4EE3;&#x8868;&#x5E73;&#x79FB;&#x5411;&#x91CF;&#x3002;&#x8BA1;&#x7B97; <img src="https://www.zhihu.com/equation?tex=S_3" alt="S_3"> &#x5404;&#x70B9;&#x7ECF;&#x8FC7;&#x6620;&#x5C04;&#x7684;&#x50CF;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=T%28x%5Cmathbf%7Bb%7D_1%2By%5Cmathbf%7Bb%7D_2%2B%5Cmathbf%7Bp%7D%29%3DA%28x%5Cmathbf%7Bb%7D_1%2By%5Cmathbf%7Bb%7D_2%2B%5Cmathbf%7Bp%7D%29%3DxA%5Cmathbf%7Bb%7D_1%2ByA%5Cmathbf%7Bb%7D_2%2BA%5Cmathbf%7Bp%7D%5C%5C" alt="T(https://www.zhihu.com/equation?tex=T(x\mathbf{b}_1%2By\mathbf{b}_2%2B\mathbf{p})%3DA(x\mathbf{b}_1%2By\mathbf{b}_2%2B\mathbf{p})%3DxA\mathbf{b}_1%2ByA\mathbf{b}_2%2BA\mathbf{p}\\)=A(x\mathbf{b}_1+y\mathbf{b}_2+\mathbf{p})=xA\mathbf{b}_1+yA\mathbf{b}_2+A\mathbf{p}\\"></p>
+<p>&#x56E0;&#x6B64;&#x53EF;&#x4EE5;&#x5F97;&#x5230; <img src="https://www.zhihu.com/equation?tex=T%28S_3%29%3DT%28S_2%29%2BA%5Cmathbf%7Bp%7D" alt="T(https://www.zhihu.com/equation?tex=T(S_3)%3DT(S_2)%2BA\mathbf{p})=T(S_2)+A\mathbf{p}"> &#xFF0C;&#x5E73;&#x79FB;&#x91CF; <img src="https://www.zhihu.com/equation?tex=A\mathbf{p}" alt="A\mathbf{p}"> &#x5E76;&#x4E0D;&#x4F1A;&#x6539;&#x53D8;&#x9762;&#x79EF;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6545;&#x4EFB;&#x7136;&#x6709; <img src="https://www.zhihu.com/equation?tex=%5Cupsilon+%28T%28S_3%29%29%3D%5Cleft+%7Cdet+A+%5Cright+%7C%5Cupsilon+%28S_2%29" alt="\upsilon (https://www.zhihu.com/equation?tex=\upsilon+(T(S_3))%3D\left+|det+A+\right+|\upsilon+(S_2))=\left |det A \right |\upsilon (S_2)"> &#x3002;</p>
+<ul>
+<li><strong>2.2.2 Jacobian &#x884C;&#x5217;&#x5F0F;&#x610F;&#x4E49;</strong></li>
+</ul>
+<p>&#x82E5; <img src="https://www.zhihu.com/equation?tex=F%3A\mathbb{R}^{n}\rightarrow+\mathbb{R}^{n}" alt="F:\mathbb{R}^{n}\rightarrow \mathbb{R}^{n}"> &#x662F;&#x53EF;&#x5BFC;&#x51FD;&#x6570;&#xFF0C;&#x5219;Jacobian&#x662F;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=n\times+n" alt="n\times n"> &#x9636;&#x77E9;&#x9635;&#xFF0C;&#x56E0;&#x6B64;&#x53EF;&#x8BA1;&#x7B97;&#x884C;&#x5217;&#x5F0F;&#x3002;&#x4E3A;&#x65B9;&#x4FBF;&#x8BF4;&#x660E;&#xFF0C;&#x8BBE; <img src="https://www.zhihu.com/equation?tex=n%3D2" alt="n=2"> &#xFF0C;&#x5411;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x5C06; <img src="https://www.zhihu.com/equation?tex=\mathbf{u}%3D\begin{bmatrix}u\\+\upsilon+\end{bmatrix}" alt="\mathbf{u}=\begin{bmatrix}u\\ \upsilon \end{bmatrix}"> &#x6620;&#x5C04;&#x81F3; <img src="https://www.zhihu.com/equation?tex=\mathbf{x}%3D\begin{bmatrix}x\\+y+\end{bmatrix}" alt="\mathbf{x}=\begin{bmatrix}x\\ y \end{bmatrix}"> &#xFF0C;&#x5219; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x7684;Jacobian&#x884C;&#x5217;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=det+~J%28u%2C%5Cupsilon+%29%3D%5Cbegin%7Bvmatrix%7D+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7D+%26%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon+%7D+%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7D+%26%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon+%7D+%5Cend%7Bvmatrix%7D%3D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7D%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon+%7D+-%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon+%7D%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7D%5C%5C" alt="det ~J(https://www.zhihu.com/equation?tex=det+~J(u%2C\upsilon+)%3D\begin{vmatrix}+\frac{\partial+x}{\partial+u}+%26\frac{\partial+x}{\partial+\upsilon+}+\\+\frac{\partial+y}{\partial+u}+%26\frac{\partial+y}{\partial+\upsilon+}+\end{vmatrix}%3D\frac{\partial+x}{\partial+u}\frac{\partial+y}{\partial+\upsilon+}+-\frac{\partial+x}{\partial+\upsilon+}\frac{\partial+y}{\partial+u}\\ )=\begin{vmatrix} \frac{\partial x}{\partial u} &amp;\frac{\partial x}{\partial \upsilon } \\ \frac{\partial y}{\partial u} &amp;\frac{\partial y}{\partial \upsilon } \end{vmatrix}=\frac{\partial x}{\partial u}\frac{\partial y}{\partial \upsilon } -\frac{\partial x}{\partial \upsilon }\frac{\partial y}{\partial u}\\"></p>
+<p>&#x4EE4; <img src="https://www.zhihu.com/equation?tex=R" alt="R"> &#x8868;&#x793A; <img src="https://www.zhihu.com/equation?tex=\begin{bmatrix}du\\+0\end{bmatrix}" alt="\begin{bmatrix}du\\ 0\end{bmatrix}"> &#x548C; <img src="https://www.zhihu.com/equation?tex=\begin{bmatrix}0\\+d\upsilon\end{bmatrix}" alt="\begin{bmatrix}0\\ d\upsilon\end{bmatrix}"> &#x8868;&#x793A;&#x957F;&#x65B9;&#x5F62;&#xFF0C;&#x5176;&#x4E2D; <img src="https://www.zhihu.com/equation?tex=du" alt="du"> &#x548C; <img src="https://www.zhihu.com/equation?tex=d\upsilon" alt="d\upsilon"> &#x90FD;&#x662F;&#x5FAE;&#x5C0F;&#x7684;&#x91CF;&#x3002;&#x82E5; <img src="https://www.zhihu.com/equation?tex=du" alt="du"> &#x548C; <img src="https://www.zhihu.com/equation?tex=d\upsilon" alt="d\upsilon"> &#x8DB3;&#x591F;&#x63A5;&#x8FD1;0&#xFF0C;&#x5219; <img src="https://www.zhihu.com/equation?tex=F%28R%29%3D%5C%7BF%28%5Cmathbf%7Bu%7D%29%7C%5Cmathbf%7Bu%7D%5Cin+R%5C%7D" alt="F(https://www.zhihu.com/equation?tex=F(R)%3D\{F(\mathbf{u})|\mathbf{u}\in+R\})=\{F(\mathbf{u})|\mathbf{u}\in R\}"> &#x8FD1;&#x4F3C;&#x5982;&#x4E0B;&#x9762;&#x5411;&#x91CF;&#x6240;&#x5F62;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=J%28u%2C%5Cupsilon+%29%5Cbegin%7Bbmatrix%7Ddu%5C%5C+0%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7D+%26+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon+%7D%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7D+%26+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon+%7D%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7Ddu%5C%5C+0%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7Ddu%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7Ddu%5Cend%7Bbmatrix%7D%5C%5C" alt="J(https://www.zhihu.com/equation?tex=J(u%2C\upsilon+)\begin{bmatrix}du\\+0\end{bmatrix}%3D\begin{bmatrix}\frac{\partial+x}{\partial+u}+%26+\frac{\partial+x}{\partial+\upsilon+}\\+\frac{\partial+y}{\partial+u}+%26+\frac{\partial+y}{\partial+\upsilon+}\end{bmatrix}\begin{bmatrix}du\\+0\end{bmatrix}%3D\begin{bmatrix}\frac{\partial+x}{\partial+u}du\\+\frac{\partial+y}{\partial+u}du\end{bmatrix}\\ )\begin{bmatrix}du\\ 0\end{bmatrix}=\begin{bmatrix}\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial \upsilon }\\ \frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial \upsilon }\end{bmatrix}\begin{bmatrix}du\\ 0\end{bmatrix}=\begin{bmatrix}\frac{\partial x}{\partial u}du\\ \frac{\partial y}{\partial u}du\end{bmatrix}\\"></p>
+<p><img src="https://www.zhihu.com/equation?tex=J%28u%2C%5Cupsilon+%29%5Cbegin%7Bbmatrix%7D0%5C%5C+d%5Cupsilon%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7D+%26+%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon+%7D%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7D+%26+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon+%7D%5Cend%7Bbmatrix%7D%5Cbegin%7Bbmatrix%7D0%5C%5C+d%5Cupsilon%5Cend%7Bbmatrix%7D%3D%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon%7Dd%5Cupsilon%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon%7Dd%5Cupsilon%5Cend%7Bbmatrix%7D%5C%5C" alt="J(https://www.zhihu.com/equation?tex=J(u%2C\upsilon+)\begin{bmatrix}0\\+d\upsilon\end{bmatrix}%3D\begin{bmatrix}\frac{\partial+x}{\partial+u}+%26+\frac{\partial+x}{\partial+\upsilon+}\\+\frac{\partial+y}{\partial+u}+%26+\frac{\partial+y}{\partial+\upsilon+}\end{bmatrix}\begin{bmatrix}0\\+d\upsilon\end{bmatrix}%3D\begin{bmatrix}\frac{\partial+x}{\partial+\upsilon}d\upsilon\\+\frac{\partial+y}{\partial+\upsilon}d\upsilon\end{bmatrix}\\ )\begin{bmatrix}0\\ d\upsilon\end{bmatrix}=\begin{bmatrix}\frac{\partial x}{\partial u} &amp; \frac{\partial x}{\partial \upsilon }\\ \frac{\partial y}{\partial u} &amp; \frac{\partial y}{\partial \upsilon }\end{bmatrix}\begin{bmatrix}0\\ d\upsilon\end{bmatrix}=\begin{bmatrix}\frac{\partial x}{\partial \upsilon}d\upsilon\\ \frac{\partial y}{\partial \upsilon}d\upsilon\end{bmatrix}\\"></p>
+<p>&#x4EE4; <img src="https://www.zhihu.com/equation?tex=dA" alt="dA"> &#x4EE3;&#x8868;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62; <img src="https://www.zhihu.com/equation?tex=F%28R%29" alt="F(https://www.zhihu.com/equation?tex=F(R))"> &#x7684;&#x9762;&#x79EF;&#x3002;&#x56E0;&#x4E3A;&#x4E8C;&#x9636;&#x884C;&#x5217;&#x5F0F;&#x7684;&#x884C;&#x5411;&#x91CF;&#x6240;&#x5F62;&#x6210;&#x7684;&#x5E73;&#x884C;&#x56DB;&#x8FB9;&#x5F62;&#x9762;&#x79EF;&#x7B49;&#x4E8E;&#x884C;&#x5217;&#x5F0F;&#x7684;&#x7EDD;&#x5BF9;&#x503C;&#x3002;</p>
+<p><img src="https://www.zhihu.com/equation?tex=dA%3D%5Cleft+%7C+det%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7Ddu+%26%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon+%7Dd%5Cupsilon+%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7Ddu+%26+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon+%7Dd%5Cupsilon+%5Cend%7Bbmatrix%7D+%5Cright+%7C%3D%5Cleft+%7C+det%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+u%7D+%26%5Cfrac%7B%5Cpartial+x%7D%7B%5Cpartial+%5Cupsilon+%7D+%5C%5C+%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+u%7D+%26%5Cfrac%7B%5Cpartial+y%7D%7B%5Cpartial+%5Cupsilon+%7D+%5Cend%7Bbmatrix%7D+%5Cright+%7Cdud%5Cupsilon+%3D%5Cleft+%7C+det~J%28u%2C%5Cupsilon+%29+%5Cright+%7Cdud%5Cupsilon+%5C%5C" alt="dA=\left | det\begin{bmatrix}\frac{\partial x}{\partial u}du &amp;\frac{\partial x}{\partial \upsilon }d\upsilon \\ \frac{\partial y}{\partial u}du &amp; \frac{\partial y}{\partial \upsilon }d\upsilon \end{bmatrix} \right |=\left | det\begin{bmatrix}\frac{\partial x}{\partial u} &amp;\frac{\partial x}{\partial \upsilon } \\ \frac{\partial y}{\partial u} &amp;\frac{\partial y}{\partial \upsilon } \end{bmatrix} \right |dud\upsilon =\left | det~J(https://www.zhihu.com/equation?tex=dA%3D\left+|+det\begin{bmatrix}\frac{\partial+x}{\partial+u}du+%26\frac{\partial+x}{\partial+\upsilon+}d\upsilon+\\+\frac{\partial+y}{\partial+u}du+%26+\frac{\partial+y}{\partial+\upsilon+}d\upsilon+\end{bmatrix}+\right+|%3D\left+|+det\begin{bmatrix}\frac{\partial+x}{\partial+u}+%26\frac{\partial+x}{\partial+\upsilon+}+\\+\frac{\partial+y}{\partial+u}+%26\frac{\partial+y}{\partial+\upsilon+}+\end{bmatrix}+\right+|dud\upsilon+%3D\left+|+det~J(u%2C\upsilon+)+\right+|dud\upsilon+\\ ) \right |dud\upsilon \\"></p>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x5FAE;&#x5C0F;&#x533A;&#x57DF; <img src="https://www.zhihu.com/equation?tex=R" alt="R"> &#x7ECF;&#x5411;&#x91CF;&#x51FD;&#x6570; <img src="https://www.zhihu.com/equation?tex=F" alt="F"> &#x6620;&#x5C04;&#x81F3; <img src="https://www.zhihu.com/equation?tex=F%28R%29" alt="F(https://www.zhihu.com/equation?tex=F(R))"> &#xFF0C;&#x5176;&#x9762;&#x79EF;&#x4F38;&#x7F29;&#x4E86; <img src="https://www.zhihu.com/equation?tex=%5Cleft+%7C+det~J%28u%2C%5Cupsilon+%29+%5Cright+%7C" alt="\left | det~J(https://www.zhihu.com/equation?tex=\left+|+det~J(u%2C\upsilon+)+\right+| ) \right |"> &#x500D;&#x3002;</p>
+<ul>
+<li><strong>2.2.3 Jacobian &#x884C;&#x5217;&#x5F0F;&#x7528;&#x9014;</strong></li>
+</ul>
+<p>Jacobian&#x884C;&#x5217;&#x5F0F;&#x6700;&#x4E3B;&#x8981;&#x7684;&#x5E94;&#x7528;&#x5728;&#x591A;&#x91CD;&#x79EF;&#x5206;&#x7684;&#x6362;&#x5143;&#x79EF;&#x5206;&#x6CD5;(integration by substitution)&#x3002;&#x4EE4; <img src="https://www.zhihu.com/equation?tex=f%3A\mathbb{R}^2\rightarrow+\mathbb{R}" alt="f:\mathbb{R}^2\rightarrow \mathbb{R}"> &#x4E3A;&#x4E00;&#x4E2A;&#x8FDE;&#x7EED;&#x5B9E;&#x51FD;&#x6570;&#xFF0C;&#x4E14; <img src="https://www.zhihu.com/equation?tex=x%3DX%28u%2C%5Cupsilon+%29" alt="x=X(https://www.zhihu.com/equation?tex=x%3DX(u%2C\upsilon+) )"> &#x548C; <img src="https://www.zhihu.com/equation?tex=y%3DY%28u%2C%5Cupsilon%29" alt="y=Y(https://www.zhihu.com/equation?tex=y%3DY(u%2C\upsilon))"> &#x662F;&#x4E00;&#x5BF9;&#x4E00;&#x53EF;&#x5BFC;&#x51FD;&#x6570;&#x3002;&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x9762;&#x79EF;&#x53D8;&#x5316;&#x5173;&#x7CFB;&#xFF0C;&#x53EF;&#x5F97;&#x5230;&#x4E0B;&#x9762;&#x7684;&#x53D8;&#x6362;&#x79EF;&#x5206;&#x516C;&#x5F0F;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Cint_%7BF%28R%29%7Df%28x%2Cy%29dxdy%3D%5Cint_Rf%28X%28u%2C%5Cupsilon+%29%2CY%28u%2C%5Cupsilon%29%29%5Cleft+%7C+det~J%28u%2C%5Cupsilon+%29+%5Cright+%7Cdud%5Cupsilon%5C%5C" alt="\int_{F(https://www.zhihu.com/equation?tex=\int_{F(R)}f(x%2Cy)dxdy%3D\int_Rf(X(u%2C\upsilon+)%2CY(u%2C\upsilon))\left+|+det~J(u%2C\upsilon+)+\right+|dud\upsilon\\)}f(x,y)dxdy=\int_Rf(X(u,\upsilon ),Y(u,\upsilon))\left | det~J(u,\upsilon ) \right |dud\upsilon\\"></p>
+<hr>
+<h2 id="3-jacobian-&#x4E0E;-hessian"><strong>3. Jacobian &#x4E0E; Hessian</strong></h2>
+<p>&#x8BBE; <img src="https://www.zhihu.com/equation?tex=f%3A\mathbb{R}^n+\rightarrow+\mathbb{R}" alt="f:\mathbb{R}^n \rightarrow \mathbb{R}"> &#x4E3A;&#x4E8C;&#x6B21;&#x53EF;&#x5BFC;&#x51FD;&#x6570;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=%5Cmathbf%7Bx%7D%3D%28x_1%2C%5Ccdots%2Cx_n%29%5ET%5Cin+%5Cmathbb%7BR%7D%5En%EF%BC%8Cn%5Ctimes+n" alt="\mathbf{x}=(https://www.zhihu.com/equation?tex=\mathbf{x}%3D(x_1%2C\cdots%2Cx_n)^T\in+\mathbb{R}^n&#xFF0C;n\times+n)^T\in \mathbb{R}^n&#xFF0C;n\times n"> &#x9636;&#x5B9E;&#x5BF9;&#x79F0;&#x77E9;&#x9635; <img src="https://www.zhihu.com/equation?tex=H%28%5Cmathbf%7Bx%7D%29%3D%5Bh_%7Bij%7D%28%5Cmathbf%7Bx%7D%29%5D" alt="H(https://www.zhihu.com/equation?tex=H(\mathbf{x})%3D[h_{ij}(\mathbf{x})])=[h_{ij}(\mathbf{x})]"> &#x79F0;&#x4E3A; <img src="https://www.zhihu.com/equation?tex=f" alt="f"> &#x7684;Hessian&#x3002;&#x5B9A;&#x4E49;&#x5165;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=H%28%5Cmathbf%7Bx%7D%29%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_1%5Cpartial+x_1%7D+%26+%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_1%5Cpartial+x_2%7D+%26%5Ccdots+%26%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_1%5Cpartial+x_n%7D+%5C%5C+%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_1%7D+%26+%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_2%7D+%26%5Ccdots+%26%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_2%5Cpartial+x_n%7D+%5C%5C+%5Cvdots+%26+%5Cvdots+%26%5Cddots+%26%5Cvdots+%5C%5C+%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_1%7D+%26+%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_2%7D+%26%5Ccdots+%26%5Cfrac%7B%5Cpartial%5E2+f%7D%7B%5Cpartial+x_n%5Cpartial+x_n%7D+%5C%5C+%5Cend%7Bbmatrix%7D%5C%5C" alt="H(https://www.zhihu.com/equation?tex=H(\mathbf{x})%3D\begin{bmatrix}+\frac{\partial^2+f}{\partial+x_1\partial+x_1}+%26+\frac{\partial^2+f}{\partial+x_1\partial+x_2}+%26\cdots+%26\frac{\partial^2+f}{\partial+x_1\partial+x_n}+\\+\frac{\partial^2+f}{\partial+x_2\partial+x_1}+%26+\frac{\partial^2+f}{\partial+x_2\partial+x_2}+%26\cdots+%26\frac{\partial^2+f}{\partial+x_2\partial+x_n}+\\+\vdots+%26+\vdots+%26\ddots+%26\vdots+\\+\frac{\partial^2+f}{\partial+x_n\partial+x_1}+%26+\frac{\partial^2+f}{\partial+x_n\partial+x_2}+%26\cdots+%26\frac{\partial^2+f}{\partial+x_n\partial+x_n}+\\+\end{bmatrix}\\)=\begin{bmatrix} \frac{\partial^2 f}{\partial x_1\partial x_1} &amp; \frac{\partial^2 f}{\partial x_1\partial x_2} &amp;\cdots &amp;\frac{\partial^2 f}{\partial x_1\partial x_n} \\ \frac{\partial^2 f}{\partial x_2\partial x_1} &amp; \frac{\partial^2 f}{\partial x_2\partial x_2} &amp;\cdots &amp;\frac{\partial^2 f}{\partial x_2\partial x_n} \\ \vdots &amp; \vdots &amp;\ddots &amp;\vdots \\ \frac{\partial^2 f}{\partial x_n\partial x_1} &amp; \frac{\partial^2 f}{\partial x_n\partial x_2} &amp;\cdots &amp;\frac{\partial^2 f}{\partial x_n\partial x_n} \\ \end{bmatrix}\\"></p>
+<p>&#x53C8; <img src="https://www.zhihu.com/equation?tex=f" alt="f"> &#x5173;&#x4E8E; <img src="https://www.zhihu.com/equation?tex=\mathbf+{x}" alt="\mathbf {x}"> &#x7684;&#x68AF;&#x5EA6;(gradient) <img src="https://www.zhihu.com/equation?tex=%5Ctriangledown+f%28%5Cmathbf%7Bx%7D%29" alt="\triangledown f(https://www.zhihu.com/equation?tex=\triangledown+f(\mathbf{x}))"> &#x5B9A;&#x4E49;&#x4E3A;&#x4E00;&#x4E2A; <img src="https://www.zhihu.com/equation?tex=n" alt="n"> &#x7EF4;&#x5411;&#x91CF;&#xFF0C;&#x5176;&#x4E2D;&#x7B2C; <img src="https://www.zhihu.com/equation?tex=i" alt="i"> &#x4E2A;&#x5143;&#x7D20;&#x662F; <img src="https://www.zhihu.com/equation?tex=f" alt="f"> &#x5BF9; <img src="https://www.zhihu.com/equation?tex=x_i" alt="x_i"> &#x7684;&#x4E00;&#x6B21;&#x504F;&#x5BFC;&#x6570;&#xFF0C;&#x5373;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=%5Ctriangledown+f%28%5Cmathbf%7Bx%7D%29%3D%5Cbegin%7Bbmatrix%7D%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_1%7D%5C%5C+%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_2%7D%5C%5C%5Cvdots+%5C%5C+%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_n%7D%5C%5C%5Cend%7Bbmatrix%7D%5C%5C" alt="\triangledown f(https://www.zhihu.com/equation?tex=\triangledown+f(\mathbf{x})%3D\begin{bmatrix}\frac{\partial+f}{\partial+x_1}\\+\frac{\partial+f}{\partial+x_2}\\\vdots+\\+\frac{\partial+f}{\partial+x_n}\\\end{bmatrix}\\)=\begin{bmatrix}\frac{\partial f}{\partial x_1}\\ \frac{\partial f}{\partial x_2}\\\vdots \\ \frac{\partial f}{\partial x_n}\\\end{bmatrix}\\"></p>
+<p>&#x68AF;&#x5EA6; <img src="https://www.zhihu.com/equation?tex=\triangledown+f%3A\mathbb{R}^n+\rightarrow+\mathbb{R}^n" alt="\triangledown f:\mathbb{R}^n \rightarrow \mathbb{R}^n"> &#x662F;&#x4E00;&#x4E2A;&#x5411;&#x91CF;&#x51FD;&#x6570;&#xFF0C; <img src="https://www.zhihu.com/equation?tex=\triangledown+f" alt="\triangledown f"> &#x7684;Jacobian&#x77E9;&#x9635;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://www.zhihu.com/equation?tex=J%28%5Cmathbf%7Bx%7D%29%3D%5Cbegin%7Bbmatrix%7D+%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_1%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_1%7D%29+%26%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_2%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_1%7D%29+%26+%5Ccdots+%26%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_n%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_1%7D%29+%5C%5C+%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_1%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_2%7D%29+%26%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_2%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_2%7D%29+%26+%5Ccdots+%26%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_n%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_2%7D%29+%5C%5C+%5Cvdots+%26+%5Cvdots+%26+%5Cddots+%26+%5Cvdots+%5C%5C+%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_1%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_n%7D%29+%26%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_2%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_n%7D%29+%26+%5Ccdots+%26%5Cfrac%7B%5Cpartial+%7D%7B%5Cpartial+x_n%7D%28%5Cfrac%7B%5Cpartial+f%7D%7B%5Cpartial+x_n%7D%29+%5C%5C+%5Cend%7Bbmatrix%7D%5C%5C" alt="J(https://www.zhihu.com/equation?tex=J(\mathbf{x})%3D\begin{bmatrix}+\frac{\partial+}{\partial+x_1}(\frac{\partial+f}{\partial+x_1})+%26\frac{\partial+}{\partial+x_2}(\frac{\partial+f}{\partial+x_1})+%26+\cdots+%26\frac{\partial+}{\partial+x_n}(\frac{\partial+f}{\partial+x_1})+\\+\frac{\partial+}{\partial+x_1}(\frac{\partial+f}{\partial+x_2})+%26\frac{\partial+}{\partial+x_2}(\frac{\partial+f}{\partial+x_2})+%26+\cdots+%26\frac{\partial+}{\partial+x_n}(\frac{\partial+f}{\partial+x_2})+\\+\vdots+%26+\vdots+%26+\ddots+%26+\vdots+\\+\frac{\partial+}{\partial+x_1}(\frac{\partial+f}{\partial+x_n})+%26\frac{\partial+}{\partial+x_2}(\frac{\partial+f}{\partial+x_n})+%26+\cdots+%26\frac{\partial+}{\partial+x_n}(\frac{\partial+f}{\partial+x_n})+\\+\end{bmatrix}\\)=\begin{bmatrix} \frac{\partial }{\partial x_1}(\frac{\partial f}{\partial x_1}) &amp;\frac{\partial }{\partial x_2}(\frac{\partial f}{\partial x_1}) &amp; \cdots &amp;\frac{\partial }{\partial x_n}(\frac{\partial f}{\partial x_1}) \\ \frac{\partial }{\partial x_1}(\frac{\partial f}{\partial x_2}) &amp;\frac{\partial }{\partial x_2}(\frac{\partial f}{\partial x_2}) &amp; \cdots &amp;\frac{\partial }{\partial x_n}(\frac{\partial f}{\partial x_2}) \\ \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\ \frac{\partial }{\partial x_1}(\frac{\partial f}{\partial x_n}) &amp;\frac{\partial }{\partial x_2}(\frac{\partial f}{\partial x_n}) &amp; \cdots &amp;\frac{\partial }{\partial x_n}(\frac{\partial f}{\partial x_n}) \\ \end{bmatrix}\\"></p>
+<p>&#x56E0;&#x6B64;&#x8BC1;&#x660E;&#x68AF;&#x5EA6; <img src="https://www.zhihu.com/equation?tex=%5Ctriangledown+f" alt="\triangledown f"> &#x7684;Jacobian&#x5373;&#x4E3A;Hessian&#x77E9;&#x9635;&#x3002;</p>
+<hr>
+<h2 id="4-&#x53C2;&#x8003;"><strong>4. &#x53C2;&#x8003;</strong></h2>
+<p>&#x5468;&#x5FD7;&#x6210;&#xFF1A;&#x300A;&#x7EBF;&#x6027;&#x4EE3;&#x6570;&#x300B;&#xFF0C;&#x56FD;&#x7ACB;&#x4EA4;&#x901A;&#x5927;&#x5B66;&#x51FA;&#x7248;&#x793E;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="distribution_show.html" class="navigation navigation-prev " aria-label="Previous page: 分布">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="graph.html" class="navigation navigation-next " aria-label="Next page: 图的基本概念">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"仿射变换","level":"2.2.3","depth":2,"next":{"title":"图的基本概念","level":"2.2.4","depth":2,"path":"math/graph.md","ref":"math/graph.md","articles":[]},"previous":{"title":"分布","level":"2.2.2","depth":2,"path":"math/distribution_show.md","ref":"math/distribution_show.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"math/affine_transformation.md","mtime":"2019-10-24T04:35:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1257 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>超分辨率baseline · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="loss.html" />
+    
+    
+    <link rel="prev" href="code_dataset.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../introduction/0.html">
+            
+                <a href="../introduction/0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../introduction/AI_system.html">
+            
+                <a href="../introduction/AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../code_technique/">
+            
+                <a href="../code_technique/">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../code_technique/python/python_technique.html">
+            
+                <a href="../code_technique/python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../code_technique/python/sort.html">
+            
+                <a href="../code_technique/python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../code_technique/python/opencv.html">
+            
+                <a href="../code_technique/python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../code_technique/pytorch/pytorch1.html">
+            
+                <a href="../code_technique/pytorch/pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../code_technique/pytorch/pytorch2.html">
+            
+                <a href="../code_technique/pytorch/pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../code_technique/pytorch/pytorch_train.html">
+            
+                <a href="../code_technique/pytorch/pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../code_technique/pytorch/pytorch_.html">
+            
+                <a href="../code_technique/pytorch/pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../code_technique/pytorch/pytorch_vision.html">
+            
+                <a href="../code_technique/pytorch/pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                <a href="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../code_technique/pytorch/SPP.html">
+            
+                <a href="../code_technique/pytorch/SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux/linux_technique.html">
+            
+                <a href="../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux/linux_GPU.html">
+            
+                <a href="../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../paper/">
+            
+                <a href="../paper/">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../paper/paper_write.html">
+            
+                <a href="../paper/paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../paper/Image_to_Image.html">
+            
+                <a href="../paper/Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../paper/GNN.html">
+            
+                <a href="../paper/GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../paper/GMMN.html">
+            
+                <a href="../paper/GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../paper/Deformable_Kernels.html">
+            
+                <a href="../paper/Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../paper/Spectral_Normalization.html">
+            
+                <a href="../paper/Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../paper/Unbalanced_sample_loss.html">
+            
+                <a href="../paper/Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../paper/NN.html">
+            
+                <a href="../paper/NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="SR_summarize.html">
+            
+                <a href="SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="SR.html">
+            
+                <a href="SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="code_dataset.html">
+            
+                <a href="code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="baseline.html">
+            
+                <a href="baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="loss.html">
+            
+                <a href="loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../data/">
+            
+                <a href="../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../data/picture.html">
+            
+                <a href="../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../data/picture_enhance.html">
+            
+                <a href="../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../data/data.html">
+            
+                <a href="../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../data/imaaug.html">
+            
+                <a href="../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../math/">
+            
+                <a href="../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../math/matrix.html">
+            
+                <a href="../math/matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../math/distribution_show.html">
+            
+                <a href="../math/distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../math/affine_transformation.html">
+            
+                <a href="../math/affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../math/graph.html">
+            
+                <a href="../math/graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../other/discriminator_train.html">
+            
+                <a href="../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../other/FLOPS.html">
+            
+                <a href="../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >超分辨率baseline</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="super-resolutionbenckmark">Super-Resolution.Benckmark</h1>
+<p>A curated list of super-resolution resources and a benchmark for single image super-resolution algorithms.</p>
+<p>See my implementated super-resolution algorithms:</p>
+<ul>
+<li><a href="https://github.com/huangzehao/torch-srgan" target="_blank">SRGAN</a></li>
+<li><a href="https://github.com/huangzehao/caffe-vdsr" target="_blank">VDSR</a></li>
+<li><a href="https://github.com/huangzehao/SCN_Matlab" target="_blank">CSCN</a></li>
+</ul>
+<h2 id="todo">TODO</h2>
+<p>Build a benckmark like <a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr" target="_blank">SelfExSR_Code</a></p>
+<h2 id="state-of-the-art-algorithms">State-of-the-art algorithms</h2>
+<h4 id="classical-sparse-coding-method">Classical Sparse Coding Method</h4>
+<ul>
+<li>ScSR <a href="http://www.ifp.illinois.edu/~jyang29/ScSR.htm" target="_blank">[Web]</a><ul>
+<li>Image super-resolution as sparse representation of raw image patches (CVPR2008), Jianchao Yang et al.</li>
+<li>Image super-resolution via sparse representation (TIP2010), Jianchao Yang et al.</li>
+<li>Coupled dictionary training for image super-resolution (TIP2011), Jianchao Yang et al.</li>
+</ul>
+</li>
+</ul>
+<h4 id="anchored-neighborhood-regression-method">Anchored Neighborhood Regression Method</h4>
+<ul>
+<li>ANR <a href="http://www.vision.ee.ethz.ch/~timofter/ICCV2013_ID1774_SUPPLEMENTARY/index.html" target="_blank">[Web]</a><ul>
+<li>Anchored Neighborhood Regression for Fast Example-Based Super-Resolution (ICCV2013), Radu Timofte et al.</li>
+</ul>
+</li>
+<li>A+ <a href="http://www.vision.ee.ethz.ch/~timofter/ACCV2014_ID820_SUPPLEMENTARY/" target="_blank">[Web]</a><ul>
+<li>A+: Adjusted Anchored Neighborhood Regression for Fast Super-Resolution (ACCV2014), Radu Timofte et al.</li>
+</ul>
+</li>
+<li>IA <a href="http://www.vision.ee.ethz.ch/~timofter/CVPR2016_ID769_SUPPLEMENTARY/index.html" target="_blank">[Web]</a><ul>
+<li>Seven ways to improve example-based single image super resolution (CVPR2016), Radu Timofte et al.</li>
+</ul>
+</li>
+</ul>
+<h4 id="self-exemplars">Self-Exemplars</h4>
+<ul>
+<li>SelfExSR <a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr" target="_blank">[Web]</a><ul>
+<li>Single Image Super-Resolution from Transformed Self-Exemplars (CVPR2015), Jia-Bin Huang et al.</li>
+</ul>
+</li>
+</ul>
+<h4 id="bayes">Bayes</h4>
+<ul>
+<li>NBSRF <a href="http://jordisalvador-image.blogspot.com/2015/08/iccv-2015.html" target="_blank">[Web]</a><ul>
+<li>Naive Bayes Super-Resolution Forest (ICCV2015), Jordi Salvador et al.</li>
+</ul>
+</li>
+</ul>
+<h4 id="deep-learning-method">Deep Learning Method</h4>
+<ul>
+<li>SRCNN <a href="http://mmlab.ie.cuhk.edu.hk/projects/SRCNN.html" target="_blank">[Web]</a> <a href="https://github.com/nagadomi/waifu2x" target="_blank">[waifu2x by nagadomi]</a><ul>
+<li>Image Super-Resolution Using Deep Convolutional Networks (ECCV2014), Chao Dong et al.</li>
+<li>Image Super-Resolution Using Deep Convolutional Networks (TPAMI2015), Chao Dong et al.</li>
+</ul>
+</li>
+<li>CSCN <a href="http://www.ifp.illinois.edu/~dingliu2/iccv15/" target="_blank">[Web]</a><ul>
+<li>Deep Networks for Image Super-Resolution with Sparse Prior (ICCV2015), Zhaowen Wang et al.</li>
+<li>Robust Single Image Super-Resolution via Deep Networks with Sparse Prior (TIP2016), Ding Liu et al.</li>
+</ul>
+</li>
+<li>VDSR <a href="http://cv.snu.ac.kr/research/VDSR/" target="_blank">[Web]</a> <a href="https://github.com/huangzehao/caffe-vdsr" target="_blank">[Unofficial Implementation in Caffe]</a><ul>
+<li>Accurate Image Super-Resolution Using Very Deep Convolutional Networks (CVPR2016), Jiwon Kim et al.</li>
+</ul>
+</li>
+<li>DRCN <a href="http://cv.snu.ac.kr/research/DRCN/" target="_blank">[Web]</a><ul>
+<li>Deeply-Recursive Convolutional Network for Image Super-Resolution (CVPR2016), Jiwon Kim et al. </li>
+</ul>
+</li>
+<li>ESPCN <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Shi_Real-Time_Single_Image_CVPR_2016_paper.pdf" target="_blank">[PDF]</a><ul>
+<li>Real-Time Single Image and Video Super-Resolution Using an Efficient Sub-Pixel Convolutional Neural Network (CVPR2016), Wenzhe Shi et al.</li>
+<li>Is the deconvolution layer the same as a convolutional layer? <a href="https://arxiv.org/ftp/arxiv/papers/1609/1609.07009.pdf" target="_blank">[PDF]</a></li>
+<li>Checkerboard artifact free sub-pixel convolution <a href="https://arxiv.org/pdf/1707.02937.pdf" target="_blank">[PDF]</a></li>
+</ul>
+</li>
+<li>FSRCNN <a href="http://mmlab.ie.cuhk.edu.hk/projects/FSRCNN.html" target="_blank">[Web]</a><ul>
+<li>Acclerating the Super-Resolution Convolutional Neural Network (ECCV2016), Dong Chao et al.</li>
+</ul>
+</li>
+<li>LapSRN <a href="http://vllab1.ucmerced.edu/~wlai24/LapSRN/" target="_blank">[Web]</a><ul>
+<li>Deep Laplacian Pyramid Networks for Fast and Accurate Super-Resolution (CVPR 2017), Wei-Sheng Lai et al.</li>
+</ul>
+</li>
+<li>EDSR <a href="https://arxiv.org/pdf/1707.02921.pdf" target="_blank">[PDF]</a><ul>
+<li>Enhanced Deep Residual Networks for Single Image Super-Resolution (Winner of NTIRE2017 Super-Resolution Challenge), Bee Lim et al.</li>
+</ul>
+</li>
+</ul>
+<h4 id="perceptual-loss-and-gan">Perceptual Loss and GAN</h4>
+<ul>
+<li>Perceptual Loss <a href="http://cs.stanford.edu/people/jcjohns/papers/eccv16/JohnsonECCV16.pdf" target="_blank">[PDF]</a><ul>
+<li>Perceptual Losses for Real-Time Style Transfer and Super-Resolution (ECCV2016), Justin Johnson et al.</li>
+</ul>
+</li>
+<li>SRGAN <a href="https://arxiv.org/abs/1609.04802" target="_blank">[PDF]</a><ul>
+<li>Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network (CVPR2017), Christian Ledig et al.</li>
+</ul>
+</li>
+<li>AffGAN <a href="https://arxiv.org/pdf/1610.04490.pdf" target="_blank">[PDF]</a><ul>
+<li>AMORTISED MAP INFERENCE FOR IMAGE SUPER-RESOLUTION (ICLR2017), Casper Kaae S&#xF8;nderby et al.</li>
+</ul>
+</li>
+<li>EnhanceNet <a href="https://arxiv.org/abs/1612.07919" target="_blank">[PDF]</a><ul>
+<li>EnhanceNet: Single Image Super-Resolution through Automated Texture Synthesis, Mehdi S. M. Sajjadi et al.</li>
+</ul>
+</li>
+<li>neural-enchance <a href="https://github.com/alexjc/neural-enhance" target="_blank">[Github]</a></li>
+</ul>
+<h4 id="video-sr">Video SR</h4>
+<ul>
+<li>VESPCN <a href="https://arxiv.org/pdf/1611.05250.pdf" target="_blank">[PDF]</a><ul>
+<li>Real-Time Video Super-Resolution with Spatio-Temporal Networks and Motion Compensation (CVPR2017), Jose Caballero et al.</li>
+</ul>
+</li>
+</ul>
+<h2 id="dicussion">Dicussion</h2>
+<h4 id="deconvolution-and-sub-pixel-convolution">Deconvolution and Sub-Pixel Convolution</h4>
+<ul>
+<li><a href="http://distill.pub/2016/deconv-checkerboard/" target="_blank">Deconvolution and Checkerboard Artifacts</a></li>
+<li><a href="https://github.com/Tetrachrome/subpixel" target="_blank">SubPixel</a></li>
+</ul>
+<h2 id="datasets">Datasets</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Test Dataset</th>
+<th style="text-align:center">Image source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Set 5</strong></td>
+<td style="text-align:center"><a href="http://people.rennes.inria.fr/Aline.Roumy/results/SR_BMVC12.html" target="_blank">Bevilacqua et al. BMVC 2012</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Set 14</strong></td>
+<td style="text-align:center"><a href="https://sites.google.com/site/romanzeyde/research-interests" target="_blank">Zeyde et al. LNCS 2010</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>BSD 100</strong></td>
+<td style="text-align:center"><a href="https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/" target="_blank">Martin et al. ICCV 2001</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Urban 100</strong></td>
+<td style="text-align:center"><a href="https://sites.google.com/site/jbhuang0604/publications/struct_sr" target="_blank">Huang et al. CVPR 2015</a></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Train Dataset</th>
+<th style="text-align:center">Image source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Yang 91</strong></td>
+<td style="text-align:center"><a href="http://www.ifp.illinois.edu/~jyang29/ScSR.htm" target="_blank">Yang et al. CVPR 2008</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>BSD 200</strong></td>
+<td style="text-align:center"><a href="https://www.eecs.berkeley.edu/Research/Projects/CS/vision/bsds/" target="_blank">Martin et al. ICCV 2001</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>General 100</strong></td>
+<td style="text-align:center"><a href="http://mmlab.ie.cuhk.edu.hk/projects/FSRCNN.html" target="_blank">Dong et al. ECCV 2016</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>ImageNet</strong></td>
+<td style="text-align:center"><a href="http://www.image-net.org/" target="_blank">Olga Russakovsky et al. IJCV 2015</a></td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>COCO</strong></td>
+<td style="text-align:center"><a href="http://mscoco.org/" target="_blank">Tsung-Yi Lin et al. ECCV 2014</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="quantitative-comparisons">Quantitative comparisons</h2>
+<p>Results from papers of VDSR, DRCN, CSCN and IA.</p>
+<p><strong>Note:</strong> IA use enchanced prediction trick to improve result.</p>
+<h5 id="results-on-set-5">Results on Set 5</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Scale</th>
+<th style="text-align:center">Bicubic</th>
+<th style="text-align:center">A+</th>
+<th style="text-align:center">SRCNN</th>
+<th style="text-align:center">SelfExSR</th>
+<th style="text-align:center">CSCN</th>
+<th style="text-align:center">VDSR</th>
+<th style="text-align:center">DRCN</th>
+<th style="text-align:center">IA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">33.66/0.9929</td>
+<td style="text-align:center">36.54/0.9544</td>
+<td style="text-align:center">36.66/0.9542</td>
+<td style="text-align:center">36.49/0.9537</td>
+<td style="text-align:center">36.93/0.9552</td>
+<td style="text-align:center">37.53/0.9587</td>
+<td style="text-align:center">37.63/0.9588</td>
+<td style="text-align:center">37.39/</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>3x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">30.39/0.8682</td>
+<td style="text-align:center">32.59/0.9088</td>
+<td style="text-align:center">32.75/0.9090</td>
+<td style="text-align:center">32.58/0.9093</td>
+<td style="text-align:center">33.10/0.9144</td>
+<td style="text-align:center">33.66/0.9213</td>
+<td style="text-align:center">33.82/0.9226</td>
+<td style="text-align:center">33.46/</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>4x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">28.42/0.8104</td>
+<td style="text-align:center">30.28/0.8603</td>
+<td style="text-align:center">30.48/0.8628</td>
+<td style="text-align:center">30.31/0.8619</td>
+<td style="text-align:center">30.86/0.8732</td>
+<td style="text-align:center">31.35/0.8838</td>
+<td style="text-align:center">31.53/0.8854</td>
+<td style="text-align:center">31.10/</td>
+</tr>
+</tbody>
+</table>
+<h5 id="results-on-set-14">Results on Set 14</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Scale</th>
+<th style="text-align:center">Bicubic</th>
+<th style="text-align:center">A+</th>
+<th style="text-align:center">SRCNN</th>
+<th style="text-align:center">SelfExSR</th>
+<th style="text-align:center">CSCN</th>
+<th style="text-align:center">VDSR</th>
+<th style="text-align:center">DRCN</th>
+<th style="text-align:center">IA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">30.24/0.8688</td>
+<td style="text-align:center">32.28/0.9056</td>
+<td style="text-align:center">32.42/0.9063</td>
+<td style="text-align:center">32.22/0.9034</td>
+<td style="text-align:center">32.56/0.9074</td>
+<td style="text-align:center">33.03/0.9124</td>
+<td style="text-align:center">33.04/0.9118</td>
+<td style="text-align:center">32.87/</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>3x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">27.55/0.7742</td>
+<td style="text-align:center">29.13/0.8188</td>
+<td style="text-align:center">29.28/0.8209</td>
+<td style="text-align:center">29.16/0.8196</td>
+<td style="text-align:center">29.41/0.8238</td>
+<td style="text-align:center">29.77/0.8314</td>
+<td style="text-align:center">29.76/0.8311</td>
+<td style="text-align:center">29.69/</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>4x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">26.00/0.7027</td>
+<td style="text-align:center">27.32/0.7491</td>
+<td style="text-align:center">27.49/0.7503</td>
+<td style="text-align:center">27.40/0.7518</td>
+<td style="text-align:center">27.64/0.7587</td>
+<td style="text-align:center">28.01/0.7674</td>
+<td style="text-align:center">28.02/0.7670</td>
+<td style="text-align:center">27.88/</td>
+</tr>
+</tbody>
+</table>
+<h5 id="results-on-bsd-100">Results on BSD 100</h5>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Scale</th>
+<th style="text-align:center">Bicubic</th>
+<th style="text-align:center">A+</th>
+<th style="text-align:center">SRCNN</th>
+<th style="text-align:center">SelfExSR</th>
+<th style="text-align:center">CSCN</th>
+<th style="text-align:center">VDSR</th>
+<th style="text-align:center">DRCN</th>
+<th style="text-align:center">IA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>2x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">29.56/0.8431</td>
+<td style="text-align:center">31.21/0.8863</td>
+<td style="text-align:center">31.36/0.8879</td>
+<td style="text-align:center">31.18/0.8855</td>
+<td style="text-align:center">31.40/0.8884</td>
+<td style="text-align:center">31.90/0.8960</td>
+<td style="text-align:center">31.85/0.8942</td>
+<td style="text-align:center">31.79/</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>3x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">27.21/0.7385</td>
+<td style="text-align:center">28.29/0.7835</td>
+<td style="text-align:center">28.41/0.7863</td>
+<td style="text-align:center">28.29/0.7840</td>
+<td style="text-align:center">28.50/0.7885</td>
+<td style="text-align:center">28.82/0.7976</td>
+<td style="text-align:center">28.80/0.7963</td>
+<td style="text-align:center">28.76/</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>4x</strong> - PSNR/SSIM</td>
+<td style="text-align:center">25.96/0.6675</td>
+<td style="text-align:center">26.82/0.7087</td>
+<td style="text-align:center">26.90/0.7101</td>
+<td style="text-align:center">26.84/0.7106</td>
+<td style="text-align:center">27.03/0.7161</td>
+<td style="text-align:center">27.29/0.7251</td>
+<td style="text-align:center">27.23/0.7233</td>
+<td style="text-align:center">27.25/</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="code_dataset.html" class="navigation navigation-prev " aria-label="Previous page: 超分辨率代码数据集合集">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="loss.html" class="navigation navigation-next " aria-label="Next page: 超分辨率的损失函数总结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"超分辨率baseline","level":"1.7.4","depth":2,"next":{"title":"超分辨率的损失函数总结","level":"1.7.5","depth":2,"path":"super_resolution/loss.md","ref":"super_resolution/loss.md","articles":[]},"previous":{"title":"超分辨率代码数据集合集","level":"1.7.3","depth":2,"path":"super_resolution/code_dataset.md","ref":"super_resolution/code_dataset.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"super_resolution/baseline.md","mtime":"2019-10-24T04:35:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

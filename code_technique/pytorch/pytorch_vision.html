@@ -1,0 +1,1006 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>pytorch网络可视化 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="PSNR_SSIM.html" />
+    
+    
+    <link rel="prev" href="pytorch_.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../introduction/0.html">
+            
+                <a href="../../introduction/0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../introduction/AI_system.html">
+            
+                <a href="../../introduction/AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../python/python_technique.html">
+            
+                <a href="../python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../python/sort.html">
+            
+                <a href="../python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../python/opencv.html">
+            
+                <a href="../python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="pytorch1.html">
+            
+                <a href="pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="pytorch2.html">
+            
+                <a href="pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="pytorch_train.html">
+            
+                <a href="pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="pytorch_.html">
+            
+                <a href="pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.8" data-path="pytorch_vision.html">
+            
+                <a href="pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="PSNR_SSIM.html">
+            
+                <a href="PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="SPP.html">
+            
+                <a href="SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../linux/linux_technique.html">
+            
+                <a href="../../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../linux/linux_GPU.html">
+            
+                <a href="../../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../paper/">
+            
+                <a href="../../paper/">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../paper/paper_write.html">
+            
+                <a href="../../paper/paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../paper/Image_to_Image.html">
+            
+                <a href="../../paper/Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../paper/GNN.html">
+            
+                <a href="../../paper/GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="../../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../paper/GMMN.html">
+            
+                <a href="../../paper/GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../paper/Deformable_Kernels.html">
+            
+                <a href="../../paper/Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="../../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../paper/Spectral_Normalization.html">
+            
+                <a href="../../paper/Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../paper/Unbalanced_sample_loss.html">
+            
+                <a href="../../paper/Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../paper/NN.html">
+            
+                <a href="../../paper/NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../super_resolution/">
+            
+                <a href="../../super_resolution/">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../super_resolution/SR_summarize.html">
+            
+                <a href="../../super_resolution/SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../super_resolution/SR.html">
+            
+                <a href="../../super_resolution/SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../super_resolution/code_dataset.html">
+            
+                <a href="../../super_resolution/code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../super_resolution/baseline.html">
+            
+                <a href="../../super_resolution/baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../super_resolution/loss.html">
+            
+                <a href="../../super_resolution/loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../data/">
+            
+                <a href="../../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../data/picture.html">
+            
+                <a href="../../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../data/picture_enhance.html">
+            
+                <a href="../../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../data/data.html">
+            
+                <a href="../../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../data/imaaug.html">
+            
+                <a href="../../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../math/matrix.html">
+            
+                <a href="../../math/matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../math/distribution_show.html">
+            
+                <a href="../../math/distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../math/affine_transformation.html">
+            
+                <a href="../../math/affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../math/graph.html">
+            
+                <a href="../../math/graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../other/">
+            
+                <a href="../../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../other/discriminator_train.html">
+            
+                <a href="../../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../other/FLOPS.html">
+            
+                <a href="../../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >pytorch网络可视化</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="pytorch&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#x53EF;&#x89C6;&#x5316;"><a href="https://zhuanlan.zhihu.com/p/68613993" target="_blank">Pytorch&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#x53EF;&#x89C6;&#x5316;</a></h2>
+<p><img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-07-101953.jpg" alt="Pytorch&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#x53EF;&#x89C6;&#x5316;"></p>
+<h2 id="&#x5B89;&#x88C5;"><strong>&#x5B89;&#x88C5;</strong></h2>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x7684;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5B89;&#x88C5;</p>
+<pre><code class="lang-python">conda install pytorch-nightly -c pytorch
+conda install graphviz
+conda install torchvision
+conda install tensorwatch
+</code></pre>
+<p>&#x672C;&#x6559;&#x7A0B;&#x57FA;&#x4E8E;&#x4EE5;&#x4E0B;&#x7684;&#x7248;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-python3">torchvision.__version__   &apos;0.2.1&apos;
+torch.__version__         &apos;1.2.0.dev20190610&apos;
+sys.version               &apos;3.6.8 |Anaconda custom (64-bit)| (default, Dec 30 2018, 01:22:34) \n[GCC 7.3.0]&apos;
+</code></pre>
+<h2 id="&#x8F7D;&#x5165;&#x5E93;"><strong>&#x8F7D;&#x5165;&#x5E93;</strong></h2>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> sys
+<span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">import</span> tensorwatch <span class="hljs-keyword">as</span> tw
+<span class="hljs-keyword">import</span> torchvision.models
+</code></pre>
+<h2 id="&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#x53EF;&#x89C6;&#x5316;"><strong>&#x7F51;&#x7EDC;&#x7ED3;&#x6784;&#x53EF;&#x89C6;&#x5316;</strong></h2>
+<pre><code class="lang-python">alexnet_model = torchvision.models.alexnet()
+tw.draw_model(alexnet_model, [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">224</span>, <span class="hljs-number">224</span>])
+</code></pre>
+<p>&#x8F7D;&#x5165;alexnet&#xFF0C;draw_model&#x51FD;&#x6570;&#x9700;&#x8981;&#x4F20;&#x5165;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x4E3A;model&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;input_shape&#xFF0C;&#x7B2C;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x4E3A;orientation&#xFF0C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&apos;LR&apos;&#x6216;&#x8005;&apos;TB&apos;&#xFF0C;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x5DE6;&#x53F3;&#x5E03;&#x5C40;&#x4E0E;&#x4E0A;&#x4E0B;&#x5E03;&#x5C40;&#x3002;</p>
+<p>&#x5728;notebook&#x4E2D;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x663E;&#x793A;&#x5982;&#x4E0B;&#x7684;&#x56FE;&#xFF0C;&#x5C06;&#x7F51;&#x7EDC;&#x7684;&#x7ED3;&#x6784;&#x53CA;&#x5404;&#x4E2A;&#x5C42;&#x7684;name&#x548C;shape&#x8FDB;&#x884C;&#x4E86;&#x53EF;&#x89C6;&#x5316;&#x3002;</p>
+<p><img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-07-101954.jpg" alt="img"></p>
+<h2 id="&#x7EDF;&#x8BA1;&#x7F51;&#x7EDC;&#x53C2;&#x6570;"><strong>&#x7EDF;&#x8BA1;&#x7F51;&#x7EDC;&#x53C2;&#x6570;</strong></h2>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;model_stats&#x65B9;&#x6CD5;&#x7EDF;&#x8BA1;&#x5404;&#x5C42;&#x7684;&#x53C2;&#x6570;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-python">tw.model_stats(alexnet_model, [<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">224</span>, <span class="hljs-number">224</span>])
+
+[MAdd]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Flops]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Memory]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[MAdd]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Flops]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Memory]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[MAdd]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Flops]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Memory]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[MAdd]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Flops]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Memory]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[MAdd]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Flops]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Memory]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[MAdd]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Flops]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+[Memory]: Dropout <span class="hljs-keyword">is</span> <span class="hljs-keyword">not</span> supported!
+</code></pre>
+<p><img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-07-101955.jpg" alt="img"></p>
+<pre><code class="lang-python">alexnet_model.features
+
+Sequential(
+  (<span class="hljs-number">0</span>): Conv2d(<span class="hljs-number">3</span>, <span class="hljs-number">64</span>, kernel_size=(<span class="hljs-number">11</span>, <span class="hljs-number">11</span>), stride=(<span class="hljs-number">4</span>, <span class="hljs-number">4</span>), padding=(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>))
+  (<span class="hljs-number">1</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">2</span>): MaxPool2d(kernel_size=<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">0</span>, dilation=<span class="hljs-number">1</span>, ceil_mode=<span class="hljs-keyword">False</span>)
+  (<span class="hljs-number">3</span>): Conv2d(<span class="hljs-number">64</span>, <span class="hljs-number">192</span>, kernel_size=(<span class="hljs-number">5</span>, <span class="hljs-number">5</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">2</span>, <span class="hljs-number">2</span>))
+  (<span class="hljs-number">4</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">5</span>): MaxPool2d(kernel_size=<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">0</span>, dilation=<span class="hljs-number">1</span>, ceil_mode=<span class="hljs-keyword">False</span>)
+  (<span class="hljs-number">6</span>): Conv2d(<span class="hljs-number">192</span>, <span class="hljs-number">384</span>, kernel_size=(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>))
+  (<span class="hljs-number">7</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">8</span>): Conv2d(<span class="hljs-number">384</span>, <span class="hljs-number">256</span>, kernel_size=(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>))
+  (<span class="hljs-number">9</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">10</span>): Conv2d(<span class="hljs-number">256</span>, <span class="hljs-number">256</span>, kernel_size=(<span class="hljs-number">3</span>, <span class="hljs-number">3</span>), stride=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>), padding=(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>))
+  (<span class="hljs-number">11</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">12</span>): MaxPool2d(kernel_size=<span class="hljs-number">3</span>, stride=<span class="hljs-number">2</span>, padding=<span class="hljs-number">0</span>, dilation=<span class="hljs-number">1</span>, ceil_mode=<span class="hljs-keyword">False</span>)
+)
+
+alexnet_model.classifier
+
+Sequential(
+  (<span class="hljs-number">0</span>): Dropout(p=<span class="hljs-number">0.5</span>)
+  (<span class="hljs-number">1</span>): Linear(in_features=<span class="hljs-number">9216</span>, out_features=<span class="hljs-number">4096</span>, bias=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">2</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">3</span>): Dropout(p=<span class="hljs-number">0.5</span>)
+  (<span class="hljs-number">4</span>): Linear(in_features=<span class="hljs-number">4096</span>, out_features=<span class="hljs-number">4096</span>, bias=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">5</span>): ReLU(inplace=<span class="hljs-keyword">True</span>)
+  (<span class="hljs-number">6</span>): Linear(in_features=<span class="hljs-number">4096</span>, out_features=<span class="hljs-number">1000</span>, bias=<span class="hljs-keyword">True</span>)
+)
+</code></pre>
+<p><strong>&#x53C2;&#x8003;</strong></p>
+<p><a href="http://link.zhihu.com/?target=https%3A//github.com/microsoft/tensorwatch" target="_blank">https://github.com/microsoft/te</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pytorch_.html" class="navigation navigation-prev " aria-label="Previous page: pytorch解冻">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="PSNR_SSIM.html" class="navigation navigation-next " aria-label="Next page: PSNR&&SSIM">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"pytorch网络可视化","level":"1.4.8","depth":2,"next":{"title":"PSNR&&SSIM","level":"1.4.9","depth":2,"path":"code_technique/pytorch/PSNR_SSIM.md","ref":"code_technique/pytorch/PSNR_SSIM.md","articles":[]},"previous":{"title":"pytorch解冻","level":"1.4.7","depth":2,"path":"code_technique/pytorch/pytorch_.md","ref":"code_technique/pytorch/pytorch_.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"code_technique/pytorch/pytorch_vision.md","mtime":"2019-10-24T04:35:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

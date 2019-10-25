@@ -1,0 +1,1071 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>为什么要使得AI System具备可解释性呢？ · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../code_technique/" />
+    
+    
+    <link rel="prev" href="0.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="0.html">
+            
+                <a href="0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="AI_system.html">
+            
+                <a href="AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../code_technique/">
+            
+                <a href="../code_technique/">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../code_technique/python/python_technique.html">
+            
+                <a href="../code_technique/python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../code_technique/python/sort.html">
+            
+                <a href="../code_technique/python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../code_technique/python/opencv.html">
+            
+                <a href="../code_technique/python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../code_technique/pytorch/pytorch1.html">
+            
+                <a href="../code_technique/pytorch/pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../code_technique/pytorch/pytorch2.html">
+            
+                <a href="../code_technique/pytorch/pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../code_technique/pytorch/pytorch_train.html">
+            
+                <a href="../code_technique/pytorch/pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../code_technique/pytorch/pytorch_.html">
+            
+                <a href="../code_technique/pytorch/pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../code_technique/pytorch/pytorch_vision.html">
+            
+                <a href="../code_technique/pytorch/pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                <a href="../code_technique/pytorch/PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../code_technique/pytorch/SPP.html">
+            
+                <a href="../code_technique/pytorch/SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="../code_technique/pytorch/Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../linux/linux_technique.html">
+            
+                <a href="../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../linux/linux_GPU.html">
+            
+                <a href="../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../paper/">
+            
+                <a href="../paper/">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../paper/paper_write.html">
+            
+                <a href="../paper/paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../paper/Image_to_Image.html">
+            
+                <a href="../paper/Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../paper/GNN.html">
+            
+                <a href="../paper/GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../paper/GMMN.html">
+            
+                <a href="../paper/GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../paper/Deformable_Kernels.html">
+            
+                <a href="../paper/Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../paper/Spectral_Normalization.html">
+            
+                <a href="../paper/Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../paper/Unbalanced_sample_loss.html">
+            
+                <a href="../paper/Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../paper/NN.html">
+            
+                <a href="../paper/NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../super_resolution/">
+            
+                <a href="../super_resolution/">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../super_resolution/SR_summarize.html">
+            
+                <a href="../super_resolution/SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../super_resolution/SR.html">
+            
+                <a href="../super_resolution/SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../super_resolution/code_dataset.html">
+            
+                <a href="../super_resolution/code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../super_resolution/baseline.html">
+            
+                <a href="../super_resolution/baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../super_resolution/loss.html">
+            
+                <a href="../super_resolution/loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../data/">
+            
+                <a href="../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../data/picture.html">
+            
+                <a href="../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../data/picture_enhance.html">
+            
+                <a href="../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../data/data.html">
+            
+                <a href="../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../data/imaaug.html">
+            
+                <a href="../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../math/">
+            
+                <a href="../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../math/matrix.html">
+            
+                <a href="../math/matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../math/distribution_show.html">
+            
+                <a href="../math/distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../math/affine_transformation.html">
+            
+                <a href="../math/affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../math/graph.html">
+            
+                <a href="../math/graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../other/discriminator_train.html">
+            
+                <a href="../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../other/FLOPS.html">
+            
+                <a href="../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >为什么要使得AI System具备可解释性呢？</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x5F97;ai-system&#x5177;&#x5907;&#x53EF;&#x89E3;&#x91CA;&#x6027;&#x5462;&#xFF1F;"><strong>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x5F97;AI System&#x5177;&#x5907;&#x53EF;&#x89E3;&#x91CA;&#x6027;&#x5462;&#xFF1F;</strong></h2>
+<p>&#x5982;&#x5728;AI&#x533B;&#x7597;&#x9886;&#x57DF;&#xFF0C;&#x5982;&#x679C;&#x65E0;&#x6CD5;&#x7406;&#x89E3;&#x53CA;&#x9A8C;&#x8BC1;AI System&#x505A;&#x51B3;&#x7B56;&#x7684;&#x6D41;&#x7A0B;&#x673A;&#x7406;&#xFF0C;&#x90A3;&#x4E48;&#x4EE5;&#x9ED8;&#x8BA4;&#x76F8;&#x4FE1;AI&#x5224;&#x65AD;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x4E0D;&#x8D1F;&#x8D23;&#x4EFB;&#x7684;&#xFF08;Self Driving etc.&#xFF09;&#xFF0C;&#x66F4;&#x591A;&#x8BA8;&#x8BBA;&#x53EF;&#x4EE5;&#x770B;&#x4EE5;&#x4E0B;&#x8BBA;&#x6587;&#x3002;</p>
+<p><a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1708.08296" target="_blank">Explainable Artificial Intelligence: Understanding, Visualizing and Interpreting Deep Learning Models</a> </p>
+<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1g2w9c6jretj30go0b40u9.jpg" alt="img"></p>
+<h2 id="&#x91CD;&#x8981;&#x7684;&#x7F51;&#x7AD9;heatmapping">&#x91CD;&#x8981;&#x7684;&#x7F51;&#x7AD9;<a href="https://link.zhihu.com/?target=http%3A//Heatmapping.org" target="_blank">Heatmapping</a></h2>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x6574;&#x7406;Explainable AI&#x7684;&#x76F8;&#x5173;&#x60F3;&#x6CD5;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x53BB;&#x89E3;&#x91CA;&#x90A3;&#x4E9B;State of the art&#x6A21;&#x578B;&#xFF0C;&#x6211;&#x5148;&#x5C55;&#x793A;&#x4E00;&#x4E2A;&#x53EF;&#x89C6;&#x5316;&#x7684;Demo&#xFF1A;<a href="https://link.zhihu.com/?target=https%3A//lrpserver.hhi.fraunhofer.de/handwriting-classification" target="_blank">LRP Demos&#x94FE;&#x63A5;</a></p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1g2w9c7lm2zj30go07daat.jpg" alt="img">&#x6570;&#x5B57;&#x8FA8;&#x8BC6;&#x53CA;&#x91CD;&#x8981;&#x7684;&#x50CF;&#x7D20;&#x70ED;&#x529B;&#x56FE;&#x663E;&#x793A;</p>
+<p>&#x732B;&#x54AA;&#x7684;&#x5206;&#x7C7B;&#x4F1A;&#x6BD4;&#x8F83;&#x76F4;&#x89C2;&#x4E00;&#x4E0B;&#xFF1A;</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1g2w9c6w879j30go0b40u9.jpg" alt="img">&#x770B;&#x6837;&#x5B50;&#x662F;&#x5B66;&#x4E60;&#x5230;&#x4E86;&#x732B;&#x54AA;&#x7684;&#x8F6E;&#x5ED3;</p>
+<hr>
+<p><strong>&#x4EE5;&#x4E0B;&#x5185;&#x5BB9;&#x6765;&#x81EA;Heatmapping&#xFF01;</strong></p>
+<h2 id="&#x5173;&#x4E8E;lrp&#x7684;&#x4ECB;&#x7ECD;&#xFF1A;">&#x5173;&#x4E8E;LRP&#x7684;&#x4ECB;&#x7ECD;&#xFF1A;</h2>
+<ul>
+<li><a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/tutorial" target="_blank">A Tutorial on Implementing LRP</a></li>
+<li><a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/deeptaylor" target="_blank">A Quick Introduction to Deep Taylor Decomposition</a> </li>
+</ul>
+<h2 id="&#x5173;&#x4E8E;lrp&#x7684;&#x8F6F;&#x4EF6;&#xFF1A;">&#x5173;&#x4E8E;LRP&#x7684;&#x8F6F;&#x4EF6;&#xFF1A;</h2>
+<ul>
+<li><a href="https://link.zhihu.com/?target=https%3A//github.com/albermax/innvestigate" target="_blank">Keras Explanation Toolbox (LRP and other Methods)</a></li>
+<li><a href="https://link.zhihu.com/?target=https%3A//github.com/sebastian-lapuschkin/lrp_toolbox" target="_blank">GitHub project page for the LRP Toolbox</a></li>
+<li><a href="https://link.zhihu.com/?target=https%3A//github.com/VigneshSrinivasan10/interprettensor" target="_blank">TensorFlow LRP Wrapper</a></li>
+<li><a href="https://link.zhihu.com/?target=https%3A//github.com/ArrasL/LRP_for_LSTM" target="_blank">LRP Code for LSTM</a></li>
+</ul>
+<h2 id="&#x5173;&#x4E8E;deep-model&#x53EF;&#x89E3;&#x91CA;&#x6027;&#x7684;talk&#xFF1A;">&#x5173;&#x4E8E;Deep Model&#x53EF;&#x89E3;&#x91CA;&#x6027;&#x7684;talk&#xFF1A;</h2>
+<p><a href="https://link.zhihu.com/?target=https%3A//www.youtube.com/watch%3Fv%3DLtbM2phNI7I" target="_blank">CVPR18: Tutorial: Part 1: Interpreting and Explaining Deep Models in Computer Vision</a> </p>
+<ul>
+<li>EMBC 2019 Tutorial (<a href="https://link.zhihu.com/?target=http%3A//interpretable-ml.org/embc2019tutorial/" target="_blank">Website</a>)
+  Explainable ML, Medical Applications</li>
+<li>Northern Lights Deep Learning Workshop Keynote(<a href="https://link.zhihu.com/?target=http%3A//nldl2019.org/" target="_blank">Website</a> | <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2019_NLDL.pdf" target="_blank">Slides</a>)
+  Explainable ML, Applications</li>
+<li>2018 Int. Explainable AI Symposium Keynote(<a href="https://link.zhihu.com/?target=http%3A//xai.unist.ac.kr/Symposium/2018/" target="_blank">Website</a> | <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/XAI18.pdf" target="_blank">Slides</a>)
+  Explainable ML, Applications</li>
+<li>ICIP 2018 Tutorial (<a href="https://link.zhihu.com/?target=http%3A//interpretable-ml.org/icip2018tutorial/" target="_blank">Website</a> | Slides: <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_ICIP_1.pdf" target="_blank">1-Intro</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_ICIP_2.pdf" target="_blank">2-Methods</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_ICIP_3.pdf" target="_blank">3-Evaluation</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_ICIP_4.pdf" target="_blank">4-Applications</a>)
+  Explainable ML, Applications</li>
+<li>MICCAI 2018 Tutorial (<a href="https://link.zhihu.com/?target=http%3A//interpretable-ml.org/miccai2018tutorial/" target="_blank">Website</a> | <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_MICCAI.pdf" target="_blank">Slides</a>)
+  Explainable ML, Medical Applications</li>
+<li>Talk at Int. Workshop ML &amp; AI 2018 (<a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_workshopMLAI.pdf" target="_blank">Slides</a>)
+  Deep Taylor Decomposition, Validating Explanations</li>
+<li>WCCI 2018 Keynote (<a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2018_WCCI.pdf" target="_blank">Slides</a>)
+  Explainable ML, LRP, Applications</li>
+<li>GCPR 2017 Tutorial (<a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2017_GCPR.pdf" target="_blank">Slides</a>)</li>
+<li>ICASSP 2017 Tutorial (Slides <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2017_ICASSP_1.pdf" target="_blank">1-Intro</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2017_ICASSP_2.pdf" target="_blank">2-Methods</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/slides/2017_ICASSP_3.pdf" target="_blank">3-Applications</a>)</li>
+</ul>
+<h2 id="hightlight-papers">Hightlight Papers</h2>
+<p>S Lapuschkin, S W&#xE4;ldchen, A Binder, G Montavon, W Samek, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1038/s41467-019-08987-4" target="_blank">Unmasking Clever Hans Predictors and Assessing What Machines Really Learn</a>
+Nature Communications, 10:1096, 2019 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1902.10178" target="_blank">preprint</a> | <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/lapuschkin-ncomm19.txt" target="_blank">bibtex</a>]</p>
+<h2 id="&#x5165;&#x95E8;&#x7EA7;&#x4ECB;&#x7ECD;&#xFF1A;">&#x5165;&#x95E8;&#x7EA7;&#x4ECB;&#x7ECD;&#xFF1A;</h2>
+<ul>
+<li>G Montavon, W Samek, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=https%3A//doi.org/10.1016/j.dsp.2017.10.011" target="_blank">Methods for Interpreting and Understanding Deep Neural Networks</a>
+  Digital Signal Processing, 73:1-15, 2018 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1706.07979" target="_blank">preprint</a> | <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/montavon-dsp18.txt" target="_blank">bibtex</a>]</li>
+<li>W Samek, T Wiegand, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=https%3A//www.itu.int/en/journal/001/Pages/05.aspx" target="_blank">Explainable Artificial Intelligence: Understanding, Visualizing and Interpreting Deep Learning Models</a>
+  ITU Journal: ICT Discoveries - Special Issue 1 - The Impact of AI on Communication Networks and Services, 1(1):39-48, 2018 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1708.08296" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/samek-itu18.txt" target="_blank">bibtex</a>]</li>
+</ul>
+<h2 id="&#x65B9;&#x6CD5;&#x76F8;&#x5173;&#xFF1A;">&#x65B9;&#x6CD5;&#x76F8;&#x5173;&#xFF1A;</h2>
+<ul>
+<li>S Bach, A Binder, G Montavon, F Klauschen, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//journals.plos.org/plosone/article%3Fid%3D10.1371/journal.pone.0130140" target="_blank">On Pixel-wise Explanations for Non-Linear Classifier Decisions by Layer-wise Relevance Propagation</a>
+  PLOS ONE, 10(7):e0130140, 2015 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/BacPLOS15.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/bach-plos15.txt" target="_blank">bibtex</a>]</li>
+<li>G Montavon, S Lapuschkin, A Binder, W Samek, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1016/j.patcog.2016.11.008" target="_blank">Explaining NonLinear Classification Decisions with Deep Taylor Decomposition</a>
+  Pattern Recognition, 65:211&#x2013;222, 2017 [<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1512.02479" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/montavon-pr17.txt" target="_blank">bibtex</a>]</li>
+<li>L Arras, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//www.aclweb.org/anthology/W17-5221" target="_blank">Explaining Recurrent Neural Network Predictions in Sentiment Analysis</a>
+  EMNLP Workshop on Computational Approaches to Subjectivity, Sentiment &amp; Social Media Analysis, 159-168, 2017 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1706.07206" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/arras-emnlp17.txt" target="_blank">bibtex</a>]</li>
+<li>A Binder, G Montavon, S Lapuschkin, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1007/978-3-319-44781-0_8" target="_blank">Layer-wise Relevance Propagation for Neural Networks with Local Renormalization Layers</a>
+  Artificial Neural Networks and Machine Learning &#x2013; ICANN 2016, Part II, Lecture Notes in Computer Science, Springer-Verlag, 9887:63-71, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/BinICANN16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/binder-icann16.txt" target="_blank">bibtex</a>]</li>
+<li>PJ Kindermans, KT Sch&#xFC;tt, M Alber, KR M&#xFC;ller, D Erhan, B Kim, S D&#xE4;hne. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1705.05598" target="_blank">Learning how to explain neural networks: PatternNet and PatternAttribution</a>
+  International Conference on Learning Representations (ICLR), 2018</li>
+<li>L Rieger, P Chormai, G Montavon, LK Hansen, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=https%3A//doi.org/10.1007/978-3-319-98131-4_5" target="_blank">Structuring Neural Networks for More Explainable Predictions</a> in Explainable and Interpretable Models in Computer Vision and Machine Learning, 115-131, Springer SSCML, 2018</li>
+<li>J Kauffmann, KR M&#xFC;ller, G Montavon. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1805.06230" target="_blank">Towards Explaining Anomalies: A Deep Taylor Decomposition of One-Class Models</a>
+  arXiv:1805.06230, 2018</li>
+</ul>
+<h2 id="&#x8BC4;&#x4F30;&#x89E3;&#x91CA;-evaluation-of-explanation">&#x8BC4;&#x4F30;&#x89E3;&#x91CA; Evaluation of Explanation</h2>
+<ul>
+<li>L Arras, A Osman, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1904.11829" target="_blank">Evaluating Recurrent Neural Network Explanations</a>
+  arXiv:1904.11829, 2019</li>
+<li>W Samek, A Binder, G Montavon, S Bach, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1109/TNNLS.2016.2599820" target="_blank">Evaluating the Visualization of What a Deep Neural Network has Learned</a>
+  IEEE Transactions on Neural Networks and Learning Systems, 28(11):2660-2673, 2017 [<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1509.06321" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/samek-tnnls17.txt" target="_blank">bibtex</a>]</li>
+</ul>
+<h2 id="&#x5173;&#x4E8E;&#x8F6F;&#x4EF6;&#x7684;papers">&#x5173;&#x4E8E;&#x8F6F;&#x4EF6;&#x7684;Papers:</h2>
+<ul>
+<li>M Alber, S Lapuschkin, P Seegerer, M H&#xE4;gele, KT Sch&#xFC;tt, G Montavon, W Samek, KR M&#xFC;ller, S D&#xE4;hne, PJ Kindermans <a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1808.04260" target="_blank">iNNvestigate neural networks!.</a>
+  arXiv:1808.04260, 2018</li>
+<li>S Lapuschkin, A Binder, G Montavon, KR M&#xFC;ller, W Samek <a href="https://link.zhihu.com/?target=http%3A//www.jmlr.org/papers/v17/15-618.html" target="_blank">The Layer-wise Relevance Propagation Toolbox for Artificial Neural Networks</a>
+  Journal of Machine Learning Research, 17(114):1&#x2212;5, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/LapJMLR16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/lapuschkin-jmlr16.txt" target="_blank">bibtex</a>]</li>
+</ul>
+<h2 id="application-of-science">Application of Science:</h2>
+<ul>
+<li>I Sturm, S Bach, W Samek, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1016/j.jneumeth.2016.10.008" target="_blank">Interpretable Deep Neural Networks for Single-Trial EEG Classification</a>
+  Journal of Neuroscience Methods, 274:141&#x2013;145, 2016 [<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1604.08201" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/sturm-jnm16.txt" target="_blank">bibtex</a>]</li>
+<li>A Binder, M Bockmayr, M H&#xE4;gele, S Wienert, D Heim, K Hellweg, A Stenzinger, L Parlow, J Budczies, B Goeppert, D Treue, M Kotani, M Ishii, M Dietel, A Hocke, C Denkert, KR M&#xFC;ller, F Klauschen. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1805.11178" target="_blank">Towards computational fluorescence microscopy: Machine learning-based integrated prediction of morphological and molecular tumor profiles</a>
+  arXiv:1805.11178, 2018</li>
+<li>F Horst, S Lapuschkin, W Samek, KR M&#xFC;ller, WI Sch&#xF6;llhorn. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1038/s41598-019-38748-8" target="_blank">Explaining the Unique Nature of Individual Gait Patterns with Deep Learning</a>
+  Scientific Reports, 9:2391, 2019 [<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1808.04308" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/horst-srep19.txt" target="_blank">bibtex</a>]</li>
+<li>AW Thomas, HR Heekeren, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1810.09945" target="_blank">Analyzing Neuroimaging Data Through Recurrent Deep Learning Models</a>
+  arXiv:1810.09945, 2018</li>
+</ul>
+<h2 id="&#x6587;&#x672C;&#x4E0A;&#x7684;&#x5E94;&#x7528;&#xFF1A;">&#x6587;&#x672C;&#x4E0A;&#x7684;&#x5E94;&#x7528;&#xFF1A;</h2>
+<ul>
+<li>L Arras, F Horn, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1371/journal.pone.0181142" target="_blank">&quot;What is Relevant in a Text Document?&quot;: An Interpretable Machine Learning Approach</a>
+  PLOS ONE, 12(8):e0181142, 2017 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1612.07843" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/arras-plos17.txt" target="_blank">bibtex</a>]</li>
+<li>L Arras, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//www.aclweb.org/anthology/W17-5221" target="_blank">Explaining Recurrent Neural Network Predictions in Sentiment Analysis</a>
+  EMNLP Workshop on Computational Approaches to Subjectivity, Sentiment &amp; Social Media Analysis, 159-168, 2017 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1706.07206" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/arras-emnlp17.txt" target="_blank">bibtex</a>]</li>
+<li>L Arras, F Horn, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//www.aclweb.org/anthology/W/W16/W16-1601.pdf" target="_blank">Explaining Predictions of Non-Linear Classifiers in NLP</a>
+  ACL Workshop on Representation Learning for NLP, 1-7, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/ArrACL16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/arras-acl16.txt" target="_blank">bibtex</a>]</li>
+<li>F Horn, L Arras, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1707.05261" target="_blank">Exploring text datasets by visualizing relevant words</a>
+  arXiv:1707.05261, 2017</li>
+</ul>
+<h2 id="&#x56FE;&#x50CF;&#x53CA;&#x8138;&#x90E8;&#x8BC6;&#x522B;&#x7684;&#x5E94;&#x7528;&#xFF1A;">&#x56FE;&#x50CF;&#x53CA;&#x8138;&#x90E8;&#x8BC6;&#x522B;&#x7684;&#x5E94;&#x7528;&#xFF1A;</h2>
+<ul>
+<li>S Lapuschkin, A Binder, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1109/CVPR.2016.318" target="_blank">Analyzing Classifiers: Fisher Vectors and Deep Neural Networks</a>
+  Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2912-2920, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/LapCVPR16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/lapuschkin-cvpr16.txt" target="_blank">bibtex</a>]</li>
+<li>S Lapuschkin, A Binder, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1708.07689" target="_blank">Understanding and Comparing Deep Neural Networks for Age and Gender Classification</a>
+  IEEE International Conference on Computer Vision Workshops (ICCVW), 1629-1638, 2017 [<a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1708.07689" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/lapuschkin-iccv17.txt" target="_blank">bibtex</a>]</li>
+<li>C Seibold, W Samek, A Hilsmann, P Eisert. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1806.04265" target="_blank">Accurate and Robust Neural Networks for Security Related Applications Exampled by Face Morphing Attacks</a>
+  arXiv:1806.04265, 2018</li>
+<li>S Bach, A Binder, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1109/ICIP.2016.7532763" target="_blank">Controlling Explanatory Heatmap Resolution and Semantics via Decomposition Depth</a>
+  Proceedings of the IEEE International Conference on Image Processing (ICIP), 2271-2275, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/BacICIP16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/bach-icip16.txt" target="_blank">bibtex</a>]</li>
+<li>A Binder, S Bach, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1007/978-981-10-0557-2_87" target="_blank">Layer-wise Relevance Propagation for Deep Neural Network Architectures</a>
+  Proceedings of the 7th International Conference on Information Science and Applications (ICISA), 6679:913-922, Springer Singapore, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/BinICISA16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/binder-icisa16.txt" target="_blank">bibtex</a>]</li>
+<li>F Arbabzadah, G Montavon, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1007/978-3-319-45886-1_28" target="_blank">Identifying Individual Facial Expressions by Deconstructing a Neural Network</a>
+  Pattern Recognition - 38th German Conference, GCPR 2016, Lecture Notes in Computer Science, 9796:344-354, 2016 [<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/pdf/1606.07285" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/arbabzadah-gcpr16.txt" target="_blank">bibtex</a>]</li>
+</ul>
+<h2 id="&#x89C6;&#x9891;&#x7684;&#x5E94;&#x7528;&#xFF1A;">&#x89C6;&#x9891;&#x7684;&#x5E94;&#x7528;&#xFF1A;</h2>
+<ul>
+<li>C Anders, G Montavon, W Samek, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1806.06926" target="_blank">Understanding Patch-Based Learning by Explaining Predictions</a>
+  arXiv:1806.06926, 2018</li>
+<li>V Srinivasan, S Lapuschkin, C Hellge, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=http%3A//dx.doi.org/10.1109/ICASSP.2017.7952445" target="_blank">Interpretable human action recognition in compressed domain</a>
+  Proceedings of the IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP), 1692-1696, 2017 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/SriICASSP17.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/srinivasan-icassp17.txt" target="_blank">bibtex</a>]</li>
+</ul>
+<h2 id="&#x8BED;&#x97F3;&#x7684;&#x5E94;&#x7528;&#xFF1A;">&#x8BED;&#x97F3;&#x7684;&#x5E94;&#x7528;&#xFF1A;</h2>
+<ul>
+<li>S Becker, M Ackermann, S Lapuschkin, KR M&#xFC;ller, W Samek. <a href="https://link.zhihu.com/?target=https%3A//arxiv.org/abs/1807.03418" target="_blank">Interpreting and Explaining Deep Neural Networks for Classification of Audio Signals</a>
+  arXiv:1807.03418, 2018</li>
+</ul>
+<h2 id="&#x77ED;paper">&#x77ED;Paper</h2>
+<ul>
+<li>W Samek, G Montavon, A Binder, S Lapuschkin, and KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1611.08191" target="_blank">Interpreting the Predictions of Complex ML Models by Layer-wise Relevance Propagation</a>
+  NIPS Workshop on Interpretable ML for Complex Systems, 1-5, 2016 [<a href="https://link.zhihu.com/?target=http%3A//arxiv.org/abs/1611.08191" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/samek-nips16.txt" target="_blank">bibtex</a>]</li>
+<li>G Montavon, S Bach, A Binder, W Samek, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//icmlviz.github.io/assets/papers/13.pdf" target="_blank">Deep Taylor Decomposition of Neural Networks</a>
+  ICML Workshop on Visualization for Deep Learning, 1-3, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/MonICML16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/montavon-icml16.txt" target="_blank">bibtex</a>]</li>
+<li>A Binder, W Samek, G Montavon, S Bach, KR M&#xFC;ller. <a href="https://link.zhihu.com/?target=http%3A//icmlviz.github.io/assets/papers/18.pdf" target="_blank">Analyzing and Validating Neural Networks Predictions</a>
+  ICML Workshop on Visualization for Deep Learning, 1-4, 2016 [<a href="https://link.zhihu.com/?target=http%3A//iphome.hhi.de/samek/pdf/BinICML16.pdf" target="_blank">preprint</a>, <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/bibtex/binder-icml16.txt" target="_blank">bibtex</a>]</li>
+</ul>
+<h2 id="&#x6700;&#x540E;&#xFF1A;bvlc-model-zoo-contributions">&#x6700;&#x540E;&#xFF1A;BVLC Model Zoo Contributions</h2>
+<ul>
+<li>Pascal VOC 2012 Multilabel Model (see <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/%23cvpr16" target="_blank">paper</a>): [<a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/files/bvlc_model_zoo/pascal_voc_2012_multilabel/pascalvoc2012_train_simple2_iter_30000.caffemodel" target="_blank">caffemodel</a>] [<a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/files/bvlc_model_zoo/pascal_voc_2012_multilabel/deploy_x30.prototxt" target="_blank">prototxt</a>]</li>
+<li>Age and Gender Classification Models (see <a href="https://link.zhihu.com/?target=http%3A//heatmapping.org/%23iccv17" target="_blank">paper</a>): [<a href="https://link.zhihu.com/?target=https%3A//github.com/sebastian-lapuschkin/understanding-age-gender-deep-learning-models" target="_blank">data and models</a>]</li>
+</ul>
+<h2 id="&#x76F8;&#x5173;&#x8D44;&#x6599;&#xFF1A;"><strong>&#x76F8;&#x5173;&#x8D44;&#x6599;&#xFF1A;</strong></h2>
+<p>[1]Samek, Wojciech, Thomas Wiegand, and Klaus-Robert M&#xFC;ller. &quot;Explainable artificial intelligence: Understanding, visualizing and interpreting deep learning models.&quot;<em>arXiv preprint arXiv:1708.08296</em>(2017).</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0.html" class="navigation navigation-prev " aria-label="Previous page: 送给研一入学的你们—炼丹师入门手册">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../code_technique/" class="navigation navigation-next " aria-label="Next page: 编程技巧">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"为什么要使得AI System具备可解释性呢？","level":"1.3","depth":1,"next":{"title":"编程技巧","level":"1.4","depth":1,"path":"code_technique/README.md","ref":"code_technique/README.md","articles":[{"title":"python编程技巧","level":"1.4.1","depth":2,"path":"code_technique/python/python_technique.md","ref":"code_technique/python/python_technique.md","articles":[]},{"title":"python常见排序","level":"1.4.2","depth":2,"path":"code_technique/python/sort.md","ref":"code_technique/python/sort.md","articles":[]},{"title":"opencv-python极速入门","level":"1.4.3","depth":2,"path":"code_technique/python/opencv.md","ref":"code_technique/python/opencv.md","articles":[]},{"title":"pytorch常用代码","level":"1.4.4","depth":2,"path":"code_technique/pytorch/pytorch1.md","ref":"code_technique/pytorch/pytorch1.md","articles":[]},{"title":"pytorch常用代码段合集","level":"1.4.5","depth":2,"path":"code_technique/pytorch/pytorch2.md","ref":"code_technique/pytorch/pytorch2.md","articles":[]},{"title":"pytorch训练技巧","level":"1.4.6","depth":2,"path":"code_technique/pytorch/pytorch_train.md","ref":"code_technique/pytorch/pytorch_train.md","articles":[]},{"title":"pytorch解冻","level":"1.4.7","depth":2,"path":"code_technique/pytorch/pytorch_.md","ref":"code_technique/pytorch/pytorch_.md","articles":[]},{"title":"pytorch网络可视化","level":"1.4.8","depth":2,"path":"code_technique/pytorch/pytorch_vision.md","ref":"code_technique/pytorch/pytorch_vision.md","articles":[]},{"title":"PSNR&&SSIM","level":"1.4.9","depth":2,"path":"code_technique/pytorch/PSNR_SSIM.md","ref":"code_technique/pytorch/PSNR_SSIM.md","articles":[]},{"title":"SPP","level":"1.4.10","depth":2,"path":"code_technique/pytorch/SPP.md","ref":"code_technique/pytorch/SPP.md","articles":[]},{"title":"Tensor to img && imge to tensor","level":"1.4.11","depth":2,"path":"code_technique/pytorch/Tensor_to_img_imge_to_tensor.md","ref":"code_technique/pytorch/Tensor_to_img_imge_to_tensor.md","articles":[]}]},"previous":{"title":"送给研一入学的你们—炼丹师入门手册","level":"1.2","depth":1,"path":"introduction/0.md","ref":"introduction/0.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"introduction/AI_system.md","mtime":"2019-10-24T04:35:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1231 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PSNR&&SSIM · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="SPP.html" />
+    
+    
+    <link rel="prev" href="pytorch_vision.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../introduction/0.html">
+            
+                <a href="../../introduction/0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../introduction/AI_system.html">
+            
+                <a href="../../introduction/AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../python/python_technique.html">
+            
+                <a href="../python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../python/sort.html">
+            
+                <a href="../python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../python/opencv.html">
+            
+                <a href="../python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="pytorch1.html">
+            
+                <a href="pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="pytorch2.html">
+            
+                <a href="pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="pytorch_train.html">
+            
+                <a href="pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="pytorch_.html">
+            
+                <a href="pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="pytorch_vision.html">
+            
+                <a href="pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.9" data-path="PSNR_SSIM.html">
+            
+                <a href="PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="SPP.html">
+            
+                <a href="SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../linux/linux_technique.html">
+            
+                <a href="../../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../linux/linux_GPU.html">
+            
+                <a href="../../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../paper/">
+            
+                <a href="../../paper/">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../paper/paper_write.html">
+            
+                <a href="../../paper/paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../paper/Image_to_Image.html">
+            
+                <a href="../../paper/Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../paper/GNN.html">
+            
+                <a href="../../paper/GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="../../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../paper/GMMN.html">
+            
+                <a href="../../paper/GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../paper/Deformable_Kernels.html">
+            
+                <a href="../../paper/Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="../../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../paper/Spectral_Normalization.html">
+            
+                <a href="../../paper/Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../paper/Unbalanced_sample_loss.html">
+            
+                <a href="../../paper/Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../paper/NN.html">
+            
+                <a href="../../paper/NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../super_resolution/">
+            
+                <a href="../../super_resolution/">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../super_resolution/SR_summarize.html">
+            
+                <a href="../../super_resolution/SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../super_resolution/SR.html">
+            
+                <a href="../../super_resolution/SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../super_resolution/code_dataset.html">
+            
+                <a href="../../super_resolution/code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../super_resolution/baseline.html">
+            
+                <a href="../../super_resolution/baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../super_resolution/loss.html">
+            
+                <a href="../../super_resolution/loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../data/">
+            
+                <a href="../../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../data/picture.html">
+            
+                <a href="../../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../data/picture_enhance.html">
+            
+                <a href="../../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../data/data.html">
+            
+                <a href="../../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../data/imaaug.html">
+            
+                <a href="../../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../math/matrix.html">
+            
+                <a href="../../math/matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../math/distribution_show.html">
+            
+                <a href="../../math/distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../math/affine_transformation.html">
+            
+                <a href="../../math/affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../math/graph.html">
+            
+                <a href="../../math/graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../other/">
+            
+                <a href="../../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../other/discriminator_train.html">
+            
+                <a href="../../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../other/FLOPS.html">
+            
+                <a href="../../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >PSNR&&SSIM</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p><img src="http://ww3.sinaimg.cn/large/006tNc79ly1g3a1ynuxyzj30zv0u0h1s.jpg" alt="image-20190522135654280"></p>
+<pre><code>import torch
+import torch.nn.functional as F
+from math import exp
+import numpy as np
+</code></pre><p>&#x200B;     </p>
+<pre><code># &#x8BA1;&#x7B97;&#x4E00;&#x7EF4;&#x7684;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x5411;&#x91CF;
+def gaussian(window_size, sigma):
+    gauss = torch.Tensor([exp(-(x - window_size//2)**2/float(2*sigma**2)) for x in range(window_size)])
+    return gauss/gauss.sum()
+</code></pre><p>&#x200B;     </p>
+<pre><code># &#x521B;&#x5EFA;&#x9AD8;&#x65AF;&#x6838;&#xFF0C;&#x901A;&#x8FC7;&#x4E24;&#x4E2A;&#x4E00;&#x7EF4;&#x9AD8;&#x65AF;&#x5206;&#x5E03;&#x5411;&#x91CF;&#x8FDB;&#x884C;&#x77E9;&#x9635;&#x4E58;&#x6CD5;&#x5F97;&#x5230;
+# &#x53EF;&#x4EE5;&#x8BBE;&#x5B9A;channel&#x53C2;&#x6570;&#x62D3;&#x5C55;&#x4E3A;3&#x901A;&#x9053;
+def create_window(window_size, channel=1):
+    _1D_window = gaussian(window_size, 1.5).unsqueeze(1)
+    _2D_window = _1D_window.mm(_1D_window.t()).float().unsqueeze(0).unsqueeze(0)
+    window = _2D_window.expand(channel, 1, window_size, window_size).contiguous()
+    return window
+</code></pre><p>&#x200B;     </p>
+<pre><code># &#x8BA1;&#x7B97;SSIM
+# &#x76F4;&#x63A5;&#x4F7F;&#x7528;SSIM&#x7684;&#x516C;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8BA1;&#x7B97;&#x5747;&#x503C;&#x65F6;&#xFF0C;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x6C42;&#x50CF;&#x7D20;&#x5E73;&#x5747;&#x503C;&#xFF0C;&#x800C;&#x662F;&#x91C7;&#x7528;&#x5F52;&#x4E00;&#x5316;&#x7684;&#x9AD8;&#x65AF;&#x6838;&#x5377;&#x79EF;&#x6765;&#x4EE3;&#x66FF;&#x3002;
+# &#x5728;&#x8BA1;&#x7B97;&#x65B9;&#x5DEE;&#x548C;&#x534F;&#x65B9;&#x5DEE;&#x65F6;&#x7528;&#x5230;&#x4E86;&#x516C;&#x5F0F;Var(X)=E[X^2]-E[X]^2, cov(X,Y)=E[XY]-E[X]E[Y].
+# &#x6B63;&#x5982;&#x524D;&#x9762;&#x63D0;&#x5230;&#x7684;&#xFF0C;&#x4E0A;&#x9762;&#x6C42;&#x671F;&#x671B;&#x7684;&#x64CD;&#x4F5C;&#x91C7;&#x7528;&#x9AD8;&#x65AF;&#x6838;&#x5377;&#x79EF;&#x4EE3;&#x66FF;&#x3002;
+def ssim(img1, img2, window_size=11, window=None, size_average=True, full=False, val_range=None):
+    # Value range can be different from 255. Other common ranges are 1 (sigmoid) and 2 (tanh).
+    if val_range is None:
+        if torch.max(img1) &gt; 128:
+            max_val = 255
+        else:
+            max_val = 1
+
+        if torch.min(img1) &lt; -0.5:
+            min_val = -1
+        else:
+            min_val = 0
+        L = max_val - min_val
+    else:
+        L = val_range
+
+    padd = 0
+    (_, channel, height, width) = img1.size()
+    if window is None:
+        real_size = min(window_size, height, width)
+        window = create_window(real_size, channel=channel).to(img1.device)
+
+    mu1 = F.conv2d(img1, window, padding=padd, groups=channel)
+    mu2 = F.conv2d(img2, window, padding=padd, groups=channel)
+
+    mu1_sq = mu1.pow(2)
+    mu2_sq = mu2.pow(2)
+    mu1_mu2 = mu1 * mu2
+
+    sigma1_sq = F.conv2d(img1 * img1, window, padding=padd, groups=channel) - mu1_sq
+    sigma2_sq = F.conv2d(img2 * img2, window, padding=padd, groups=channel) - mu2_sq
+    sigma12 = F.conv2d(img1 * img2, window, padding=padd, groups=channel) - mu1_mu2
+
+    C1 = (0.01 * L) ** 2
+    C2 = (0.03 * L) ** 2
+
+    v1 = 2.0 * sigma12 + C2
+    v2 = sigma1_sq + sigma2_sq + C2
+    cs = torch.mean(v1 / v2)  # contrast sensitivity
+
+    ssim_map = ((2 * mu1_mu2 + C1) * v1) / ((mu1_sq + mu2_sq + C1) * v2)
+
+    if size_average:
+        ret = ssim_map.mean()
+    else:
+        ret = ssim_map.mean(1).mean(1).mean(1)
+
+    if full:
+        return ret, cs
+    return ret
+</code></pre><p>&#x200B;<br>&#x200B;     </p>
+<pre><code># Classes to re-use window
+class SSIM(torch.nn.Module):
+    def __init__(self, window_size=11, size_average=True, val_range=None):
+        super(SSIM, self).__init__()
+        self.window_size = window_size
+        self.size_average = size_average
+        self.val_range = val_range
+
+        # Assume 1 channel for SSIM
+        self.channel = 1
+        self.window = create_window(window_size)
+
+    def forward(self, img1, img2):
+        (_, channel, _, _) = img1.size()
+
+        if channel == self.channel and self.window.dtype == img1.dtype:
+            window = self.window
+        else:
+            window = create_window(self.window_size, channel).to(img1.device).type(img1.dtype)
+            self.window = window
+            self.channel = channel
+
+        return ssim(img1, img2, window=window, window_size=self.window_size, size_average=self.size_average)
+</code></pre><p>&#x6211;&#x5199;&#x597D;&#x7684;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x540D;&#x5B57;&#x5BF9;&#x5176; PSNR/SSIM</p>
+<pre><code class="lang-python"><span class="hljs-string">&apos;&apos;&apos;
+calculate the PSNR and SSIM.
+same as MATLAB&apos;s results
+&apos;&apos;&apos;</span>
+<span class="hljs-keyword">import</span> os
+<span class="hljs-keyword">import</span> math
+<span class="hljs-keyword">import</span> numpy <span class="hljs-keyword">as</span> np
+<span class="hljs-keyword">import</span> cv2
+<span class="hljs-keyword">import</span> glob
+<span class="hljs-keyword">import</span> sys
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-comment"># Configurations</span>
+
+    <span class="hljs-comment"># GT - Ground-truth;</span>
+    <span class="hljs-comment"># Gen: Generated / Restored / Recovered images</span>
+
+<span class="hljs-comment">#    folder_GT = &apos;DMDM40256no_gen&apos;</span>
+<span class="hljs-comment">#    folder_GT = &apos;testDNDN256no_gen&apos;</span>
+    folder_GT = <span class="hljs-string">&apos;testDWNW_199_256no_gen&apos;</span>
+
+    folder_Gen = <span class="hljs-string">&apos;testB&apos;</span>
+
+    crop_border = <span class="hljs-number">4</span>
+    suffix = <span class="hljs-string">&apos;/&apos;</span>  <span class="hljs-comment"># suffix for Gen images</span>
+    test_Y = <span class="hljs-keyword">False</span>  <span class="hljs-comment"># True: test Y channel only; False: test RGB channels</span>
+
+    PSNR_all = []
+    SSIM_all = []
+    img_list = sorted(glob.glob(folder_GT + <span class="hljs-string">&apos;/*&apos;</span>))
+
+    <span class="hljs-keyword">if</span> test_Y:
+        print(<span class="hljs-string">&apos;Testing Y channel.&apos;</span>)
+    <span class="hljs-keyword">else</span>:
+        print(<span class="hljs-string">&apos;Testing RGB channels.&apos;</span>)
+    print(len(img_list))
+
+<span class="hljs-comment">#    fo = open(&quot;DN-gt.txt&quot;, &quot;w&quot;)</span>
+    fo = open(<span class="hljs-string">&quot;DW-gt.txt&quot;</span>, <span class="hljs-string">&quot;w&quot;</span>)
+<span class="hljs-comment">#    fo = open(&quot;DM-gt.txt&quot;, &quot;w&quot;)</span>
+
+    <span class="hljs-keyword">for</span> i, img_path <span class="hljs-keyword">in</span> enumerate(img_list):
+        base_name = os.path.splitext(os.path.basename(img_path))[<span class="hljs-number">0</span>]
+<span class="hljs-comment">#        print(base_name,img_path,folder_Gen,suffix)</span>
+        im_GT = cv2.imread(img_path) 
+<span class="hljs-comment">#        print(type(im_GT))</span>
+        im_GT = im_GT / <span class="hljs-number">255</span>
+        im_Gen = cv2.imread(os.path.join(folder_Gen, base_name  + <span class="hljs-string">&apos;.jpg&apos;</span>)) 
+<span class="hljs-comment">#        print(type(im_Gen),os.path.join(folder_Gen, base_name  + &apos;.jpg&apos;))</span>
+        im_Gen = im_Gen / <span class="hljs-number">255</span>
+
+        <span class="hljs-keyword">if</span> test_Y <span class="hljs-keyword">and</span> im_GT.shape[<span class="hljs-number">2</span>] == <span class="hljs-number">3</span>:  <span class="hljs-comment"># evaluate on Y channel in YCbCr color space</span>
+            im_GT_in = bgr2ycbcr(im_GT)
+            im_Gen_in = bgr2ycbcr(im_Gen)
+        <span class="hljs-keyword">else</span>:
+            im_GT_in = im_GT
+            im_Gen_in = im_Gen
+
+        <span class="hljs-comment"># crop borders</span>
+        <span class="hljs-keyword">if</span> im_GT_in.ndim == <span class="hljs-number">3</span>:
+            cropped_GT = im_GT_in[crop_border:-crop_border, crop_border:-crop_border, :]
+            cropped_Gen = im_Gen_in[crop_border:-crop_border, crop_border:-crop_border, :]
+        <span class="hljs-keyword">elif</span> im_GT_in.ndim == <span class="hljs-number">2</span>:
+            cropped_GT = im_GT_in[crop_border:-crop_border, crop_border:-crop_border]
+            cropped_Gen = im_Gen_in[crop_border:-crop_border, crop_border:-crop_border]
+        <span class="hljs-keyword">else</span>:
+            <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;Wrong image dimension: {}. Should be 2 or 3.&apos;</span>.format(im_GT_in.ndim))
+
+        <span class="hljs-comment"># calculate PSNR and SSIM</span>
+        PSNR = calculate_psnr(cropped_GT * <span class="hljs-number">255</span>, cropped_Gen * <span class="hljs-number">255</span>)
+
+        SSIM = calculate_ssim(cropped_GT * <span class="hljs-number">255</span>, cropped_Gen * <span class="hljs-number">255</span>)
+<span class="hljs-comment">#        print(&apos;{:3d} - {:25}. \tPSNR: {:.6f} dB, \tSSIM: {:.6f}&apos;.format(i + 1, base_name, PSNR, SSIM))</span>
+<span class="hljs-comment">#        print (&quot;&#x6587;&#x4EF6;&#x540D;: &quot;, fo.name)</span>
+        fo.write(<span class="hljs-string">&apos;{:3d} - {:25}. \tPSNR: {:.6f} dB, \tSSIM: {:.6f}\n&apos;</span>.format(
+                i + <span class="hljs-number">1</span>, base_name, PSNR, SSIM))
+
+<span class="hljs-comment">#        print(i,&quot;/&quot;,len(img_list),i/len(img_list),&quot;%&quot;)</span>
+        print(i)
+        PSNR_all.append(PSNR)
+        SSIM_all.append(SSIM)
+
+<span class="hljs-comment">#    print(&apos;Average: PSNR: {:.6f} dB, SSIM: {:.6f}&apos;.format(sum(PSNR_all) / len(PSNR_all),sum(SSIM_all) / len(SSIM_all)))</span>
+
+    fo.write(<span class="hljs-string">&apos;Average: PSNR: {:.6f} dB, SSIM: {:.6f}\n&apos;</span>.format(
+        sum(PSNR_all) / len(PSNR_all),
+        sum(SSIM_all) / len(SSIM_all)))
+    <span class="hljs-comment"># &#x5173;&#x95ED;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;</span>
+    fo.close()
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_psnr</span><span class="hljs-params">(img1, img2)</span>:</span>
+    <span class="hljs-comment"># img1 and img2 have range [0, 255]</span>
+    img1 = img1.astype(np.float64)
+    img2 = img2.astype(np.float64)
+    mse = np.mean((img1 - img2)**<span class="hljs-number">2</span>)
+    <span class="hljs-keyword">if</span> mse == <span class="hljs-number">0</span>:
+        <span class="hljs-keyword">return</span> float(<span class="hljs-string">&apos;inf&apos;</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-number">20</span> * math.log10(<span class="hljs-number">255.0</span> / math.sqrt(mse))
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">ssim</span><span class="hljs-params">(img1, img2)</span>:</span>
+    C1 = (<span class="hljs-number">0.01</span> * <span class="hljs-number">255</span>)**<span class="hljs-number">2</span>
+    C2 = (<span class="hljs-number">0.03</span> * <span class="hljs-number">255</span>)**<span class="hljs-number">2</span>
+
+    img1 = img1.astype(np.float64)
+    img2 = img2.astype(np.float64)
+    kernel = cv2.getGaussianKernel(<span class="hljs-number">11</span>, <span class="hljs-number">1.5</span>)
+    window = np.outer(kernel, kernel.transpose())
+
+    mu1 = cv2.filter2D(img1, <span class="hljs-number">-1</span>, window)[<span class="hljs-number">5</span>:<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>:<span class="hljs-number">-5</span>]  <span class="hljs-comment"># valid</span>
+    mu2 = cv2.filter2D(img2, <span class="hljs-number">-1</span>, window)[<span class="hljs-number">5</span>:<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>:<span class="hljs-number">-5</span>]
+    mu1_sq = mu1**<span class="hljs-number">2</span>
+    mu2_sq = mu2**<span class="hljs-number">2</span>
+    mu1_mu2 = mu1 * mu2
+    sigma1_sq = cv2.filter2D(img1**<span class="hljs-number">2</span>, <span class="hljs-number">-1</span>, window)[<span class="hljs-number">5</span>:<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>:<span class="hljs-number">-5</span>] - mu1_sq
+    sigma2_sq = cv2.filter2D(img2**<span class="hljs-number">2</span>, <span class="hljs-number">-1</span>, window)[<span class="hljs-number">5</span>:<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>:<span class="hljs-number">-5</span>] - mu2_sq
+    sigma12 = cv2.filter2D(img1 * img2, <span class="hljs-number">-1</span>, window)[<span class="hljs-number">5</span>:<span class="hljs-number">-5</span>, <span class="hljs-number">5</span>:<span class="hljs-number">-5</span>] - mu1_mu2
+
+    ssim_map = ((<span class="hljs-number">2</span> * mu1_mu2 + C1) * (<span class="hljs-number">2</span> * sigma12 + C2)) / ((mu1_sq + mu2_sq + C1) *
+                                                            (sigma1_sq + sigma2_sq + C2))
+    <span class="hljs-keyword">return</span> ssim_map.mean()
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">calculate_ssim</span><span class="hljs-params">(img1, img2)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;calculate SSIM
+    the same outputs as MATLAB&apos;s
+    img1, img2: [0, 255]
+    &apos;&apos;&apos;</span>
+    <span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> img1.shape == img2.shape:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;Input images must have the same dimensions.&apos;</span>)
+    <span class="hljs-keyword">if</span> img1.ndim == <span class="hljs-number">2</span>:
+        <span class="hljs-keyword">return</span> ssim(img1, img2)
+    <span class="hljs-keyword">elif</span> img1.ndim == <span class="hljs-number">3</span>:
+        <span class="hljs-keyword">if</span> img1.shape[<span class="hljs-number">2</span>] == <span class="hljs-number">3</span>:
+            ssims = []
+            <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+                ssims.append(ssim(img1, img2))
+            <span class="hljs-keyword">return</span> np.array(ssims).mean()
+        <span class="hljs-keyword">elif</span> img1.shape[<span class="hljs-number">2</span>] == <span class="hljs-number">1</span>:
+            <span class="hljs-keyword">return</span> ssim(np.squeeze(img1), np.squeeze(img2))
+    <span class="hljs-keyword">else</span>:
+        <span class="hljs-keyword">raise</span> ValueError(<span class="hljs-string">&apos;Wrong input image dimensions.&apos;</span>)
+
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">bgr2ycbcr</span><span class="hljs-params">(img, only_y=True)</span>:</span>
+    <span class="hljs-string">&apos;&apos;&apos;same as matlab rgb2ycbcr
+    only_y: only return Y channel
+    Input:
+        uint8, [0, 255]
+        float, [0, 1]
+    &apos;&apos;&apos;</span>
+    in_img_type = img.dtype
+    img.astype(np.float32)
+    <span class="hljs-keyword">if</span> in_img_type != np.uint8:
+        img *= <span class="hljs-number">255.</span>
+    <span class="hljs-comment"># convert</span>
+    <span class="hljs-keyword">if</span> only_y:
+        rlt = np.dot(img, [<span class="hljs-number">24.966</span>, <span class="hljs-number">128.553</span>, <span class="hljs-number">65.481</span>]) / <span class="hljs-number">255.0</span> + <span class="hljs-number">16.0</span>
+    <span class="hljs-keyword">else</span>:
+        rlt = np.matmul(img, [[<span class="hljs-number">24.966</span>, <span class="hljs-number">112.0</span>, <span class="hljs-number">-18.214</span>], [<span class="hljs-number">128.553</span>, <span class="hljs-number">-74.203</span>, <span class="hljs-number">-93.786</span>],
+                              [<span class="hljs-number">65.481</span>, <span class="hljs-number">-37.797</span>, <span class="hljs-number">112.0</span>]]) / <span class="hljs-number">255.0</span> + [<span class="hljs-number">16</span>, <span class="hljs-number">128</span>, <span class="hljs-number">128</span>]
+    <span class="hljs-keyword">if</span> in_img_type == np.uint8:
+        rlt = rlt.round()
+    <span class="hljs-keyword">else</span>:
+        rlt /= <span class="hljs-number">255.</span>
+    <span class="hljs-keyword">return</span> rlt.astype(in_img_type)
+
+
+<span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">&apos;__main__&apos;</span>:
+    main()
+&#xDF;
+</code></pre>
+<pre><code class="lang-python"><span class="hljs-comment">#PSNR</span>
+per_image_mse_loss = F.mse_loss (gen_hr,imgs_hr, reduction=<span class="hljs-string">&apos;none&apos;</span>)
+per_image_psnr = <span class="hljs-number">10</span> * torch.log10 (<span class="hljs-number">10</span> / per_image_mse_loss)
+tensor_average_psnr = torch.mean (per_image_psnr).item ()
+
+<span class="hljs-comment">#SSIM</span>
+<span class="hljs-keyword">import</span> pytorch_ssim
+<span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+
+img1 = Variable(torch.rand(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">256</span>, <span class="hljs-number">256</span>))
+img2 = Variable(torch.rand(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">256</span>, <span class="hljs-number">256</span>))
+
+<span class="hljs-keyword">if</span> torch.cuda.is_available():
+    img1 = img1.cuda()
+    img2 = img2.cuda()
+
+print(pytorch_ssim.ssim(img1, img2))
+
+ssim_loss = pytorch_ssim.SSIM(window_size = <span class="hljs-number">11</span>)
+
+print(ssim_loss(img1, img2))
+
+<span class="hljs-comment">#MSSSIM</span>
+<span class="hljs-keyword">import</span> pytorch_ssim
+<span class="hljs-keyword">import</span> torch
+<span class="hljs-keyword">from</span> torch.autograd <span class="hljs-keyword">import</span> Variable
+
+device = torch.device(<span class="hljs-string">&apos;cuda&apos;</span> <span class="hljs-keyword">if</span> torch.cuda.is_available() <span class="hljs-keyword">else</span> <span class="hljs-string">&apos;cpu&apos;</span>)
+m = pytorch_msssim.MSSSIM()
+
+img1 = torch.rand(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">256</span>, <span class="hljs-number">256</span>)
+img2 = torch.rand(<span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-number">256</span>, <span class="hljs-number">256</span>)
+
+print(pytorch_msssim.msssim(img1, img2))
+print(m(img1, img2)))
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="pytorch_vision.html" class="navigation navigation-prev " aria-label="Previous page: pytorch网络可视化">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="SPP.html" class="navigation navigation-next " aria-label="Next page: SPP">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PSNR&&SSIM","level":"1.4.9","depth":2,"next":{"title":"SPP","level":"1.4.10","depth":2,"path":"code_technique/pytorch/SPP.md","ref":"code_technique/pytorch/SPP.md","articles":[]},"previous":{"title":"pytorch网络可视化","level":"1.4.8","depth":2,"path":"code_technique/pytorch/pytorch_vision.md","ref":"code_technique/pytorch/pytorch_vision.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"code_technique/pytorch/PSNR_SSIM.md","mtime":"2019-10-25T09:57:54.661Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

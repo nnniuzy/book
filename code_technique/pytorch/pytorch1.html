@@ -1,0 +1,1598 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>pytorch常用代码 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="pytorch2.html" />
+    
+    
+    <link rel="prev" href="../python/opencv.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../introduction/0.html">
+            
+                <a href="../../introduction/0.html">
+            
+                    
+                    送给研一入学的你们—炼丹师入门手册
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../introduction/AI_system.html">
+            
+                <a href="../../introduction/AI_system.html">
+            
+                    
+                    为什么要使得AI System具备可解释性呢？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    编程技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../python/python_technique.html">
+            
+                <a href="../python/python_technique.html">
+            
+                    
+                    python编程技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../python/sort.html">
+            
+                <a href="../python/sort.html">
+            
+                    
+                    python常见排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../python/opencv.html">
+            
+                <a href="../python/opencv.html">
+            
+                    
+                    opencv-python极速入门
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.4" data-path="pytorch1.html">
+            
+                <a href="pytorch1.html">
+            
+                    
+                    pytorch常用代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="pytorch2.html">
+            
+                <a href="pytorch2.html">
+            
+                    
+                    pytorch常用代码段合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="pytorch_train.html">
+            
+                <a href="pytorch_train.html">
+            
+                    
+                    pytorch训练技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="pytorch_.html">
+            
+                <a href="pytorch_.html">
+            
+                    
+                    pytorch解冻
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="pytorch_vision.html">
+            
+                <a href="pytorch_vision.html">
+            
+                    
+                    pytorch网络可视化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="PSNR_SSIM.html">
+            
+                <a href="PSNR_SSIM.html">
+            
+                    
+                    PSNR&&SSIM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="SPP.html">
+            
+                <a href="SPP.html">
+            
+                    
+                    SPP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="Tensor_to_img_imge_to_tensor.html">
+            
+                <a href="Tensor_to_img_imge_to_tensor.html">
+            
+                    
+                    Tensor to img && imge to tensor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../linux/">
+            
+                <a href="../../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../linux/linux_technique.html">
+            
+                <a href="../../linux/linux_technique.html">
+            
+                    
+                    Linux技巧
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../linux/linux_GPU.html">
+            
+                <a href="../../linux/linux_GPU.html">
+            
+                    
+                    Linux显卡驱动修复
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../paper/">
+            
+                <a href="../../paper/">
+            
+                    
+                    论文
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../paper/paper_write.html">
+            
+                <a href="../../paper/paper_write.html">
+            
+                    
+                    论文写作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../paper/Image_to_Image.html">
+            
+                <a href="../../paper/Image_to_Image.html">
+            
+                    
+                    Image-to-Image 的论文汇总（含 GitHub 代码）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../paper/GNN.html">
+            
+                <a href="../../paper/GNN.html">
+            
+                    
+                    GNN综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                <a href="../../paper/Perceptual_GAN_for_Small_Object_Detection.html">
+            
+                    
+                    Perceptual GAN for Small Object Detection阅读笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../paper/GMMN.html">
+            
+                <a href="../../paper/GMMN.html">
+            
+                    
+                    GAN变体-GMMN 网络
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../paper/Deformable_Kernels.html">
+            
+                <a href="../../paper/Deformable_Kernels.html">
+            
+                    
+                    图像视频去噪中的Deformable Kernels
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                <a href="../../paper/Isolating_Sources_of_Disentanglement_in_VAEs.html">
+            
+                    
+                    Isolating Sources of Disentanglement in VAEs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../paper/Spectral_Normalization.html">
+            
+                <a href="../../paper/Spectral_Normalization.html">
+            
+                    
+                    Spectral Normalization 谱归一化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../../paper/Unbalanced_sample_loss.html">
+            
+                <a href="../../paper/Unbalanced_sample_loss.html">
+            
+                    
+                    不均衡样本loss
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../../paper/NN.html">
+            
+                <a href="../../paper/NN.html">
+            
+                    
+                    论文神经网络示意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../super_resolution/">
+            
+                <a href="../../super_resolution/">
+            
+                    
+                    超分辨率
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../super_resolution/SR_summarize.html">
+            
+                <a href="../../super_resolution/SR_summarize.html">
+            
+                    
+                    超分辨率方向综述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../super_resolution/SR.html">
+            
+                <a href="../../super_resolution/SR.html">
+            
+                    
+                    超分辨率技术
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../super_resolution/code_dataset.html">
+            
+                <a href="../../super_resolution/code_dataset.html">
+            
+                    
+                    超分辨率代码数据集合集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../super_resolution/baseline.html">
+            
+                <a href="../../super_resolution/baseline.html">
+            
+                    
+                    超分辨率baseline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../super_resolution/loss.html">
+            
+                <a href="../../super_resolution/loss.html">
+            
+                    
+                    超分辨率的损失函数总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="divider"></li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../data/">
+            
+                <a href="../../data/">
+            
+                    
+                    图片和数据处理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1.1" data-path="../../data/picture.html">
+            
+                <a href="../../data/picture.html">
+            
+                    
+                    图片处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.2" data-path="../../data/picture_enhance.html">
+            
+                <a href="../../data/picture_enhance.html">
+            
+                    
+                    图像数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.3" data-path="../../data/data.html">
+            
+                <a href="../../data/data.html">
+            
+                    
+                    数据增强
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.1.4" data-path="../../data/imaaug.html">
+            
+                <a href="../../data/imaaug.html">
+            
+                    
+                    imaaug 数据增强大杀器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../math/">
+            
+                <a href="../../math/">
+            
+                    
+                    数学
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.2.1" data-path="../../math/matrix.html">
+            
+                <a href="../../math/matrix.html">
+            
+                    
+                    矩阵总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.2" data-path="../../math/distribution_show.html">
+            
+                <a href="../../math/distribution_show.html">
+            
+                    
+                    分布
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.3" data-path="../../math/affine_transformation.html">
+            
+                <a href="../../math/affine_transformation.html">
+            
+                    
+                    仿射变换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2.4" data-path="../../math/graph.html">
+            
+                <a href="../../math/graph.html">
+            
+                    
+                    图的基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../other/">
+            
+                <a href="../../other/">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.3.1" data-path="../../other/discriminator_train.html">
+            
+                <a href="../../other/discriminator_train.html">
+            
+                    
+                    判别器训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3.2" data-path="../../other/FLOPS.html">
+            
+                <a href="../../other/FLOPS.html">
+            
+                    
+                    网络FLOPS计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >pytorch常用代码</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x672C;&#x6587;&#x4EE3;&#x7801;&#x57FA;&#x4E8E;PyTorch 1.0&#x7248;&#x672C;&#xFF0C;&#x9700;&#x8981;&#x7528;&#x5230;&#x4EE5;&#x4E0B;&#x5305;</p>
+<pre><code class="lang-text">import collections
+import os
+import shutil
+import tqdm
+
+import numpy as np
+import PIL.Image
+import torch
+import torchvision
+</code></pre>
+<h2 id="1-&#x57FA;&#x7840;&#x914D;&#x7F6E;"><strong>1. &#x57FA;&#x7840;&#x914D;&#x7F6E;</strong></h2>
+<p><strong>&#x68C0;&#x67E5;PyTorch&#x7248;&#x672C;</strong></p>
+<pre><code class="lang-text">torch.__version__               # PyTorch version
+torch.version.cuda              # Corresponding CUDA version
+torch.backends.cudnn.version()  # Corresponding cuDNN version
+torch.cuda.get_device_name(0)   # GPU type
+</code></pre>
+<p><strong>&#x66F4;&#x65B0;PyTorch</strong></p>
+<p>PyTorch&#x5C06;&#x88AB;&#x5B89;&#x88C5;&#x5728;anaconda3/lib/python3.7/site-packages/torch/&#x76EE;&#x5F55;&#x4E0B;&#x3002;</p>
+<pre><code class="lang-text">conda update pytorch torchvision -c pytorch
+</code></pre>
+<p><strong>&#x56FA;&#x5B9A;&#x968F;&#x673A;&#x79CD;&#x5B50;</strong></p>
+<pre><code class="lang-text">torch.manual_seed(0)
+torch.cuda.manual_seed_all(0)
+</code></pre>
+<p><strong>&#x6307;&#x5B9A;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5728;&#x7279;&#x5B9A;GPU&#x5361;&#x4E0A;</strong></p>
+<p>&#x5728;&#x547D;&#x4EE4;&#x884C;&#x6307;&#x5B9A;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<pre><code class="lang-text">CUDA_VISIBLE_DEVICES=0,1 python train.py
+</code></pre>
+<p>&#x6216;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x6307;&#x5B9A;</p>
+<pre><code class="lang-text">os.environ[&apos;CUDA_VISIBLE_DEVICES&apos;] = &apos;0,1&apos;
+</code></pre>
+<p><strong>&#x5224;&#x65AD;&#x662F;&#x5426;&#x6709;CUDA&#x652F;&#x6301;</strong></p>
+<pre><code class="lang-text">torch.cuda.is_available()
+</code></pre>
+<p><strong>&#x8BBE;&#x7F6E;&#x4E3A;cuDNN benchmark&#x6A21;&#x5F0F;</strong></p>
+<p>Benchmark&#x6A21;&#x5F0F;&#x4F1A;&#x63D0;&#x5347;&#x8BA1;&#x7B97;&#x901F;&#x5EA6;&#xFF0C;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x8BA1;&#x7B97;&#x4E2D;&#x6709;&#x968F;&#x673A;&#x6027;&#xFF0C;&#x6BCF;&#x6B21;&#x7F51;&#x7EDC;&#x524D;&#x9988;&#x7ED3;&#x679C;&#x7565;&#x6709;&#x5DEE;&#x5F02;&#x3002;</p>
+<pre><code class="lang-text">torch.backends.cudnn.benchmark = True
+</code></pre>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x7ED3;&#x679C;&#x6CE2;&#x52A8;&#xFF0C;&#x8BBE;&#x7F6E;</p>
+<pre><code class="lang-text">torch.backends.cudnn.deterministic = True
+</code></pre>
+<p><strong>&#x6E05;&#x9664;GPU&#x5B58;&#x50A8;</strong></p>
+<p>&#x6709;&#x65F6;Control-C&#x4E2D;&#x6B62;&#x8FD0;&#x884C;&#x540E;GPU&#x5B58;&#x50A8;&#x6CA1;&#x6709;&#x53CA;&#x65F6;&#x91CA;&#x653E;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x6E05;&#x7A7A;&#x3002;&#x5728;PyTorch&#x5185;&#x90E8;&#x53EF;&#x4EE5;</p>
+<pre><code class="lang-text">torch.cuda.empty_cache()
+</code></pre>
+<p>&#x6216;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x53EF;&#x4EE5;&#x5148;&#x4F7F;&#x7528;ps&#x627E;&#x5230;&#x7A0B;&#x5E8F;&#x7684;PID&#xFF0C;&#x518D;&#x4F7F;&#x7528;kill&#x7ED3;&#x675F;&#x8BE5;&#x8FDB;&#x7A0B;</p>
+<pre><code class="lang-python3">ps aux | grep python
+kill -9 [pid]
+</code></pre>
+<p>&#x6216;&#x8005;&#x76F4;&#x63A5;&#x91CD;&#x7F6E;&#x6CA1;&#x6709;&#x88AB;&#x6E05;&#x7A7A;&#x7684;GPU</p>
+<pre><code class="lang-text">nvidia-smi --gpu-reset -i [gpu_id]
+</code></pre>
+<h2 id="2-&#x5F20;&#x91CF;&#x5904;&#x7406;"><strong>2. &#x5F20;&#x91CF;&#x5904;&#x7406;</strong></h2>
+<p><strong>&#x5F20;&#x91CF;&#x57FA;&#x672C;&#x4FE1;&#x606F;</strong></p>
+<pre><code class="lang-text">tensor.type()   # Data type
+tensor.size()   # Shape of the tensor. It is a subclass of Python tuple
+tensor.dim()    # Number of dimensions.
+</code></pre>
+<p><strong>&#x6570;&#x636E;&#x7C7B;&#x578B;&#x8F6C;&#x6362;</strong></p>
+<pre><code class="lang-text"># Set default tensor type. Float in PyTorch is much faster than double.
+torch.set_default_tensor_type(torch.FloatTensor)
+
+# Type convertions.
+tensor = tensor.cuda()
+tensor = tensor.cpu()
+tensor = tensor.float()
+tensor = tensor.long()
+</code></pre>
+<p><strong>torch.Tensor&#x4E0E;np.ndarray&#x8F6C;&#x6362;</strong></p>
+<pre><code class="lang-text"># torch.Tensor -&gt; np.ndarray.
+ndarray = tensor.cpu().numpy()
+
+# np.ndarray -&gt; torch.Tensor.
+tensor = torch.from_numpy(ndarray).float()
+tensor = torch.from_numpy(ndarray.copy()).float()  # If ndarray has negative stride
+</code></pre>
+<p><strong>torch.Tensor&#x4E0E;PIL.Image&#x8F6C;&#x6362;</strong></p>
+<p>PyTorch&#x4E2D;&#x7684;&#x5F20;&#x91CF;&#x9ED8;&#x8BA4;&#x91C7;&#x7528;N&#xD7;D&#xD7;H&#xD7;W&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x5E76;&#x4E14;&#x6570;&#x636E;&#x8303;&#x56F4;&#x5728;[0, 1]&#xFF0C;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x8F6C;&#x7F6E;&#x548C;&#x89C4;&#x8303;&#x5316;&#x3002;</p>
+<pre><code class="lang-text"># torch.Tensor -&gt; PIL.Image.
+image = PIL.Image.fromarray(torch.clamp(tensor * 255, min=0, max=255
+    ).byte().permute(1, 2, 0).cpu().numpy())
+image = torchvision.transforms.functional.to_pil_image(tensor)  # Equivalently way
+
+# PIL.Image -&gt; torch.Tensor.
+tensor = torch.from_numpy(np.asarray(PIL.Image.open(path))
+    ).permute(2, 0, 1).float() / 255
+tensor = torchvision.transforms.functional.to_tensor(PIL.Image.open(path))  # Equivalently way
+</code></pre>
+<p><strong>np.ndarray&#x4E0E;PIL.Image&#x8F6C;&#x6362;</strong></p>
+<pre><code class="lang-text"># np.ndarray -&gt; PIL.Image.
+image = PIL.Image.fromarray(ndarray.astypde(np.uint8))
+
+# PIL.Image -&gt; np.ndarray.
+ndarray = np.asarray(PIL.Image.open(path))
+</code></pre>
+<p><strong>&#x4ECE;&#x53EA;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x5F20;&#x91CF;&#x4E2D;&#x63D0;&#x53D6;&#x503C;</strong></p>
+<p>&#x8FD9;&#x5728;&#x8BAD;&#x7EC3;&#x65F6;&#x7EDF;&#x8BA1;loss&#x7684;&#x53D8;&#x5316;&#x8FC7;&#x7A0B;&#x4E2D;&#x7279;&#x522B;&#x6709;&#x7528;&#x3002;&#x5426;&#x5219;&#x8FD9;&#x5C06;&#x7D2F;&#x79EF;&#x8BA1;&#x7B97;&#x56FE;&#xFF0C;&#x4F7F;GPU&#x5B58;&#x50A8;&#x5360;&#x7528;&#x91CF;&#x8D8A;&#x6765;&#x8D8A;&#x5927;&#x3002;</p>
+<pre><code class="lang-text">value = tensor.item()
+</code></pre>
+<p><strong>&#x5F20;&#x91CF;&#x5F62;&#x53D8;</strong></p>
+<p>&#x5F20;&#x91CF;&#x5F62;&#x53D8;&#x5E38;&#x5E38;&#x9700;&#x8981;&#x7528;&#x4E8E;&#x5C06;&#x5377;&#x79EF;&#x5C42;&#x7279;&#x5F81;&#x8F93;&#x5165;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#x7684;&#x60C5;&#x5F62;&#x3002;&#x76F8;&#x6BD4;torch.view&#xFF0C;torch.reshape&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x5904;&#x7406;&#x8F93;&#x5165;&#x5F20;&#x91CF;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x60C5;&#x51B5;&#x3002;</p>
+<pre><code class="lang-text">tensor = torch.reshape(tensor, shape)
+</code></pre>
+<p><strong>&#x6253;&#x4E71;&#x987A;&#x5E8F;</strong></p>
+<pre><code class="lang-text">tensor = tensor[torch.randperm(tensor.size(0))]  # Shuffle the first dimension
+</code></pre>
+<p><strong>&#x6C34;&#x5E73;&#x7FFB;&#x8F6C;</strong></p>
+<p>PyTorch&#x4E0D;&#x652F;&#x6301;tensor[::-1]&#x8FD9;&#x6837;&#x7684;&#x8D1F;&#x6B65;&#x957F;&#x64CD;&#x4F5C;&#xFF0C;&#x6C34;&#x5E73;&#x7FFB;&#x8F6C;&#x53EF;&#x4EE5;&#x7528;&#x5F20;&#x91CF;&#x7D22;&#x5F15;&#x5B9E;&#x73B0;&#x3002;</p>
+<pre><code class="lang-python3"># Assume tensor has shape N*D*H*W.
+tensor = tensor[:, :, :, torch.arange(tensor.size(3) - 1, -1, -1).long()]
+</code></pre>
+<p><strong>&#x590D;&#x5236;&#x5F20;&#x91CF;</strong></p>
+<p>&#x6709;&#x4E09;&#x79CD;&#x590D;&#x5236;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x5BF9;&#x5E94;&#x4E0D;&#x540C;&#x7684;&#x9700;&#x6C42;&#x3002;</p>
+<pre><code class="lang-text"># Operation                 |  New/Shared memory | Still in computation graph |
+tensor.clone()            # |        New         |          Yes               |
+tensor.detach()           # |      Shared        |          No                |
+tensor.detach.clone()()   # |        New         |          No                |
+</code></pre>
+<p><strong>&#x62FC;&#x63A5;&#x5F20;&#x91CF;</strong></p>
+<p>&#x6CE8;&#x610F;torch.cat&#x548C;torch.stack&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;torch.cat&#x6CBF;&#x7740;&#x7ED9;&#x5B9A;&#x7684;&#x7EF4;&#x5EA6;&#x62FC;&#x63A5;&#xFF0C;&#x800C;torch.stack&#x4F1A;&#x65B0;&#x589E;&#x4E00;&#x7EF4;&#x3002;&#x4F8B;&#x5982;&#x5F53;&#x53C2;&#x6570;&#x662F;3&#x4E2A;10&#xD7;5&#x7684;&#x5F20;&#x91CF;&#xFF0C;torch.cat&#x7684;&#x7ED3;&#x679C;&#x662F;30&#xD7;5&#x7684;&#x5F20;&#x91CF;&#xFF0C;&#x800C;torch.stack&#x7684;&#x7ED3;&#x679C;&#x662F;3&#xD7;10&#xD7;5&#x7684;&#x5F20;&#x91CF;&#x3002;</p>
+<pre><code class="lang-text">tensor = torch.cat(list_of_tensors, dim=0)
+tensor = torch.stack(list_of_tensors, dim=0)
+</code></pre>
+<p><strong>&#x5C06;&#x6574;&#x6570;&#x6807;&#x8BB0;&#x8F6C;&#x6362;&#x6210;&#x72EC;&#x70ED;&#xFF08;one-hot&#xFF09;&#x7F16;&#x7801;</strong></p>
+<p>PyTorch&#x4E2D;&#x7684;&#x6807;&#x8BB0;&#x9ED8;&#x8BA4;&#x4ECE;0&#x5F00;&#x59CB;&#x3002;</p>
+<pre><code class="lang-text">N = tensor.size(0)
+one_hot = torch.zeros(N, num_classes).long()
+one_hot.scatter_(dim=1, index=torch.unsqueeze(tensor, dim=1), src=torch.ones(N, num_classes).long())
+</code></pre>
+<p><strong>&#x5F97;&#x5230;&#x975E;&#x96F6;/&#x96F6;&#x5143;&#x7D20;</strong></p>
+<pre><code class="lang-text">torch.nonzero(tensor)               # Index of non-zero elements
+torch.nonzero(tensor == 0)          # Index of zero elements
+torch.nonzero(tensor).size(0)       # Number of non-zero elements
+torch.nonzero(tensor == 0).size(0)  # Number of zero elements
+</code></pre>
+<p><strong>&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5F20;&#x91CF;&#x76F8;&#x7B49;</strong></p>
+<pre><code class="lang-text">torch.allclose(tensor1, tensor2)  # float tensor
+torch.equal(tensor1, tensor2)     # int tensor
+</code></pre>
+<p><strong>&#x5F20;&#x91CF;&#x6269;&#x5C55;</strong></p>
+<pre><code class="lang-text"># Expand tensor of shape 64*512 to shape 64*512*7*7.
+torch.reshape(tensor, (64, 512, 1, 1)).expand(64, 512, 7, 7)
+</code></pre>
+<p><strong>&#x77E9;&#x9635;&#x4E58;&#x6CD5;</strong></p>
+<pre><code class="lang-text"># Matrix multiplication: (m*n) * (n*p) -&gt; (m*p).
+result = torch.mm(tensor1, tensor2)
+
+# Batch matrix multiplication: (b*m*n) * (b*n*p) -&gt; (b*m*p).
+result = torch.bmm(tensor1, tensor2)
+
+# Element-wise multiplication.
+result = tensor1 * tensor2
+</code></pre>
+<p><strong>&#x8BA1;&#x7B97;&#x4E24;&#x7EC4;&#x6570;&#x636E;&#x4E4B;&#x95F4;&#x7684;&#x4E24;&#x4E24;&#x6B27;&#x5F0F;&#x8DDD;&#x79BB;</strong></p>
+<pre><code class="lang-text"># X1 is of shape m*d, X2 is of shape n*d.
+dist = torch.sqrt(torch.sum((X1[:,None,:] - X2) ** 2, dim=2))
+</code></pre>
+<h2 id="3-&#x6A21;&#x578B;&#x5B9A;&#x4E49;"><strong>3. &#x6A21;&#x578B;&#x5B9A;&#x4E49;</strong></h2>
+<p><strong>&#x5377;&#x79EF;&#x5C42;</strong></p>
+<p>&#x6700;&#x5E38;&#x7528;&#x7684;&#x5377;&#x79EF;&#x5C42;&#x914D;&#x7F6E;&#x662F;</p>
+<pre><code class="lang-python3">conv = torch.nn.Conv2d(in_channels, out_channels, kernel_size=3, stride=1, padding=1, bias=True)
+conv = torch.nn.Conv2d(in_channels, out_channels, kernel_size=1, stride=1, padding=0, bias=True)
+</code></pre>
+<p>&#x5982;&#x679C;&#x5377;&#x79EF;&#x5C42;&#x914D;&#x7F6E;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x4E0D;&#x65B9;&#x4FBF;&#x8BA1;&#x7B97;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5982;&#x4E0B;&#x53EF;&#x89C6;&#x5316;&#x5DE5;&#x5177;&#x8F85;&#x52A9;</p>
+<p>Convolution Visualizerezyang.github.io</p>
+<p><strong>GAP&#xFF08;Global average pooling&#xFF09;&#x5C42;</strong></p>
+<pre><code class="lang-text">gap = torch.nn.AdaptiveAvgPool2d(output_size=1)
+</code></pre>
+<p><strong>&#x53CC;&#x7EBF;&#x6027;&#x6C47;&#x5408;&#xFF08;bilinear pooling&#xFF09;</strong><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_1" target="_blank">[1]</a></p>
+<pre><code class="lang-text">X = torch.reshape(N, D, H * W)                        # Assume X has shape N*D*H*W
+X = torch.bmm(X, torch.transpose(X, 1, 2)) / (H * W)  # Bilinear pooling
+assert X.size() == (N, D, D)
+X = torch.reshape(X, (N, D * D))
+X = torch.sign(X) * torch.sqrt(torch.abs(X) + 1e-5)   # Signed-sqrt normalization
+X = torch.nn.functional.normalize(X)                  # L2 normalization
+</code></pre>
+<p><strong>&#x591A;&#x5361;&#x540C;&#x6B65;BN&#xFF08;Batch normalization&#xFF09;</strong></p>
+<p>&#x5F53;&#x4F7F;&#x7528;torch.nn.DataParallel&#x5C06;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x5728;&#x591A;&#x5F20;GPU&#x5361;&#x4E0A;&#x65F6;&#xFF0C;PyTorch&#x7684;BN&#x5C42;&#x9ED8;&#x8BA4;&#x64CD;&#x4F5C;&#x662F;&#x5404;&#x5361;&#x4E0A;&#x6570;&#x636E;&#x72EC;&#x7ACB;&#x5730;&#x8BA1;&#x7B97;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#xFF0C;&#x540C;&#x6B65;BN&#x4F7F;&#x7528;&#x6240;&#x6709;&#x5361;&#x4E0A;&#x7684;&#x6570;&#x636E;&#x4E00;&#x8D77;&#x8BA1;&#x7B97;BN&#x5C42;&#x7684;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#xFF0C;&#x7F13;&#x89E3;&#x4E86;&#x5F53;&#x6279;&#x91CF;&#x5927;&#x5C0F;&#xFF08;batch size&#xFF09;&#x6BD4;&#x8F83;&#x5C0F;&#x65F6;&#x5BF9;&#x5747;&#x503C;&#x548C;&#x6807;&#x51C6;&#x5DEE;&#x4F30;&#x8BA1;&#x4E0D;&#x51C6;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x662F;&#x5728;&#x76EE;&#x6807;&#x68C0;&#x6D4B;&#x7B49;&#x4EFB;&#x52A1;&#x4E2D;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x63D0;&#x5347;&#x6027;&#x80FD;&#x7684;&#x6280;&#x5DE7;&#x3002;</p>
+<p>vacancy/Synchronized-BatchNorm-PyTorchgithub.com<img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-21-152951.jpg" alt="&#x56FE;&#x6807;"></p>
+<p>&#x73B0;&#x5728;PyTorch&#x5B98;&#x65B9;&#x5DF2;&#x7ECF;&#x652F;&#x6301;&#x540C;&#x6B65;BN&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-text">sync_bn = torch.nn.SyncBatchNorm(num_features, eps=1e-05, momentum=0.1, affine=True, 
+                                 track_running_stats=True)
+</code></pre>
+<p>&#x5C06;&#x5DF2;&#x6709;&#x7F51;&#x7EDC;&#x7684;&#x6240;&#x6709;BN&#x5C42;&#x6539;&#x4E3A;&#x540C;&#x6B65;BN&#x5C42;</p>
+<pre><code class="lang-text">def convertBNtoSyncBN(module, process_group=None):
+    &apos;&apos;&apos;Recursively replace all BN layers to SyncBN layer.
+
+    Args:
+        module[torch.nn.Module]. Network
+    &apos;&apos;&apos;
+    if isinstance(module, torch.nn.modules.batchnorm._BatchNorm):
+        sync_bn = torch.nn.SyncBatchNorm(module.num_features, module.eps, module.momentum, 
+                                         module.affine, module.track_running_stats, process_group)
+        sync_bn.running_mean = module.running_mean
+        sync_bn.running_var = module.running_var
+        if module.affine:
+            sync_bn.weight = module.weight.clone().detach()
+            sync_bn.bias = module.bias.clone().detach()
+        return sync_bn
+    else:
+        for name, child_module in module.named_children():
+            setattr(module, name) = convert_syncbn_model(child_module, process_group=process_group))
+        return module
+</code></pre>
+<p><strong>&#x7C7B;&#x4F3C;BN&#x6ED1;&#x52A8;&#x5E73;&#x5747;</strong></p>
+<p>&#x5982;&#x679C;&#x8981;&#x5B9E;&#x73B0;&#x7C7B;&#x4F3C;BN&#x6ED1;&#x52A8;&#x5E73;&#x5747;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x5728;forward&#x51FD;&#x6570;&#x4E2D;&#x8981;&#x4F7F;&#x7528;&#x539F;&#x5730;&#xFF08;inplace&#xFF09;&#x64CD;&#x4F5C;&#x7ED9;&#x6ED1;&#x52A8;&#x5E73;&#x5747;&#x8D4B;&#x503C;&#x3002;</p>
+<pre><code class="lang-text">class BN(torch.nn.Module)
+    def __init__(self):
+        ...
+        self.register_buffer(&apos;running_mean&apos;, torch.zeros(num_features))
+
+    def forward(self, X):
+        ...
+        self.running_mean += momentum * (current - self.running_mean)
+</code></pre>
+<p><strong>&#x8BA1;&#x7B97;&#x6A21;&#x578B;&#x6574;&#x4F53;&#x53C2;&#x6570;&#x91CF;</strong></p>
+<pre><code class="lang-text">num_parameters = sum(torch.numel(parameter) for parameter in model.parameters())
+</code></pre>
+<p><strong>&#x7C7B;&#x4F3C;Keras&#x7684;model.summary()&#x8F93;&#x51FA;&#x6A21;&#x578B;&#x4FE1;&#x606F;</strong></p>
+<p>sksq96/pytorch-summarygithub.com<img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-21-152947.jpg" alt="&#x56FE;&#x6807;"></p>
+<p><strong>&#x6A21;&#x578B;&#x6743;&#x503C;&#x521D;&#x59CB;&#x5316;</strong></p>
+<p>&#x6CE8;&#x610F;model.modules()&#x548C;model.children()&#x7684;&#x533A;&#x522B;&#xFF1A;model.modules()&#x4F1A;&#x8FED;&#x4EE3;&#x5730;&#x904D;&#x5386;&#x6A21;&#x578B;&#x7684;&#x6240;&#x6709;&#x5B50;&#x5C42;&#xFF0C;&#x800C;model.children()&#x53EA;&#x4F1A;&#x904D;&#x5386;&#x6A21;&#x578B;&#x4E0B;&#x7684;&#x4E00;&#x5C42;&#x3002;</p>
+<pre><code class="lang-text"># Common practise for initialization.
+for layer in model.modules():
+    if isinstance(layer, torch.nn.Conv2d):
+        torch.nn.init.kaiming_normal_(layer.weight, mode=&apos;fan_out&apos;,
+                                      nonlinearity=&apos;relu&apos;)
+        if layer.bias is not None:
+            torch.nn.init.constant_(layer.bias, val=0.0)
+    elif isinstance(layer, torch.nn.BatchNorm2d):
+        torch.nn.init.constant_(layer.weight, val=1.0)
+        torch.nn.init.constant_(layer.bias, val=0.0)
+    elif isinstance(layer, torch.nn.Linear):
+        torch.nn.init.xavier_normal_(layer.weight)
+        if layer.bias is not None:
+            torch.nn.init.constant_(layer.bias, val=0.0)
+
+# Initialization with given tensor.
+layer.weight = torch.nn.Parameter(tensor)
+</code></pre>
+<p><strong>&#x90E8;&#x5206;&#x5C42;&#x4F7F;&#x7528;&#x9884;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;</strong></p>
+<p>&#x6CE8;&#x610F;&#x5982;&#x679C;&#x4FDD;&#x5B58;&#x7684;&#x6A21;&#x578B;&#x662F;torch.nn.DataParallel&#xFF0C;&#x5219;&#x5F53;&#x524D;&#x7684;&#x6A21;&#x578B;&#x4E5F;&#x9700;&#x8981;&#x662F;torch.nn.DataParallel&#x3002;torch.nn.DataParallel(model).module == model&#x3002;</p>
+<pre><code class="lang-text">model.load_state_dict(torch.load(&apos;model,pth&apos;), strict=False)
+</code></pre>
+<p><strong>&#x5C06;&#x5728;GPU&#x4FDD;&#x5B58;&#x7684;&#x6A21;&#x578B;&#x52A0;&#x8F7D;&#x5230;CPU</strong></p>
+<pre><code class="lang-text">model.load_state_dict(torch.load(&apos;model,pth&apos;, map_location=&apos;cpu&apos;))
+</code></pre>
+<h2 id="4-&#x6570;&#x636E;&#x51C6;&#x5907;&#x3001;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x4E0E;&#x5FAE;&#x8C03;"><strong>4. &#x6570;&#x636E;&#x51C6;&#x5907;&#x3001;&#x7279;&#x5F81;&#x63D0;&#x53D6;&#x4E0E;&#x5FAE;&#x8C03;</strong></h2>
+<p><strong>&#x56FE;&#x50CF;&#x5206;&#x5757;&#x6253;&#x6563;&#xFF08;image shuffle&#xFF09;/&#x533A;&#x57DF;&#x6DF7;&#x6DC6;&#x673A;&#x5236;&#xFF08;region confusion mechanism&#xFF0C;RCM&#xFF09;</strong><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_2" target="_blank">[2]</a></p>
+<pre><code class="lang-python3"># X is torch.Tensor of size N*D*H*W.
+# Shuffle rows
+Q = (torch.unsqueeze(torch.arange(num_blocks), dim=1) * torch.ones(1, num_blocks).long()
+     + torch.randint(low=-neighbour, high=neighbour, size=(num_blocks, num_blocks)))
+Q = torch.argsort(Q, dim=0)
+assert Q.size() == (num_blocks, num_blocks)
+
+X = [torch.chunk(row, chunks=num_blocks, dim=2)
+     for row in torch.chunk(X, chunks=num_blocks, dim=1)]
+X = [[X[Q[i, j].item()][j] for j in range(num_blocks)]
+     for i in range(num_blocks)]
+
+# Shulle columns.
+Q = (torch.ones(num_blocks, 1).long() * torch.unsqueeze(torch.arange(num_blocks), dim=0)
+     + torch.randint(low=-neighbour, high=neighbour, size=(num_blocks, num_blocks)))
+Q = torch.argsort(Q, dim=1)
+assert Q.size() == (num_blocks, num_blocks)
+X = [[X[i][Q[i, j].item()] for j in range(num_blocks)]
+     for i in range(num_blocks)]
+
+Y = torch.cat([torch.cat(row, dim=2) for row in X], dim=1)
+</code></pre>
+<p><strong>&#x5F97;&#x5230;&#x89C6;&#x9891;&#x6570;&#x636E;&#x57FA;&#x672C;&#x4FE1;&#x606F;</strong></p>
+<pre><code class="lang-text">import cv2
+video = cv2.VideoCapture(mp4_path)
+height = int(video.get(cv2.CAP_PROP_FRAME_HEIGHT))
+width = int(video.get(cv2.CAP_PROP_FRAME_WIDTH))
+num_frames = int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+fps = int(video.get(cv2.CAP_PROP_FPS))
+video.release()
+</code></pre>
+<p><strong>TSN&#x6BCF;&#x6BB5;&#xFF08;segment&#xFF09;&#x91C7;&#x6837;&#x4E00;&#x5E27;&#x89C6;&#x9891;</strong><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_3" target="_blank">[3]</a></p>
+<pre><code class="lang-text">K = self._num_segments
+if is_train:
+    if num_frames &gt; K:
+        # Random index for each segment.
+        frame_indices = torch.randint(
+            high=num_frames // K, size=(K,), dtype=torch.long)
+        frame_indices += num_frames // K * torch.arange(K)
+    else:
+        frame_indices = torch.randint(
+            high=num_frames, size=(K - num_frames,), dtype=torch.long)
+        frame_indices = torch.sort(torch.cat((
+            torch.arange(num_frames), frame_indices)))[0]
+else:
+    if num_frames &gt; K:
+        # Middle index for each segment.
+        frame_indices = num_frames / K // 2
+        frame_indices += num_frames // K * torch.arange(K)
+    else:
+        frame_indices = torch.sort(torch.cat((                              
+            torch.arange(num_frames), torch.arange(K - num_frames))))[0]
+assert frame_indices.size() == (K,)
+return [frame_indices[i] for i in range(K)]
+</code></pre>
+<p><strong>&#x63D0;&#x53D6;ImageNet&#x9884;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#x67D0;&#x5C42;&#x7684;&#x5377;&#x79EF;&#x7279;&#x5F81;</strong></p>
+<pre><code class="lang-text"># VGG-16 relu5-3 feature.
+model = torchvision.models.vgg16(pretrained=True).features[:-1]
+# VGG-16 pool5 feature.
+model = torchvision.models.vgg16(pretrained=True).features
+# VGG-16 fc7 feature.
+model = torchvision.models.vgg16(pretrained=True)
+model.classifier = torch.nn.Sequential(*list(model.classifier.children())[:-3])
+# ResNet GAP feature.
+model = torchvision.models.resnet18(pretrained=True)
+model = torch.nn.Sequential(collections.OrderedDict(
+    list(model.named_children())[:-1]))
+
+with torch.no_grad():
+    model.eval()
+    conv_representation = model(image)
+</code></pre>
+<p><strong>&#x63D0;&#x53D6;ImageNet&#x9884;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;&#x591A;&#x5C42;&#x7684;&#x5377;&#x79EF;&#x7279;&#x5F81;</strong></p>
+<pre><code class="lang-text">class FeatureExtractor(torch.nn.Module):
+    &quot;&quot;&quot;Helper class to extract several convolution features from the given
+    pre-trained model.
+
+    Attributes:
+        _model, torch.nn.Module.
+        _layers_to_extract, list&lt;str&gt; or set&lt;str&gt;
+
+    Example:
+        &gt;&gt;&gt; model = torchvision.models.resnet152(pretrained=True)
+        &gt;&gt;&gt; model = torch.nn.Sequential(collections.OrderedDict(
+                list(model.named_children())[:-1]))
+        &gt;&gt;&gt; conv_representation = FeatureExtractor(
+                pretrained_model=model,
+                layers_to_extract={&apos;layer1&apos;, &apos;layer2&apos;, &apos;layer3&apos;, &apos;layer4&apos;})(image)
+    &quot;&quot;&quot;
+    def __init__(self, pretrained_model, layers_to_extract):
+        torch.nn.Module.__init__(self)
+        self._model = pretrained_model
+        self._model.eval()
+        self._layers_to_extract = set(layers_to_extract)
+
+    def forward(self, x):
+        with torch.no_grad():
+            conv_representation = []
+            for name, layer in self._model.named_children():
+                x = layer(x)
+                if name in self._layers_to_extract:
+                    conv_representation.append(x)
+            return conv_representation
+</code></pre>
+<p><strong>&#x5176;&#x4ED6;&#x9884;&#x8BAD;&#x7EC3;&#x6A21;&#x578B;</strong></p>
+<p>Cadene/pretrained-models.pytorchgithub.com<img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-21-152952.jpg" alt="&#x56FE;&#x6807;"></p>
+<p><strong>&#x5FAE;&#x8C03;&#x5168;&#x8FDE;&#x63A5;&#x5C42;</strong></p>
+<pre><code class="lang-text">model = torchvision.models.resnet18(pretrained=True)
+for param in model.parameters():
+    param.requires_grad = False
+model.fc = nn.Linear(512, 100)  # Replace the last fc layer
+optimizer = torch.optim.SGD(model.fc.parameters(), lr=1e-2, momentum=0.9, weight_decay=1e-4)
+</code></pre>
+<p><strong>&#x4EE5;&#x8F83;&#x5927;&#x5B66;&#x4E60;&#x7387;&#x5FAE;&#x8C03;&#x5168;&#x8FDE;&#x63A5;&#x5C42;&#xFF0C;&#x8F83;&#x5C0F;&#x5B66;&#x4E60;&#x7387;&#x5FAE;&#x8C03;&#x5377;&#x79EF;&#x5C42;</strong></p>
+<pre><code class="lang-text">model = torchvision.models.resnet18(pretrained=True)
+finetuned_parameters = list(map(id, model.fc.parameters()))
+conv_parameters = (p for p in model.parameters() if id(p) not in finetuned_parameters)
+parameters = [{&apos;params&apos;: conv_parameters, &apos;lr&apos;: 1e-3}, 
+              {&apos;params&apos;: model.fc.parameters()}]
+optimizer = torch.optim.SGD(parameters, lr=1e-2, momentum=0.9, weight_decay=1e-4)
+</code></pre>
+<h2 id="5-&#x6A21;&#x578B;&#x8BAD;&#x7EC3;"><strong>5. &#x6A21;&#x578B;&#x8BAD;&#x7EC3;</strong></h2>
+<p><strong>&#x5E38;&#x7528;&#x8BAD;&#x7EC3;&#x548C;&#x9A8C;&#x8BC1;&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;</strong></p>
+<p>&#x5176;&#x4E2D;ToTensor&#x64CD;&#x4F5C;&#x4F1A;&#x5C06;PIL.Image&#x6216;&#x5F62;&#x72B6;&#x4E3A;H&#xD7;W&#xD7;D&#xFF0C;&#x6570;&#x503C;&#x8303;&#x56F4;&#x4E3A;[0, 255]&#x7684;np.ndarray&#x8F6C;&#x6362;&#x4E3A;&#x5F62;&#x72B6;&#x4E3A;D&#xD7;H&#xD7;W&#xFF0C;&#x6570;&#x503C;&#x8303;&#x56F4;&#x4E3A;[0.0, 1.0]&#x7684;torch.Tensor&#x3002;</p>
+<pre><code class="lang-text">train_transform = torchvision.transforms.Compose([
+    torchvision.transforms.RandomResizedCrop(size=224,
+                                             scale=(0.08, 1.0)),
+    torchvision.transforms.RandomHorizontalFlip(),
+    torchvision.transforms.ToTensor(),
+    torchvision.transforms.Normalize(mean=(0.485, 0.456, 0.406),
+                                     std=(0.229, 0.224, 0.225)),
+ ])
+ val_transform = torchvision.transforms.Compose([
+    torchvision.transforms.Resize(256),
+    torchvision.transforms.CenterCrop(224),
+    torchvision.transforms.ToTensor(),
+    torchvision.transforms.Normalize(mean=(0.485, 0.456, 0.406),
+                                     std=(0.229, 0.224, 0.225)),
+])
+</code></pre>
+<p><strong>&#x8BAD;&#x7EC3;&#x57FA;&#x672C;&#x4EE3;&#x7801;&#x6846;&#x67B6;</strong></p>
+<pre><code class="lang-text">for t in epoch(80):
+    for images, labels in tqdm.tqdm(train_loader, desc=&apos;Epoch %3d&apos; % (t + 1)):
+        images, labels = images.cuda(), labels.cuda()
+        scores = model(images)
+        loss = loss_function(scores, labels)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+</code></pre>
+<p><strong>&#x6807;&#x8BB0;&#x5E73;&#x6ED1;&#xFF08;label smoothing&#xFF09;</strong><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_4" target="_blank">[4]</a></p>
+<pre><code class="lang-text">for images, labels in train_loader:
+    images, labels = images.cuda(), labels.cuda()
+    N = labels.size(0)
+    # C is the number of classes.
+    smoothed_labels = torch.full(size=(N, C), fill_value=0.1 / (C - 1)).cuda()
+    smoothed_labels.scatter_(dim=1, index=torch.unsqueeze(labels, dim=1), value=0.9)
+
+    score = model(images)
+    log_prob = torch.nn.functional.log_softmax(score, dim=1)
+    loss = -torch.sum(log_prob * smoothed_labels) / N
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+</code></pre>
+<p><strong>Mixup</strong><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_5" target="_blank">[5]</a></p>
+<pre><code class="lang-python3">beta_distribution = torch.distributions.beta.Beta(alpha, alpha)
+for images, labels in train_loader:
+    images, labels = images.cuda(), labels.cuda()
+
+    # Mixup images.
+    lambda_ = beta_distribution.sample([]).item()
+    index = torch.randperm(images.size(0)).cuda()
+    mixed_images = lambda_ * images + (1 - lambda_) * images[index, :]
+
+    # Mixup loss.    
+    scores = model(mixed_images)
+    loss = (lambda_ * loss_function(scores, labels) 
+            + (1 - lambda_) * loss_function(scores, labels[index]))
+
+    optimizer.zero_grad()
+    loss.backward()
+    optimizer.step()
+</code></pre>
+<p><strong>L1&#x6B63;&#x5219;&#x5316;</strong></p>
+<pre><code class="lang-text">l1_regularization = torch.nn.L1Loss(reduction=&apos;sum&apos;)
+loss = ...  # Standard cross-entropy loss
+for param in model.parameters():
+    loss += lambda_ * torch.sum(torch.abs(param))
+loss.backward()
+</code></pre>
+<p><strong>&#x4E0D;&#x5BF9;&#x504F;&#x7F6E;&#x9879;&#x8FDB;&#x884C;L2&#x6B63;&#x5219;&#x5316;/&#x6743;&#x503C;&#x8870;&#x51CF;&#xFF08;weight decay&#xFF09;</strong></p>
+<pre><code class="lang-text">bias_list = (param for name, param in model.named_parameters() if name[-4:] == &apos;bias&apos;)
+others_list = (param for name, param in model.named_parameters() if name[-4:] != &apos;bias&apos;)
+parameters = [{&apos;parameters&apos;: bias_list, &apos;weight_decay&apos;: 0},                
+              {&apos;parameters&apos;: others_list}]
+optimizer = torch.optim.SGD(parameters, lr=1e-2, momentum=0.9, weight_decay=1e-4)
+</code></pre>
+<p><strong>&#x68AF;&#x5EA6;&#x88C1;&#x526A;&#xFF08;gradient clipping&#xFF09;</strong></p>
+<pre><code class="lang-text">torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=20)
+</code></pre>
+<p><strong>&#x8BA1;&#x7B97;Softmax&#x8F93;&#x51FA;&#x7684;&#x51C6;&#x786E;&#x7387;</strong></p>
+<pre><code class="lang-text">score = model(images)
+prediction = torch.argmax(score, dim=1)
+num_correct = torch.sum(prediction == labels).item()
+accuruacy = num_correct / labels.size(0)
+</code></pre>
+<p><strong>&#x53EF;&#x89C6;&#x5316;&#x6A21;&#x578B;&#x524D;&#x9988;&#x7684;&#x8BA1;&#x7B97;&#x56FE;</strong></p>
+<p>szagoruyko/pytorchvizgithub.com<img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-21-152949.jpg" alt="&#x56FE;&#x6807;"></p>
+<p><strong>&#x53EF;&#x89C6;&#x5316;&#x5B66;&#x4E60;&#x66F2;&#x7EBF;</strong></p>
+<p>&#x6709;Facebook&#x81EA;&#x5DF1;&#x5F00;&#x53D1;&#x7684;Visdom&#x548C;Tensorboard&#xFF08;&#x4ECD;&#x5904;&#x4E8E;&#x5B9E;&#x9A8C;&#x9636;&#x6BB5;&#xFF09;&#x4E24;&#x4E2A;&#x9009;&#x62E9;&#x3002;</p>
+<p>facebookresearch/visdomgithub.com<img src="https://cy-1256894686.cos.ap-beijing.myqcloud.com/cy/2019-10-21-152950.jpg" alt="&#x56FE;&#x6807;"></p>
+<p>torch.utils.tensorboard - PyTorch master documentationpytorch.org</p>
+<pre><code class="lang-text"># Example using Visdom.
+vis = visdom.Visdom(env=&apos;Learning curve&apos;, use_incoming_socket=False)
+assert self._visdom.check_connection()
+self._visdom.close()
+options = collections.namedtuple(&apos;Options&apos;, [&apos;loss&apos;, &apos;acc&apos;, &apos;lr&apos;])(
+    loss={&apos;xlabel&apos;: &apos;Epoch&apos;, &apos;ylabel&apos;: &apos;Loss&apos;, &apos;showlegend&apos;: True},
+    acc={&apos;xlabel&apos;: &apos;Epoch&apos;, &apos;ylabel&apos;: &apos;Accuracy&apos;, &apos;showlegend&apos;: True},
+    lr={&apos;xlabel&apos;: &apos;Epoch&apos;, &apos;ylabel&apos;: &apos;Learning rate&apos;, &apos;showlegend&apos;: True})
+
+for t in epoch(80):
+    tran(...)
+    val(...)
+    vis.line(X=torch.Tensor([t + 1]), Y=torch.Tensor([train_loss]),
+             name=&apos;train&apos;, win=&apos;Loss&apos;, update=&apos;append&apos;, opts=options.loss)
+    vis.line(X=torch.Tensor([t + 1]), Y=torch.Tensor([val_loss]),
+             name=&apos;val&apos;, win=&apos;Loss&apos;, update=&apos;append&apos;, opts=options.loss)
+    vis.line(X=torch.Tensor([t + 1]), Y=torch.Tensor([train_acc]),
+             name=&apos;train&apos;, win=&apos;Accuracy&apos;, update=&apos;append&apos;, opts=options.acc)
+    vis.line(X=torch.Tensor([t + 1]), Y=torch.Tensor([val_acc]),
+             name=&apos;val&apos;, win=&apos;Accuracy&apos;, update=&apos;append&apos;, opts=options.acc)
+    vis.line(X=torch.Tensor([t + 1]), Y=torch.Tensor([lr]),
+             win=&apos;Learning rate&apos;, update=&apos;append&apos;, opts=options.lr)
+</code></pre>
+<p><strong>&#x5F97;&#x5230;&#x5F53;&#x524D;&#x5B66;&#x4E60;&#x7387;</strong></p>
+<pre><code class="lang-text"># If there is one global learning rate (which is the common case).
+lr = next(iter(optimizer.param_groups))[&apos;lr&apos;]
+
+# If there are multiple learning rates for different layers.
+all_lr = []
+for param_group in optimizer.param_groups:
+    all_lr.append(param_group[&apos;lr&apos;])
+</code></pre>
+<p><strong>&#x5B66;&#x4E60;&#x7387;&#x8870;&#x51CF;</strong></p>
+<pre><code class="lang-text"># Reduce learning rate when validation accuarcy plateau.
+scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode=&apos;max&apos;, patience=5, verbose=True)
+for t in range(0, 80):
+    train(...); val(...)
+    scheduler.step(val_acc)
+
+# Cosine annealing learning rate.
+scheduler = torch.optim.lr_scheduler.CosineAnnealingLR(optimizer, T_max=80)
+# Reduce learning rate by 10 at given epochs.
+scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[50, 70], gamma=0.1)
+for t in range(0, 80):
+    scheduler.step()    
+    train(...); val(...)
+
+# Learning rate warmup by 10 epochs.
+scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda t: t / 10)
+for t in range(0, 10):
+    scheduler.step()
+    train(...); val(...)
+</code></pre>
+<p><strong>&#x4FDD;&#x5B58;&#x4E0E;&#x52A0;&#x8F7D;&#x65AD;&#x70B9;</strong></p>
+<p>&#x6CE8;&#x610F;&#x4E3A;&#x4E86;&#x80FD;&#x591F;&#x6062;&#x590D;&#x8BAD;&#x7EC3;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x540C;&#x65F6;&#x4FDD;&#x5B58;&#x6A21;&#x578B;&#x548C;&#x4F18;&#x5316;&#x5668;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x4EE5;&#x53CA;&#x5F53;&#x524D;&#x7684;&#x8BAD;&#x7EC3;&#x8F6E;&#x6570;&#x3002;</p>
+<pre><code class="lang-python3"># Save checkpoint.
+is_best = current_acc &gt; best_acc
+best_acc = max(best_acc, current_acc)
+checkpoint = {
+    &apos;best_acc&apos;: best_acc,    
+    &apos;epoch&apos;: t + 1,
+    &apos;model&apos;: model.state_dict(),
+    &apos;optimizer&apos;: optimizer.state_dict(),
+}
+model_path = os.path.join(&apos;model&apos;, &apos;checkpoint.pth.tar&apos;)
+torch.save(checkpoint, model_path)
+if is_best:
+    shutil.copy(&apos;checkpoint.pth.tar&apos;, model_path)
+
+# Load checkpoint.
+if resume:
+    model_path = os.path.join(&apos;model&apos;, &apos;checkpoint.pth.tar&apos;)
+    assert os.path.isfile(model_path)
+    checkpoint = torch.load(model_path)
+    best_acc = checkpoint[&apos;best_acc&apos;]
+    start_epoch = checkpoint[&apos;epoch&apos;]
+    model.load_state_dict(checkpoint[&apos;model&apos;])
+    optimizer.load_state_dict(checkpoint[&apos;optimizer&apos;])
+    print(&apos;Load checkpoint at epoch %d.&apos; % start_epoch)
+</code></pre>
+<p><strong>&#x8BA1;&#x7B97;&#x51C6;&#x786E;&#x7387;&#x3001;&#x67E5;&#x51C6;&#x7387;&#xFF08;precision&#xFF09;&#x3001;&#x67E5;&#x5168;&#x7387;&#xFF08;recall&#xFF09;</strong></p>
+<pre><code class="lang-text"># data[&apos;label&apos;] and data[&apos;prediction&apos;] are groundtruth label and prediction 
+# for each image, respectively.
+accuracy = np.mean(data[&apos;label&apos;] == data[&apos;prediction&apos;]) * 100
+
+# Compute recision and recall for each class.
+for c in range(len(num_classes)):
+    tp = np.dot((data[&apos;label&apos;] == c).astype(int),
+                (data[&apos;prediction&apos;] == c).astype(int))
+    tp_fp = np.sum(data[&apos;prediction&apos;] == c)
+    tp_fn = np.sum(data[&apos;label&apos;] == c)
+    precision = tp / tp_fp * 100
+    recall = tp / tp_fn * 100
+</code></pre>
+<h2 id="6-&#x6A21;&#x578B;&#x6D4B;&#x8BD5;">6. &#x6A21;&#x578B;&#x6D4B;&#x8BD5;</h2>
+<p><strong>&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x7C7B;&#x522B;&#x7684;&#x67E5;&#x51C6;&#x7387;&#xFF08;precision&#xFF09;&#x3001;&#x67E5;&#x5168;&#x7387;&#xFF08;recall&#xFF09;&#x3001;F1&#x548C;&#x603B;&#x4F53;&#x6307;&#x6807;</strong></p>
+<pre><code class="lang-text">import sklearn.metrics
+
+all_label = []
+all_prediction = []
+for images, labels in tqdm.tqdm(data_loader):
+     # Data.
+     images, labels = images.cuda(), labels.cuda()
+
+     # Forward pass.
+     score = model(images)
+
+     # Save label and predictions.
+     prediction = torch.argmax(score, dim=1)
+     all_label.append(labels.cpu().numpy())
+     all_prediction.append(prediction.cpu().numpy())
+
+# Compute RP and confusion matrix.
+all_label = np.concatenate(all_label)
+assert len(all_label.shape) == 1
+all_prediction = np.concatenate(all_prediction)
+assert all_label.shape == all_prediction.shape
+micro_p, micro_r, micro_f1, _ = sklearn.metrics.precision_recall_fscore_support(
+     all_label, all_prediction, average=&apos;micro&apos;, labels=range(num_classes))
+class_p, class_r, class_f1, class_occurence = sklearn.metrics.precision_recall_fscore_support(
+     all_label, all_prediction, average=None, labels=range(num_classes))
+# Ci,j = #{y=i and hat_y=j}
+confusion_mat = sklearn.metrics.confusion_matrix(
+     all_label, all_prediction, labels=range(num_classes))
+assert confusion_mat.shape == (num_classes, num_classes)
+</code></pre>
+<p><strong>&#x5C06;&#x5404;&#x7C7B;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x7535;&#x5B50;&#x8868;&#x683C;</strong></p>
+<pre><code class="lang-text">import csv
+
+# Write results onto disk.
+with open(os.path.join(path, filename), &apos;wt&apos;, encoding=&apos;utf-8&apos;) as f:
+     f = csv.writer(f)
+     f.writerow([&apos;Class&apos;, &apos;Label&apos;, &apos;# occurence&apos;, &apos;Precision&apos;, &apos;Recall&apos;, &apos;F1&apos;,
+                 &apos;Confused class 1&apos;, &apos;Confused class 2&apos;, &apos;Confused class 3&apos;,
+                 &apos;Confused 4&apos;, &apos;Confused class 5&apos;])
+     for c in range(num_classes):
+         index = np.argsort(confusion_mat[:, c])[::-1][:5]
+         f.writerow([
+             label2class[c], c, class_occurence[c], &apos;%4.3f&apos; % class_p[c],
+                 &apos;%4.3f&apos; % class_r[c], &apos;%4.3f&apos; % class_f1[c],
+                 &apos;%s:%d&apos; % (label2class[index[0]], confusion_mat[index[0], c]),
+                 &apos;%s:%d&apos; % (label2class[index[1]], confusion_mat[index[1], c]),
+                 &apos;%s:%d&apos; % (label2class[index[2]], confusion_mat[index[2], c]),
+                 &apos;%s:%d&apos; % (label2class[index[3]], confusion_mat[index[3], c]),
+                 &apos;%s:%d&apos; % (label2class[index[4]], confusion_mat[index[4], c])])
+         f.writerow([&apos;All&apos;, &apos;&apos;, np.sum(class_occurence), micro_p, micro_r, micro_f1, 
+                     &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;, &apos;&apos;])
+</code></pre>
+<h2 id="7-pytorch&#x5176;&#x4ED6;&#x6CE8;&#x610F;&#x4E8B;&#x9879;"><strong>7. PyTorch&#x5176;&#x4ED6;&#x6CE8;&#x610F;&#x4E8B;&#x9879;</strong></h2>
+<p>&#x6A21;&#x578B;&#x5B9A;&#x4E49;</p>
+<ul>
+<li>&#x5EFA;&#x8BAE;&#x6709;&#x53C2;&#x6570;&#x7684;&#x5C42;&#x548C;&#x6C47;&#x5408;&#xFF08;pooling&#xFF09;&#x5C42;&#x4F7F;&#x7528;torch.nn&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#xFF0C;&#x6FC0;&#x6D3B;&#x51FD;&#x6570;&#x76F4;&#x63A5;&#x4F7F;&#x7528;torch.nn.functional&#x3002;torch.nn&#x6A21;&#x5757;&#x548C;torch.nn.functional&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;torch.nn&#x6A21;&#x5757;&#x5728;&#x8BA1;&#x7B97;&#x65F6;&#x5E95;&#x5C42;&#x8C03;&#x7528;&#x4E86;torch.nn.functional&#xFF0C;&#x4F46;torch.nn&#x6A21;&#x5757;&#x5305;&#x62EC;&#x8BE5;&#x5C42;&#x53C2;&#x6570;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5E94;&#x5BF9;&#x8BAD;&#x7EC3;&#x548C;&#x6D4B;&#x8BD5;&#x4E24;&#x79CD;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x3002;&#x4F7F;&#x7528;torch.nn.functional&#x65F6;&#x8981;&#x6CE8;&#x610F;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#xFF0C;&#x5982;</li>
+</ul>
+<pre><code class="lang-text">def forward(self, x):
+    ...
+    x = torch.nn.functional.dropout(x, p=0.5, training=self.training)
+</code></pre>
+<ul>
+<li>model(x)&#x524D;&#x7528;model.train()&#x548C;model.eval()&#x5207;&#x6362;&#x7F51;&#x7EDC;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x4E0D;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x68AF;&#x5EA6;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x7528;with torch.no<em>grad()&#x5305;&#x542B;&#x8D77;&#x6765;&#x3002;model.eval()&#x548C;torch.no*</em>*grad()&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#xFF0C;model.eval()&#x662F;&#x5C06;&#x7F51;&#x7EDC;&#x5207;&#x6362;&#x4E3A;&#x6D4B;&#x8BD5;&#x72B6;&#x6001;&#xFF0C;&#x4F8B;&#x5982;BN&#x548C;&#x968F;&#x673A;&#x5931;&#x6D3B;&#xFF08;dropout&#xFF09;&#x5728;&#x8BAD;&#x7EC3;&#x548C;&#x6D4B;&#x8BD5;&#x9636;&#x6BB5;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x3002;torch.no_grad()&#x662F;&#x5173;&#x95ED;PyTorch&#x5F20;&#x91CF;&#x7684;&#x81EA;&#x52A8;&#x6C42;&#x5BFC;&#x673A;&#x5236;&#xFF0C;&#x4EE5;&#x51CF;&#x5C11;&#x5B58;&#x50A8;&#x4F7F;&#x7528;&#x548C;&#x52A0;&#x901F;&#x8BA1;&#x7B97;&#xFF0C;&#x5F97;&#x5230;&#x7684;&#x7ED3;&#x679C;&#x65E0;&#x6CD5;&#x8FDB;&#x884C;loss.backward()&#x3002;</li>
+<li>torch.nn.CrossEntropyLoss&#x7684;&#x8F93;&#x5165;&#x4E0D;&#x9700;&#x8981;&#x7ECF;&#x8FC7;Softmax&#x3002;torch.nn.CrossEntropyLoss&#x7B49;&#x4EF7;&#x4E8E;torch.nn.functional.log_softmax + torch.nn.NLLLoss&#x3002;</li>
+<li>loss.backward()&#x524D;&#x7528;optimizer.zero_grad()&#x6E05;&#x9664;&#x7D2F;&#x79EF;&#x68AF;&#x5EA6;&#x3002;optimizer.zero_grad()&#x548C;model.zero_grad()&#x6548;&#x679C;&#x4E00;&#x6837;&#x3002;</li>
+</ul>
+<p>PyTorch&#x6027;&#x80FD;&#x4E0E;&#x8C03;&#x8BD5;</p>
+<ul>
+<li>torch.utils.data.DataLoader&#x4E2D;&#x5C3D;&#x91CF;&#x8BBE;&#x7F6E;pin_memory=True&#xFF0C;&#x5BF9;&#x7279;&#x522B;&#x5C0F;&#x7684;&#x6570;&#x636E;&#x96C6;&#x5982;MNIST&#x8BBE;&#x7F6E;pin_memory=False&#x53CD;&#x800C;&#x66F4;&#x5FEB;&#x4E00;&#x4E9B;&#x3002;num_workers&#x7684;&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x5728;&#x5B9E;&#x9A8C;&#x4E2D;&#x627E;&#x5230;&#x6700;&#x5FEB;&#x7684;&#x53D6;&#x503C;&#x3002;</li>
+<li>&#x7528;del&#x53CA;&#x65F6;&#x5220;&#x9664;&#x4E0D;&#x7528;&#x7684;&#x4E2D;&#x95F4;&#x53D8;&#x91CF;&#xFF0C;&#x8282;&#x7EA6;GPU&#x5B58;&#x50A8;&#x3002;</li>
+<li>&#x4F7F;&#x7528;inplace&#x64CD;&#x4F5C;&#x53EF;&#x8282;&#x7EA6;GPU&#x5B58;&#x50A8;&#xFF0C;&#x5982;</li>
+</ul>
+<pre><code class="lang-text">x = torch.nn.functional.relu(x, inplace=True)
+</code></pre>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;torch.utils.checkpoint&#x524D;&#x5411;&#x4F20;&#x64AD;&#x65F6;&#x53EA;&#x4FDD;&#x7559;&#x4E00;&#x90E8;&#x5206;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x6765;&#x8282;&#x7EA6;GPU&#x5B58;&#x50A8;&#x4F7F;&#x7528;&#xFF0C;&#x5728;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x65F6;&#x9700;&#x8981;&#x7684;&#x5185;&#x5BB9;&#x4ECE;&#x6700;&#x8FD1;&#x4E2D;&#x95F4;&#x7ED3;&#x679C;&#x4E2D;&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x3002;</p>
+<ul>
+<li>&#x51CF;&#x5C11;CPU&#x548C;GPU&#x4E4B;&#x95F4;&#x7684;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x3002;&#x4F8B;&#x5982;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x77E5;&#x9053;&#x4E00;&#x4E2A;epoch&#x4E2D;&#x6BCF;&#x4E2A;mini-batch&#x7684;loss&#x548C;&#x51C6;&#x786E;&#x7387;&#xFF0C;&#x5148;&#x5C06;&#x5B83;&#x4EEC;&#x7D2F;&#x79EF;&#x5728;GPU&#x4E2D;&#x7B49;&#x4E00;&#x4E2A;epoch&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#x4E00;&#x8D77;&#x4F20;&#x8F93;&#x56DE;CPU&#x4F1A;&#x6BD4;&#x6BCF;&#x4E2A;mini-batch&#x90FD;&#x8FDB;&#x884C;&#x4E00;&#x6B21;GPU&#x5230;CPU&#x7684;&#x4F20;&#x8F93;&#x66F4;&#x5FEB;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x534A;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x6570;half()&#x4F1A;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x901F;&#x5EA6;&#x63D0;&#x5347;&#xFF0C;&#x5177;&#x4F53;&#x6548;&#x7387;&#x4F9D;&#x8D56;&#x4E8E;GPU&#x578B;&#x53F7;&#x3002;&#x9700;&#x8981;&#x5C0F;&#x5FC3;&#x6570;&#x503C;&#x7CBE;&#x5EA6;&#x8FC7;&#x4F4E;&#x5E26;&#x6765;&#x7684;&#x7A33;&#x5B9A;&#x6027;&#x95EE;&#x9898;&#x3002;</li>
+<li>&#x65F6;&#x5E38;&#x4F7F;&#x7528;assert tensor.size() == (N, D, H, W)&#x4F5C;&#x4E3A;&#x8C03;&#x8BD5;&#x624B;&#x6BB5;&#xFF0C;&#x786E;&#x4FDD;&#x5F20;&#x91CF;&#x7EF4;&#x5EA6;&#x548C;&#x4F60;&#x8BBE;&#x60F3;&#x4E2D;&#x4E00;&#x81F4;&#x3002;</li>
+<li>&#x9664;&#x4E86;&#x6807;&#x8BB0;y&#x5916;&#xFF0C;&#x5C3D;&#x91CF;&#x5C11;&#x4F7F;&#x7528;&#x4E00;&#x7EF4;&#x5F20;&#x91CF;&#xFF0C;&#x4F7F;&#x7528;n*1&#x7684;&#x4E8C;&#x7EF4;&#x5F20;&#x91CF;&#x4EE3;&#x66FF;&#xFF0C;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x4E00;&#x4E9B;&#x610F;&#x60F3;&#x4E0D;&#x5230;&#x7684;&#x4E00;&#x7EF4;&#x5F20;&#x91CF;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x3002;</li>
+<li>&#x7EDF;&#x8BA1;&#x4EE3;&#x7801;&#x5404;&#x90E8;&#x5206;&#x8017;&#x65F6;</li>
+</ul>
+<pre><code class="lang-text">with torch.autograd.profiler.profile(enabled=True, use_cuda=False) as profile:
+    ...
+print(profile)
+</code></pre>
+<p>&#x6216;&#x8005;&#x5728;&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;</p>
+<pre><code class="lang-text">python -m torch.utils.bottleneck main.py
+</code></pre>
+<h2 id="&#x81F4;&#x8C22;"><strong>&#x81F4;&#x8C22;</strong></h2>
+<p>&#x611F;&#x8C22; </p>
+<p><a href="https://www.zhihu.com/people/57cabe6d8a13c5fa82cf94df53c6ea76" target="_blank">&#x4E9B;&#x8BB8;&#x6D41;&#x5E74;</a></p>
+<p>&#x3001;</p>
+<p><a href="https://www.zhihu.com/people/43893bc9471ec2e531b43c6a1858e5ee" target="_blank">El tnoto</a></p>
+<p>&#x3001;</p>
+<p><a href="https://www.zhihu.com/people/3951450445ed16090bf3d8bc38472cd2" target="_blank">FlyCharles</a></p>
+<p>&#x7684;&#x52D8;&#x8BEF;&#xFF0C;&#x611F;&#x8C22;</p>
+<p><a href="https://www.zhihu.com/people/63ea897503affb2d5552a13498fd6015" target="_blank">oatmeal</a></p>
+<p>&#x63D0;&#x4F9B;&#x7684;&#x66F4;&#x7B80;&#x6D01;&#x7684;&#x65B9;&#x6CD5;&#x3002;&#x7531;&#x4E8E;&#x4F5C;&#x8005;&#x624D;&#x758F;&#x5B66;&#x6D45;&#xFF0C;&#x66F4;&#x517C;&#x65F6;&#x95F4;&#x548C;&#x7CBE;&#x529B;&#x6240;&#x9650;&#xFF0C;&#x4EE3;&#x7801;&#x4E2D;&#x9519;&#x8BEF;&#x4E4B;&#x5904;&#x5728;&#x6240;&#x96BE;&#x514D;&#xFF0C;&#x656C;&#x8BF7;&#x8BFB;&#x8005;&#x6279;&#x8BC4;&#x6307;&#x6B63;&#x3002;</p>
+<h2 id="&#x53C2;&#x8003;&#x8D44;&#x6599;"><strong>&#x53C2;&#x8003;&#x8D44;&#x6599;</strong></h2>
+<ul>
+<li>PyTorch&#x5B98;&#x65B9;&#x4EE3;&#x7801;&#xFF1A;<a href="https://link.zhihu.com/?target=https%3A//github.com/pytorch/examples" target="_blank">pytorch/examples</a></li>
+<li>PyTorch&#x8BBA;&#x575B;&#xFF1A;<a href="https://link.zhihu.com/?target=https%3A//discuss.pytorch.org/latest%3Forder%3Dviews" target="_blank">PyTorch Forums</a></li>
+<li>PyTorch&#x6587;&#x6863;&#xFF1A;<a href="https://link.zhihu.com/?target=http%3A//pytorch.org/docs/stable/index.html" target="_blank">http://pytorch.org/docs/stable/index.html</a></li>
+<li>&#x5176;&#x4ED6;&#x57FA;&#x4E8E;PyTorch&#x7684;&#x516C;&#x5F00;&#x5B9E;&#x73B0;&#x4EE3;&#x7801;&#xFF0C;&#x65E0;&#x6CD5;&#x4E00;&#x4E00;&#x5217;&#x4E3E;</li>
+</ul>
+<h2 id="&#x53C2;&#x8003;">&#x53C2;&#x8003;</h2>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_1_0" target="_blank">^</a>T.-Y. Lin, A. RoyChowdhury, and S. Maji. Bilinear CNN models for fine-grained visual recognition. In ICCV, 2015.</li>
+<li><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_2_0" target="_blank">^</a>Y. Chen, Y. Bai, W. Zhang, and T. Mei. Destruction and construction learning for fine-grained image recognition. In CVPR, 2019.</li>
+<li><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_3_0" target="_blank">^</a>L. Wang, Y. Xiong, Z. Wang, Y. Qiao, D. Lin, X. Tang, and L. V. Gool. Temporal segment networks: Towards good practices for deep action recognition. In ECCV, 2016.</li>
+<li><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_4_0" target="_blank">^</a>C. Szegedy, V. Vanhoucke, S. Ioffe, J. Shlens, and Z. Wojna: Rethinking the Inception architecture for computer vision. In CVPR, 2016.</li>
+<li><a href="https://zhuanlan.zhihu.com/p/59205847?#ref_5_0" target="_blank">^</a>H. Zhang, M. Ciss&#xE9;, Y. N. Dauphin, and D. Lopez-Paz. mixup: Beyond empirical risk minimization. In ICLR, 2018.</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../python/opencv.html" class="navigation navigation-prev " aria-label="Previous page: opencv-python极速入门">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="pytorch2.html" class="navigation navigation-next " aria-label="Next page: pytorch常用代码段合集">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"pytorch常用代码","level":"1.4.4","depth":2,"next":{"title":"pytorch常用代码段合集","level":"1.4.5","depth":2,"path":"code_technique/pytorch/pytorch2.md","ref":"code_technique/pytorch/pytorch2.md","articles":[]},"previous":{"title":"opencv-python极速入门","level":"1.4.3","depth":2,"path":"code_technique/python/opencv.md","ref":"code_technique/python/opencv.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-search","search-pro","back-to-top-button","expandable-chapters-small","back-to-top-button","chapter-fold","expandable-chapters-small","github","katex","include-codeblock","livereload"],"root":"./content","styles":{"website":"assets/styles/website.less","ebook":"assets/styles/ebook.less","pdf":"assets/styles/pdf.less","mobi":"assets/styles/mobi.less","epub":"assets/styles/epub.less"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-solarizedlight.css"],"lang":{"flow":"typescript"}},"github":{"url":"https://github.com/OUCMachineLearning/OUCML"},"livereload":{},"search-pro":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"include-codeblock":{"check":false,"edit":false,"fixlang":false,"lang":"","template":"default","theme":"chrome","unindent":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"language":"zh-hans","gitbook":"*"},"file":{"path":"code_technique/pytorch/pytorch1.md","mtime":"2019-10-24T04:35:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T10:54:29.358Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
